@@ -1,0 +1,82 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+ .icon-block {
+    padding: 0 15px;
+  }
+  .icon-block .material-icons {
+      font-size: inherit;
+  }
+  
+  .sidenav {
+    background-color: #1a1d3a;
+  }
+  
+  .sidenav li>a {
+    color: #ffffff;
+  }
+  
+  #index-banner {
+    color: #000000;
+    background-color: transparent;
+    background-image: url("/public/assets/images/Balance-2.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: auto;
+  }
+  
+  .icon-block {
+    padding: 20px;
+    text-align: center;
+    background-color: transparent;
+    margin: 10px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  h3 {
+   font-size:20px;
+   text-align: center;
+  }
+  
+  a img {
+    position: absolute;
+    max-height: 40px;
+    margin-top: 0.65rem;
+    margin-bottom: .65rem;
+  }
+  
+  .centerImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height:250px;
+  }
+
+  .card {
+    position: relative;
+    border-radius: 30px silver;
+    border: 1px 2px 1px 2px solid silver;
+  }
+
+  .resources.container {
+    width: 70%
+  }
+
+  .container {
+    width: 70%
+  }
+
+  hr {
+    height: 1px solid black;
+  }
