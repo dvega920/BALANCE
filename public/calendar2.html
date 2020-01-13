@@ -17,7 +17,7 @@
     <main>
         <nav class="main navbar indigo darken-4" role="navigation">
             <div class="nav-wrapper container"><a href="#" class="brand-logo"><img
-                    src="./assets/images/" alt="logo-img-white"><span
+                    src="/assets/images/Balance-2.PNG" alt="logo-img-white"><span
                     style="margin-left: 4rem">BALANCE</span>
             </a>
             <ul class="right hide-on-med-and-down">
@@ -39,94 +39,89 @@
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
             <br>
-            <img src="./assets/images/Balance-2.PNG" alt="logo-img-white" class="centerImage">
+            <img src="assets/images/Balance-2.PNG" alt="logo-img-white" class="centerImage">
             <br>
             <h1 class="header center indigo-text" style="margin-top: 0.5rem">BALANCE</h1>
             <div class="row center">
             <h6 class="header col s12 light">
             Balance your daily life with keeping track of your mood and activities.
             </h6>
+    </div>
+        <div class="row center">
+            <a href="http://materializecss.com/getting-started.html" id="download-button"
+                class="btn-large waves-effect waves-light indigo">Get Started</a>
         </div>
-          
-     <div class="resources-container">
-         <h3 class="resources-header">We know things can get rough sometimes, but you are not alone in feeling this way. Below you will see a few resources we reccommend.</h3>
-        <br><br>
+            <br><br>
+
+    </div>
+        </div>
+
+        <h2 id="calendar-header">Below is where you'll see all of your aquired data by month. Use the 'previous' and 'next' buttons to toggle between them.</h2>
+    <div class="container col-sm-4 col-md-7 col-lg-4 mt-5">
+        <div class="card">
+            <h3 class="card-header" id="monthAndYear"></h3>
+                <table class="table table-bordered table-responsive-sm" id="calendar">
+                    <thead>
+                    <tr>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                    </tr>
+                    </thead>
         
- <div class="row">
-    <div class="col s12 m6 lg4">
-      <div class="card">
-        <div class="card-image">
-          <img src="./assets/images/nami.png">
+                    <tbody id="calendar-body">
+        
+                    </tbody>
+                </table>
+        
+                <div class="form-inline">
+        
+                    <button class="btn btn-outline-primary col-sm-6" id="previous" onclick="previous()">Previous</button>
+        
+                    <button class="btn btn-outline-primary col-sm-6" id="next" onclick="next()">Next</button>
+                </div>
+                <br/>
+                <form class="form-inline">
+                    <label class="lead mr-2 ml-2" for="month">Jump To: </label>
+                    <select class="form-control col-sm-4" name="month" id="month" onchange="jump()">
+                        <option value=0>Jan</option>
+                        <option value=1>Feb</option>
+                        <option value=2>Mar</option>
+                        <option value=3>Apr</option>
+                        <option value=4>May</option>
+                        <option value=5>Jun</option>
+                        <option value=6>Jul</option>
+                        <option value=7>Aug</option>
+                        <option value=8>Sep</option>
+                        <option value=9>Oct</option>
+                        <option value=10>Nov</option>
+                        <option value=11>Dec</option>
+                    </select>
+        
+        
+                    <label for="year"></label><select class="form-control col-sm-4" name="year" id="year" onchange="jump()">
+                    <option value=2019>2019</option>
+                    <option value=2020>2020</option>
+                    <option value=2021>2021</option>
+                    <option value=2022>2022</option>
+                    <option value=2023>2023</option>
+                    <option value=2024>2024</option>
+                    <option value=2025>2025</option>
+                    <option value=2026>2026</option>
+                    <option value=2027>2027</option>
+                    <option value=2028>2028</option>
+                    <option value=2029>2029</option>
+                    <option value=2030>2030</option>
+                </select></form>
+            </div>
         </div>
-        <div class="card-content">
-            <h3>NAMI</h3>
-            <hr>
-          <p> NAMI identifies its mission as being "dedicated to building better lives for the millions of Americans affected by mental illness"</p>
-        </div>
-        <div class="card-action">
-          <a href="https://nami.org">Click here for more</a>
-        </div>
-      </div>
-    </div>
-</div>
-  
+        
 
-  <div class="row">
-    <div class="col s12 m6 lg4">
-      <div class="card">
-        <div class="card-image">
-          <img src="./assets/images/burnout.png">
-        </div>
-        <div class="card-content">
-            <h3>Burnout.io</h3>
-            <hr>
-          <p>“Burnout is a state of emotional, mental, and physical exhaustion caused by excessive and prolonged stress.” It manifests itself in ways including anxiety, loss of motivation and confidence, and even degradation of physical health. Burnout can be prevalent in organizations that promote hero culture and where employees maintain a strong sense of duty or feel they have no alternatives in the employment market.</p>
-        </div>
-        <div class="card-action">
-          <a href="https://burnout.io">Click here for more</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="row">
-    <div class="col s12 m6 lg4">
-      <div class="card">
-        <div class="card-image">
-          <img src="./assets/images/mentalhealth.PNG">
-        </div>
-        <div class="card-content">
-            <h3>MentalHealth.gov</h3>
-            <hr>
-          <p>MentalHealth.gov is a fantastic resource for all things mental health related. It's discussions cover everything from eating disorders to veteran care to mental illness. It's worth checking out!</p>
-        </div>
-        <div class="card-action">
-          <a href="https://mentalhealth.gov">Click here for more</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col s12 m6 lg4">
-      <div class="card">
-        <div class="card-image">
-          <img src="./assets/images/artofpain.PNG">
-        </div>
-        <div class="card-content">
-            <h3>The Art of Pain</h3>
-            <hr>
-          <p>The Art of Pain is a one-woman vlog about Borderline Personality Disorder and various mental health related topics. Click the link to be directed to the Youtube channel.</p>
-        </div>
-        <div class="card-action">
-          <a href="https://www.youtube.com/channel/UCbuJcrQ-YInxpESAAFDHn_g">Click here for more</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-     </div>  
+                    
 
                 
         <footer class="page-footer indigo darken-4 text-center">
@@ -165,6 +160,7 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="assets/js/materialize.js"></script>
     <script src="assets/js/init.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 
