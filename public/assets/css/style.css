@@ -58,3 +58,15 @@ a img {
   margin-right: auto;
   max-height:250px;
 }
+
+
+  /* label focus color */
+  .input-field input[type=text]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
+    color: #3f51b5 !important;
+   }
+
+/* label underline focus color */
+   .input-field input[type=text]:focus, .materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #3f51b5 !important;
+    box-shadow: 0 1px 0 0 #3f51b5 !important;
+   }
