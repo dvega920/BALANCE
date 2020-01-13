@@ -50,73 +50,97 @@
                     <a href="http://materializecss.com/getting-started.html" id="download-button"
                         class="btn-large waves-effect waves-light indigo">Get Started</a>
                 </div>
-                <br><br>
+                
+                <br>
+                <hr style="max-width: 50%; color: #3f51b5">
+                <br>
 
             </div>
         </div>
-
-        <hr style="max-width: 50%; color: #3f51b5">
 
         <div class="container">
             <div class="section">
 
-                <div class="row" id="iconRow">
-                    <div class="col s12 m4">
-                        <div class="icon-block hoverable">
-                            <h2 class="center indigo-text"><i class="material-icons">sentiment_very_satisfied</i></h2>
-                            <h5 class="center">Header</h5>
-
-                            <p class="light" style="margin-bottom: 30px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam metus quam,
-                                ultrices in tincidunt vitae, tristique eu lorem. Curabitur tortor sem, eleifend in
-                                ultricies at, ullamcorper sed leo.</p>
-                            <a class="btn-small waves-effect waves-light indigo" href="#">This is a link</a>
-                        </div>
+        <div class="col l6 s12">
+            <div class="card-panel">
+              <h4 class="header2">Form with placeholder</h4>
+              <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input placeholder="John Doe" id="name2" type="text">
+                      <label for="first_name" class="active">Name</label>
                     </div>
-
-                    <div class="col s12 m4">
-                        <div class="icon-block hoverable">
-                            <h2 class="center indigo-text"><i class="material-icons">sentiment_neutral</i></h2>
-                            <h5 class="center">Header</h5>
-
-                            <p class="light" style="margin-bottom: 30px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam metus quam,
-                                ultrices in tincidunt vitae, tristique eu lorem. Curabitur tortor sem, eleifend in
-                                ultricies at, ullamcorper sed leo.</p>
-                            <a class="btn-small waves-effect waves-light indigo" href="#">This is a link</a>
-                        </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input placeholder="john@domainname.com" id="email2" type="email">
+                      <label for="email" class="active">Email</label>
                     </div>
-
-                    <div class="col s12 m4">
-                        <div class="icon-block hoverable">
-                            <h2 class="center indigo-text"><i class="material-icons">sentiment_very_dissatisfied</i>
-                            </h2>
-                            <h5 class="center">Header</h5>
-
-                            <p class="light" style="margin-bottom: 30px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam metus quam,
-                                ultrices in tincidunt vitae, tristique eu lorem. Curabitur tortor sem, eleifend in
-                                ultricies at, ullamcorper sed leo.</p>
-                            <a class="btn-small waves-effect waves-light indigo" href="#">This is a link</a>
-                        </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input placeholder="YourPassword" id="password2" type="password">
+                      <label for="password" class="active">Password</label>
                     </div>
-                </div>
-                <br>
-
-
-                <br>
-
-                <div class="video-container">
-                    <iframe width="160" height="200" src="https://www.youtube.com/embed/RPhCJaBqh74" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-
-                <br>
-                <br>
-
-                <hr style="max-width: 50%; color: #3f51b5">
-
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <textarea placeholder="Oh WoW! Let me check this one too." id="message2" class="materialize-textarea"></textarea>
+                      <label for="message" class="active">Message</label>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <button class="btn indigo waves-effect waves-light center" type="submit" name="action">Submit
+                          <i class="mdi-content-send right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
-            <br><br>
+          </div>
+        
+          <br>
+    <hr style="max-width: 50%; color: #3f51b5">
+    <br>
+    
+            <div class="col l6 s12 center">
+              <div class="card-panel">
+                <div class="row">
+                <form class="col s12">
+                  <h4 class="header2">Inline form</h4>
+                  <div class="row">
+                    <div class="input-field col s4">
+                      <i class="mdi-action-account-circle prefix"></i>
+                      <input id="icon_prefix" type="text" class="validate">
+                      <label for="icon_prefix">First Name</label>
+                    </div>
+                    <div class="input-field col s4">
+                      <i class="mdi-action-lock-outline prefix"></i>
+                      <input id="icon_password" type="password" class="validate">
+                      <label for="icon_password">Password</label>
+                    </div>
+                    <div class="input-field col s4">
+                      <div class="input-field col s12">
+                        <button class="btn cyan waves-effect waves-light" type="submit" name="action"><i class="mdi-action-lock-open"></i> Login</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                </div>
+              </div>
+            </div>
+         
+
         </div>
+    </div>
+
+    <br>
+    <hr style="max-width: 50%; color: #3f51b5">
+    <br>
+    <br>
 
         <footer class="page-footer indigo darken-4 text-center">
             <div class="container" style="text-align: center;">
@@ -147,6 +171,7 @@
                     </div>
                 </div>
             </div>
+   
         </footer>
     </main>
 
