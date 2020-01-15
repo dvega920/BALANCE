@@ -6,6 +6,17 @@
  * Made By MaterializeCSS.com
  */
 
+ body {
+   font-family: 'Josefin Sans', sans-serif;
+   font-weight: 300;
+ }
+
+ h1{
+   margin-left: 30px;
+   text-align: center;
+   font-weight: 300;
+   letter-spacing: .5em;   
+ }
 .icon-block {
   padding: 0 15px;
 }
