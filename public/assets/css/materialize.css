@@ -2253,13 +2253,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-<<<<<<< HEAD
-  -webkit-text-decoration: underline dotted;
-     -moz-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-=======
   text-decoration: underline dotted;
->>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
   /* 2 */
 }
 
