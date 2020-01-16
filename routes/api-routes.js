@@ -1,5 +1,12 @@
-const router = require('express').Router();
+// const router = require('express').Router();
+const db = require("../models")
 
-router.get('/', (req, res) => res.json('Sample API get endpoint'));
-
-module.exports = router;
+module.exports = function (router) {
+    router.get('/api', function (req, res) {
+        db.Mood.findAll({})
+            .then(function (dbMoods) {
+                res.json(dbMoods)
+                // console.log(dbMoods);
+            })
+    });
+}
