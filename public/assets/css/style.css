@@ -15,8 +15,13 @@
    margin-left: 30px;
    text-align: center;
    font-weight: 300;
-   letter-spacing: .5em;   
+   letter-spacing: .3em;   
  }
+
+ h2{
+   margin-top: 1.373333rem;
+ }
+
 .icon-block {
   padding: 0 15px;
 }
