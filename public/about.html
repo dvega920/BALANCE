@@ -48,8 +48,8 @@
                     </h6>
                 </div>
                 <div class="row center">
-                    <a href="#iconRow"
-                        class="btn-large waves-effect waves-light indigo head-link">Get Started</a>
+                    <a href="http://materializecss.com/getting-started.html" id="download-button"
+                        class="btn-large waves-effect waves-light indigo">Get Started</a>
                 </div>
                 <br><br>
 
@@ -174,26 +174,6 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="assets/js/materialize.js"></script>
     <script src="assets/js/init.js"></script>
-    <script>
-        $(document).ready(function () {
-          $('.materialboxed').materialbox();
-          $('.parallax').parallax();
-          $('.button-collapse').sideNav();
-        });
-      </script>
-      <script>
-        $('.head-link').click(function (e) {
-          e.preventDefault();
-    
-          var goto = $(this).attr('href');
-    
-          $('html, body').animate({
-            scrollTop: $(goto).offset().top
-          }, 800);
-        });
-    
-      </script>
-    
 
 </body>
 

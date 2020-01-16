@@ -50,12 +50,6 @@
   margin: 10px;
 }
 
-h2 {
-  font-size: 3.56rem;
-  line-height: 110%;
-  margin: 0rem 0 1.424rem 0;
-}
-
 a img {
   position: absolute;
   max-height: 40px;
@@ -95,3 +89,6 @@ a img {
   input[type=range]::-ms-thumb {
     background-color: #3f51b5;
   }
+
+  
+  

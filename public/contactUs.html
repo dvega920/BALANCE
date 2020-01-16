@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>BALANCE</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  
+</head>
+
+<body>
+  <main>
+    <nav class="main navbar indigo darken-4" role="navigation">
+      <div class="nav-wrapper container"><a href="#" class="brand-logo"><img src="./assets/images/Balance-2_white.png"
+            alt="logo-img-white"><span style="margin-left: 4rem">BALANCE</span>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+
+
+    <div class="parallax-container center align-wrapper">
+      <div class="section no-pad-bot">
+        <div class="container center align">
+          <br><br>
+          <h2 class="header col s12 center indigo-text text-darken-3">Contact us</h2>
+          <div class="row center">
+            <h5 class="header col s12 light indigo-text text-lighten-3">Have a suggestion, comment or question? <br><br>
+            Fill out the form below to get ahold of us!</h5>
+          </div>
+
+          <br>
+          <br>
+
+          <div class="row center">
+            <a href="#startPosts" class="btn-floating btn-large waves-effect waves-light indigo head-link"><i class="material-icons">arrow_drop_down</i></a>
+          </div>
+   </div>
+      </div>
+      <div class="parallax"><img src="">
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="container" id="startPosts">
+      
+      <br>
+      <br>
+      
+      <div class="row">
+      
+          <form class="center">
+
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="name" type="text" class="validate">
+                <label for="name">Your Name</label>
+              </div>
+
+
+              <div class="input-field col s6">
+                <input id="email" type="text" class="validate">
+                <label for="email">Your Email</label>
+              </div>
+            </div>
+            <!--row-->
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="message-sub" type="text" class="validate">
+                <label for="message-sub">Message Subject</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="text_area" class="materialize-textarea"></textarea>
+                <label for="text_area">Your Message</label>
+              </div>
+            </div>
+
+
+            <div>
+              <a class="btn-large waves-effect waves-light indigo">Send Message<i
+                  class="mdi-content-send right"></i></a>
+            </div>
+          </form>
+
+
+
+
+  
+      </div>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    
+    <hr style="max-width: 50%; color: #3f51b5">
+
+    <br>
+    <br>
+    <br>
+
+    <footer class="page-footer indigo darken-4 text-center">
+      <div class="container" style="text-align: center;">
+        <div class="row" style="margin-bottom: 0px; padding-bottom: 20px;">
+          <div class="col l6 s12">
+            <h5 class="indigo-text text-lighten-5">BALANCE</h5>
+
+            <p class="indigo-text text-lighten-3">
+              Balance your daily life with keeping
+              <br>
+              track of your mood and activities.</p>
+          </div>
+          <div class="col l3 s6">
+            <h5 class="indigo-text text-lighten-5">Settings</h5>
+            <ul>
+              <li><a class="indigo-text text-lighten-3 hoverable" href="#!">Link 1</a></li>
+              <li><a class="indigo-text text-lighten-3 hoverable" href="#!">Link 2</a></li>
+              <li><a class="indigo-text text-lighten-3 hoverable" href="#!">Link 3</a></li>
+            </ul>
+          </div>
+          <div class="col l3 s6">
+            <h5 class="indigo-text text-lighten-5">Connect</h5>
+            <ul>
+              <li><a class="indigo-text text-lighten-3 hoverable" href="#!">Link 1</a></li>
+              <li><a class="indigo-text text-lighten-3 hoverable" href="#!">Link 2</a></li>
+              <li><a class="indigo-text text-lighten-3 hoverable" href="#!">Link 3</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="assets/js/materialize.js"></script>
+  <script src="assets/js/init.js"></script>
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.materialboxed').materialbox();
+      $('.parallax').parallax();
+      $('.button-collapse').sideNav();
+    });
+  </script>
+  <script>
+    $('.head-link').click(function (e) {
+      e.preventDefault();
+
+      var goto = $(this).attr('href');
+
+      $('html, body').animate({
+        scrollTop: $(goto).offset().top
+      }, 800);
+    });
+
+  </script>
+
+</body>
+
+</html>
