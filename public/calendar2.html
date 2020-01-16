@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
     <title>BALANCE</title>
 
+    <!--favicon-->
+    <link rel='icon' href="assets/images/favicon.ico.png" type="image/x-icon">
+
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="assets/css/materialize.css" type="text/css" type="text/css">
@@ -17,7 +20,7 @@
     <main>
         <nav class="main navbar indigo darken-4" role="navigation">
             <div class="nav-wrapper container"><a href="#" class="brand-logo"><img
-                    src="/assets/images/Balance-2.PNG" alt="logo-img-white"><span
+                    src="./assets/images/Balance-2_white.png" alt="logo-img-white"><span
                     style="margin-left: 4rem">BALANCE</span>
             </a>
             <ul class="right hide-on-med-and-down">
@@ -36,27 +39,11 @@
            </div>
         </nav>
 
-    <div class="section no-pad-bot" id="index-banner">
-        <div class="container">
-            <br>
-            <img src="assets/images/Balance-2.PNG" alt="logo-img-white" class="centerImage">
-            <br>
-            <h1 class="header center indigo-text" style="margin-top: 0.5rem">BALANCE</h1>
-            <div class="row center">
-            <h6 class="header col s12 light">
-            Balance your daily life with keeping track of your mood and activities.
-            </h6>
-    </div>
-        <div class="row center">
-            <a href="http://materializecss.com/getting-started.html" id="download-button"
-                class="btn-large waves-effect waves-light indigo">Get Started</a>
-        </div>
-            <br><br>
 
-    </div>
-        </div>
-
-        <h2 id="calendar-header">Below is where you'll see all of your aquired data by month. Use the 'previous' and 'next' buttons to toggle between them.</h2>
+        <div class="calendar-div">
+        <h2 id="calendar-header">Below is where you'll see all of your aquired data by month.
+            <br>
+        Use the 'previous' and 'next' buttons to toggle between them.</h2>
     <div class="container col-sm-4 col-md-7 col-lg-4 mt-5">
         <div class="card">
             <h3 class="card-header" id="monthAndYear"></h3>
@@ -86,7 +73,6 @@
                 </div>
                 <br/>
                 <form class="form-inline">
-                    <label class="lead mr-2 ml-2" for="month">Jump To: </label>
                     <select class="form-control col-sm-4" name="month" id="month" onchange="jump()">
                         <option value=0>Jan</option>
                         <option value=1>Feb</option>
@@ -119,8 +105,8 @@
                 </select></form>
             </div>
         </div>
-        
-
+    </div>
+</main>
                     
 
                 
@@ -154,7 +140,7 @@
                 </div>
             </div>
         </footer>
-    </main>
+    
 
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

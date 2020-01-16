@@ -6,6 +6,11 @@
  * Made By MaterializeCSS.com
  */
 
+ body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+}
+
  .icon-block {
     padding: 0 15px;
   }
@@ -60,7 +65,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-height:250px;
+    max-height:130px;
   }
 
   .card {
@@ -69,12 +74,21 @@
     border: 1px 2px 1px 2px solid silver;
   }
 
-
-  .container {
-    width: 70%
+  .resources.header {
+    font-family: inherit;
+    color: #1a1d3a;
   }
 
-  hr {
-    height: 1px solid black;
+  .calendar.header {
+    font-family: 'Josefin Sans', sans-serif;
+    color: red;
+    font-size: 25px;
+  }
+  
+  .calendar.div {
+    border-radius: 1px solid #1a0964;
   }
 
+  .moods {
+  align-content: center;
+}

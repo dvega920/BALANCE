@@ -1,9 +1,5 @@
-/*!
-<<<<<<< HEAD
+ /*
  * Materialize v1.0.0 (http://materializecss.com)
-=======
- * Materialize v1.0.0-rc.1 (http://materializecss.com)
->>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
