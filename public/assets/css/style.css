@@ -7,65 +7,88 @@
  */
 
  body {
-   font-family: 'Josefin Sans', sans-serif;
-   font-weight: 300;
- }
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+}
 
- h1{
-   margin-left: 30px;
+ .icon-block {
+    padding: 0 15px;
+  }
+  .icon-block .material-icons {
+      font-size: inherit;
+  }
+  
+  .sidenav {
+    background-color: #1a1d3a;
+  }
+  
+  .sidenav li>a {
+    color: #ffffff;
+  }
+  
+  #index-banner {
+    color: #000000;
+    background-color: transparent;
+    background-image: url("/public/assets/images/Balance-2.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: auto;
+  }
+  
+  .icon-block {
+    padding: 20px;
+    text-align: center;
+    background-color: transparent;
+    margin: 10px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  h3 {
+   font-size:20px;
    text-align: center;
-   font-weight: 300;
-   letter-spacing: .5em;   
- }
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-	font-size: inherit;
-}
+  }
+  
+  a img {
+    position: absolute;
+    max-height: 40px;
+    margin-top: 0.65rem;
+    margin-bottom: .65rem;
+  }
+  
+  .centerImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height:130px;
+  }
 
-.sidenav {
-  background-color: #1a1d3a;
-}
+  .card {
+    position: relative;
+    border-radius: 30px silver;
+    border: 1px 2px 1px 2px solid silver;
+  }
 
-.sidenav li>a {
-  color: #ffffff;
-}
+  .resources.header {
+    font-family: inherit;
+    color: #1a1d3a;
+  }
 
-#index-banner {
-  color: #000000;
-  background-color: transparent;
-  background-image: url("/public/assets/images/Balance-2.png");
-  background-size: 40%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  height: auto;
-}
+  .calendar.header {
+    font-family: 'Josefin Sans', sans-serif;
+    color: red;
+    font-size: 25px;
+  }
+  
+  .calendar.div {
+    border-radius: 1px solid #1a0964;
+  }
 
-.icon-block {
-  padding: 20px;
-  text-align: center;
-  background-color: transparent;
-  margin: 10px;
-}
-
-h2 {
-  font-size: 3.56rem;
-  line-height: 110%;
-  margin: 0rem 0 1.424rem 0;
-}
-
-a img {
-  position: absolute;
-  max-height: 40px;
-  margin-top: 0.65rem;
-  margin-bottom: .65rem;
-}
-
-.centerImage {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-height:250px;
+  .moods {
+  align-content: center;
 }

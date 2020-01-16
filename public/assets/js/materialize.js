@@ -1,5 +1,5 @@
-/*!
- * Materialize v1.0.0-rc.1 (http://materializecss.com)
+ /*
+ * Materialize v1.0.0 (http://materializecss.com)
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
@@ -1084,6 +1084,11 @@ if (typeof define === 'function' && define.amd) {
   exports.default = M;
 }
 
+<<<<<<< HEAD
+M.version = '1.0.0';
+
+=======
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 M.keys = {
   TAB: 9,
   ENTER: 13,
@@ -1982,7 +1987,16 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_removeEventHandlers",
       value: function _removeEventHandlers() {
+<<<<<<< HEAD
+        var _this5 = this;
+
         this.el.removeEventListener('click', this._handleCollapsibleClickBound);
+        this.$headers.each(function (header) {
+          header.removeEventListener('keydown', _this5._handleCollapsibleKeydownBound);
+        });
+=======
+        this.el.removeEventListener('click', this._handleCollapsibleClickBound);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
       }
 
       /**
@@ -2032,7 +2046,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_animateIn",
       value: function _animateIn(index) {
+<<<<<<< HEAD
+        var _this6 = this;
+=======
         var _this5 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         var $collapsibleLi = this.$el.children('li').eq(index);
         if ($collapsibleLi.length) {
@@ -2071,8 +2089,13 @@ $jscomp.polyfill = function (e, r, p, m) {
               });
 
               // onOpenEnd callback
+<<<<<<< HEAD
+              if (typeof _this6.options.onOpenEnd === 'function') {
+                _this6.options.onOpenEnd.call(_this6, $collapsibleLi[0]);
+=======
               if (typeof _this5.options.onOpenEnd === 'function') {
                 _this5.options.onOpenEnd.call(_this5, $collapsibleLi[0]);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
               }
             }
           });
@@ -2087,7 +2110,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_animateOut",
       value: function _animateOut(index) {
+<<<<<<< HEAD
+        var _this7 = this;
+=======
         var _this6 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         var $collapsibleLi = this.$el.children('li').eq(index);
         if ($collapsibleLi.length) {
@@ -2110,8 +2137,13 @@ $jscomp.polyfill = function (e, r, p, m) {
               });
 
               // onCloseEnd callback
+<<<<<<< HEAD
+              if (typeof _this7.options.onCloseEnd === 'function') {
+                _this7.options.onCloseEnd.call(_this7, $collapsibleLi[0]);
+=======
               if (typeof _this6.options.onCloseEnd === 'function') {
                 _this6.options.onCloseEnd.call(_this6, $collapsibleLi[0]);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
               }
             }
           });
@@ -2126,7 +2158,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "open",
       value: function open(index) {
+<<<<<<< HEAD
+        var _this8 = this;
+=======
         var _this7 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         var $collapsibleLi = this.$el.children('li').eq(index);
         if ($collapsibleLi.length && !$collapsibleLi[0].classList.contains('active')) {
@@ -2141,7 +2177,11 @@ $jscomp.polyfill = function (e, r, p, m) {
             var $activeLis = this.$el.children('li.active');
             $activeLis.each(function (el) {
               var index = $collapsibleLis.index($(el));
+<<<<<<< HEAD
+              _this8.close(index);
+=======
               _this7.close(index);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             });
           }
 
@@ -2233,6 +2273,16 @@ $jscomp.polyfill = function (e, r, p, m) {
     function Dropdown(el, options) {
       _classCallCheck(this, Dropdown);
 
+<<<<<<< HEAD
+      var _this9 = _possibleConstructorReturn(this, (Dropdown.__proto__ || Object.getPrototypeOf(Dropdown)).call(this, Dropdown, el, options));
+
+      _this9.el.M_Dropdown = _this9;
+      Dropdown._dropdowns.push(_this9);
+
+      _this9.id = M.getIdFromTrigger(el);
+      _this9.dropdownEl = document.getElementById(_this9.id);
+      _this9.$dropdownEl = $(_this9.dropdownEl);
+=======
       var _this8 = _possibleConstructorReturn(this, (Dropdown.__proto__ || Object.getPrototypeOf(Dropdown)).call(this, Dropdown, el, options));
 
       _this8.el.M_Dropdown = _this8;
@@ -2241,6 +2291,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       _this8.id = M.getIdFromTrigger(el);
       _this8.dropdownEl = document.getElementById(_this8.id);
       _this8.$dropdownEl = $(_this8.dropdownEl);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Options for the dropdown
@@ -2259,24 +2310,59 @@ $jscomp.polyfill = function (e, r, p, m) {
        * @prop {Function} onCloseStart - Function called when dropdown starts closing
        * @prop {Function} onCloseEnd - Function called when dropdown finishes closing
        */
+<<<<<<< HEAD
+      _this9.options = $.extend({}, Dropdown.defaults, options);
+=======
       _this8.options = $.extend({}, Dropdown.defaults, options);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Describes open/close state of dropdown
        * @type {Boolean}
        */
+<<<<<<< HEAD
+      _this9.isOpen = false;
+=======
       _this8.isOpen = false;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Describes if dropdown content is scrollable
        * @type {Boolean}
        */
+<<<<<<< HEAD
+      _this9.isScrollable = false;
+=======
       _this8.isScrollable = false;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Describes if touch moving on dropdown content
        * @type {Boolean}
        */
+<<<<<<< HEAD
+      _this9.isTouchMoving = false;
+
+      _this9.focusedIndex = -1;
+      _this9.filterQuery = [];
+
+      // Move dropdown-content after dropdown-trigger
+      if (!!_this9.options.container) {
+        $(_this9.options.container).append(_this9.dropdownEl);
+      } else {
+        _this9.$el.after(_this9.dropdownEl);
+      }
+
+      _this9._makeDropdownFocusable();
+      _this9._resetFilterQueryBound = _this9._resetFilterQuery.bind(_this9);
+      _this9._handleDocumentClickBound = _this9._handleDocumentClick.bind(_this9);
+      _this9._handleDocumentTouchmoveBound = _this9._handleDocumentTouchmove.bind(_this9);
+      _this9._handleDropdownClickBound = _this9._handleDropdownClick.bind(_this9);
+      _this9._handleDropdownKeydownBound = _this9._handleDropdownKeydown.bind(_this9);
+      _this9._handleTriggerKeydownBound = _this9._handleTriggerKeydown.bind(_this9);
+      _this9._setupEventHandlers();
+      return _this9;
+=======
       _this8.isTouchMoving = false;
 
       _this8.focusedIndex = -1;
@@ -2298,6 +2384,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       _this8._handleTriggerKeydownBound = _this8._handleTriggerKeydown.bind(_this8);
       _this8._setupEventHandlers();
       return _this8;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(Dropdown, [{
@@ -2409,17 +2496,29 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_handleDocumentClick",
       value: function _handleDocumentClick(e) {
+<<<<<<< HEAD
+        var _this10 = this;
+=======
         var _this9 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         var $target = $(e.target);
         if (this.options.closeOnClick && $target.closest('.dropdown-content').length && !this.isTouchMoving) {
           // isTouchMoving to check if scrolling on mobile.
           setTimeout(function () {
+<<<<<<< HEAD
+            _this10.close();
+          }, 0);
+        } else if ($target.closest('.dropdown-trigger').length || !$target.closest('.dropdown-content').length) {
+          setTimeout(function () {
+            _this10.close();
+=======
             _this9.close();
           }, 0);
         } else if ($target.closest('.dropdown-trigger').length || !$target.closest('.dropdown-content').length) {
           setTimeout(function () {
             _this9.close();
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           }, 0);
         }
         this.isTouchMoving = false;
@@ -2502,7 +2601,15 @@ $jscomp.polyfill = function (e, r, p, m) {
           var $activatableElement = $(focusedElement).find('a, button').first();
 
           // Click a or button tag if exists, otherwise click li tag
+<<<<<<< HEAD
+          if (!!$activatableElement.length) {
+            $activatableElement[0].click();
+          } else if (!!focusedElement) {
+            focusedElement.click();
+          }
+=======
           !!$activatableElement.length ? $activatableElement[0].click() : focusedElement.click();
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
           // Close dropdown on ESC
         } else if (e.which === M.keys.ESC && this.isOpen) {
@@ -2593,7 +2700,12 @@ $jscomp.polyfill = function (e, r, p, m) {
         };
 
         // Countainer here will be closest ancestor with overflow: hidden
+<<<<<<< HEAD
+        var closestOverflowParent = !!this.dropdownEl.offsetParent ? this.dropdownEl.offsetParent : this.dropdownEl.parentNode;
+
+=======
         var closestOverflowParent = this.dropdownEl.offsetParent;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
         var alignments = M.checkPossibleAlignments(this.el, closestOverflowParent, dropdownBounds, this.options.coverTrigger ? 0 : triggerBRect.height);
 
         var verticalAlignment = 'top';
@@ -2661,7 +2773,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_animateIn",
       value: function _animateIn() {
+<<<<<<< HEAD
+        var _this11 = this;
+=======
         var _this10 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         anim.remove(this.dropdownEl);
         anim({
@@ -2675,6 +2791,15 @@ $jscomp.polyfill = function (e, r, p, m) {
           duration: this.options.inDuration,
           easing: 'easeOutQuint',
           complete: function (anim) {
+<<<<<<< HEAD
+            if (_this11.options.autoFocus) {
+              _this11.dropdownEl.focus();
+            }
+
+            // onOpenEnd callback
+            if (typeof _this11.options.onOpenEnd === 'function') {
+              _this11.options.onOpenEnd.call(_this11, _this11.el);
+=======
             if (_this10.options.autoFocus) {
               _this10.dropdownEl.focus();
             }
@@ -2683,6 +2808,7 @@ $jscomp.polyfill = function (e, r, p, m) {
             if (typeof _this10.options.onOpenEnd === 'function') {
               var elem = anim.animatables[0].target;
               _this10.options.onOpenEnd.call(elem, _this10.el);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             }
           }
         });
@@ -2695,7 +2821,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_animateOut",
       value: function _animateOut() {
+<<<<<<< HEAD
+        var _this12 = this;
+=======
         var _this11 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         anim.remove(this.dropdownEl);
         anim({
@@ -2709,12 +2839,20 @@ $jscomp.polyfill = function (e, r, p, m) {
           duration: this.options.outDuration,
           easing: 'easeOutQuint',
           complete: function (anim) {
+<<<<<<< HEAD
+            _this12._resetDropdownStyles();
+
+            // onCloseEnd callback
+            if (typeof _this12.options.onCloseEnd === 'function') {
+              _this12.options.onCloseEnd.call(_this12, _this12.el);
+=======
             _this11._resetDropdownStyles();
 
             // onCloseEnd callback
             if (typeof _this11.options.onCloseEnd === 'function') {
               var elem = anim.animatables[0].target;
               _this11.options.onCloseEnd.call(_this11, _this11.el);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             }
           }
         });
@@ -2843,7 +2981,11 @@ $jscomp.polyfill = function (e, r, p, m) {
 
   Dropdown._dropdowns = [];
 
+<<<<<<< HEAD
+  M.Dropdown = Dropdown;
+=======
   window.M.Dropdown = Dropdown;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
   if (M.jQueryLoaded) {
     M.initializeJqueryWrapper(Dropdown, 'dropdown', 'M_Dropdown');
@@ -2883,9 +3025,15 @@ $jscomp.polyfill = function (e, r, p, m) {
     function Modal(el, options) {
       _classCallCheck(this, Modal);
 
+<<<<<<< HEAD
+      var _this13 = _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).call(this, Modal, el, options));
+
+      _this13.el.M_Modal = _this13;
+=======
       var _this12 = _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).call(this, Modal, el, options));
 
       _this12.el.M_Modal = _this12;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Options for the modal
@@ -2901,12 +3049,29 @@ $jscomp.polyfill = function (e, r, p, m) {
        * @prop {String} [startingTop='4%'] - startingTop
        * @prop {String} [endingTop='10%'] - endingTop
        */
+<<<<<<< HEAD
+      _this13.options = $.extend({}, Modal.defaults, options);
+=======
       _this12.options = $.extend({}, Modal.defaults, options);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Describes open/close state of modal
        * @type {Boolean}
        */
+<<<<<<< HEAD
+      _this13.isOpen = false;
+
+      _this13.id = _this13.$el.attr('id');
+      _this13._openingTrigger = undefined;
+      _this13.$overlay = $('<div class="modal-overlay"></div>');
+      _this13.el.tabIndex = 0;
+      _this13._nthModalOpened = 0;
+
+      Modal._count++;
+      _this13._setupEventHandlers();
+      return _this13;
+=======
       _this12.isOpen = false;
 
       _this12.id = _this12.$el.attr('id');
@@ -2918,6 +3083,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       Modal._count++;
       _this12._setupEventHandlers();
       return _this12;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(Modal, [{
@@ -3046,7 +3212,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_animateIn",
       value: function _animateIn() {
+<<<<<<< HEAD
+        var _this14 = this;
+=======
         var _this13 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         // Set initial styles
         $.extend(this.el.style, {
@@ -3073,8 +3243,13 @@ $jscomp.polyfill = function (e, r, p, m) {
           easing: 'easeOutCubic',
           // Handle modal onOpenEnd callback
           complete: function () {
+<<<<<<< HEAD
+            if (typeof _this14.options.onOpenEnd === 'function') {
+              _this14.options.onOpenEnd.call(_this14, _this14.el, _this14._openingTrigger);
+=======
             if (typeof _this13.options.onOpenEnd === 'function') {
               _this13.options.onOpenEnd.call(_this13, _this13.el, _this13._openingTrigger);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             }
           }
         };
@@ -3106,7 +3281,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_animateOut",
       value: function _animateOut() {
+<<<<<<< HEAD
+        var _this15 = this;
+=======
         var _this14 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         // Animate overlay
         anim({
@@ -3123,12 +3302,21 @@ $jscomp.polyfill = function (e, r, p, m) {
           easing: 'easeOutCubic',
           // Handle modal ready callback
           complete: function () {
+<<<<<<< HEAD
+            _this15.el.style.display = 'none';
+            _this15.$overlay.remove();
+
+            // Call onCloseEnd callback
+            if (typeof _this15.options.onCloseEnd === 'function') {
+              _this15.options.onCloseEnd.call(_this15, _this15.el);
+=======
             _this14.el.style.display = 'none';
             _this14.$overlay.remove();
 
             // Call onCloseEnd callback
             if (typeof _this14.options.onCloseEnd === 'function') {
               _this14.options.onCloseEnd.call(_this14, _this14.el);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             }
           }
         };
@@ -3317,9 +3505,15 @@ $jscomp.polyfill = function (e, r, p, m) {
     function Materialbox(el, options) {
       _classCallCheck(this, Materialbox);
 
+<<<<<<< HEAD
+      var _this16 = _possibleConstructorReturn(this, (Materialbox.__proto__ || Object.getPrototypeOf(Materialbox)).call(this, Materialbox, el, options));
+
+      _this16.el.M_Materialbox = _this16;
+=======
       var _this15 = _possibleConstructorReturn(this, (Materialbox.__proto__ || Object.getPrototypeOf(Materialbox)).call(this, Materialbox, el, options));
 
       _this15.el.M_Materialbox = _this15;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Options for the modal
@@ -3331,6 +3525,24 @@ $jscomp.polyfill = function (e, r, p, m) {
        * @prop {Function} onCloseStart - Callback function called before materialbox is closed
        * @prop {Function} onCloseEnd - Callback function called after materialbox is closed
        */
+<<<<<<< HEAD
+      _this16.options = $.extend({}, Materialbox.defaults, options);
+
+      _this16.overlayActive = false;
+      _this16.doneAnimating = true;
+      _this16.placeholder = $('<div></div>').addClass('material-placeholder');
+      _this16.originalWidth = 0;
+      _this16.originalHeight = 0;
+      _this16.originInlineStyles = _this16.$el.attr('style');
+      _this16.caption = _this16.el.getAttribute('data-caption') || '';
+
+      // Wrap
+      _this16.$el.before(_this16.placeholder);
+      _this16.placeholder.append(_this16.$el);
+
+      _this16._setupEventHandlers();
+      return _this16;
+=======
       _this15.options = $.extend({}, Materialbox.defaults, options);
 
       _this15.overlayActive = false;
@@ -3347,6 +3559,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
       _this15._setupEventHandlers();
       return _this15;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(Materialbox, [{
@@ -3359,6 +3572,14 @@ $jscomp.polyfill = function (e, r, p, m) {
       value: function destroy() {
         this._removeEventHandlers();
         this.el.M_Materialbox = undefined;
+<<<<<<< HEAD
+
+        // Unwrap image
+        $(this.placeholder).after(this.el).remove();
+
+        this.$el.removeAttr('style');
+=======
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
       }
 
       /**
@@ -3466,7 +3687,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_animateImageIn",
       value: function _animateImageIn() {
+<<<<<<< HEAD
+        var _this17 = this;
+=======
         var _this16 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         var animOptions = {
           targets: this.el,
@@ -3477,11 +3702,19 @@ $jscomp.polyfill = function (e, r, p, m) {
           duration: this.options.inDuration,
           easing: 'easeOutQuad',
           complete: function () {
+<<<<<<< HEAD
+            _this17.doneAnimating = true;
+
+            // onOpenEnd callback
+            if (typeof _this17.options.onOpenEnd === 'function') {
+              _this17.options.onOpenEnd.call(_this17, _this17.el);
+=======
             _this16.doneAnimating = true;
 
             // onOpenEnd callback
             if (typeof _this16.options.onOpenEnd === 'function') {
               _this16.options.onOpenEnd.call(_this16, _this16.el);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             }
           }
         };
@@ -3506,7 +3739,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_animateImageOut",
       value: function _animateImageOut() {
+<<<<<<< HEAD
+        var _this18 = this;
+=======
         var _this17 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         var animOptions = {
           targets: this.el,
@@ -3517,7 +3754,11 @@ $jscomp.polyfill = function (e, r, p, m) {
           duration: this.options.outDuration,
           easing: 'easeOutQuad',
           complete: function () {
+<<<<<<< HEAD
+            _this18.placeholder.css({
+=======
             _this17.placeholder.css({
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
               height: '',
               width: '',
               position: '',
@@ -3526,6 +3767,30 @@ $jscomp.polyfill = function (e, r, p, m) {
             });
 
             // Revert to width or height attribute
+<<<<<<< HEAD
+            if (_this18.attrWidth) {
+              _this18.$el.attr('width', _this18.attrWidth);
+            }
+            if (_this18.attrHeight) {
+              _this18.$el.attr('height', _this18.attrHeight);
+            }
+
+            _this18.$el.removeAttr('style');
+            _this18.originInlineStyles && _this18.$el.attr('style', _this18.originInlineStyles);
+
+            // Remove class
+            _this18.$el.removeClass('active');
+            _this18.doneAnimating = true;
+
+            // Remove overflow overrides on ancestors
+            if (_this18.ancestorsChanged.length) {
+              _this18.ancestorsChanged.css('overflow', '');
+            }
+
+            // onCloseEnd callback
+            if (typeof _this18.options.onCloseEnd === 'function') {
+              _this18.options.onCloseEnd.call(_this18, _this18.el);
+=======
             if (_this17.attrWidth) {
               _this17.$el.attr('width', _this17.attrWidth);
             }
@@ -3548,6 +3813,7 @@ $jscomp.polyfill = function (e, r, p, m) {
             // onCloseEnd callback
             if (typeof _this17.options.onCloseEnd === 'function') {
               _this17.options.onCloseEnd.call(_this17, _this17.el);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             }
           }
         };
@@ -3574,7 +3840,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "open",
       value: function open() {
+<<<<<<< HEAD
+        var _this19 = this;
+=======
         var _this18 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         this._updateVars();
         this.originalWidth = this.el.getBoundingClientRect().width;
@@ -3624,8 +3894,13 @@ $jscomp.polyfill = function (e, r, p, m) {
         this.$overlay = $('<div id="materialbox-overlay"></div>').css({
           opacity: 0
         }).one('click', function () {
+<<<<<<< HEAD
+          if (_this19.doneAnimating) {
+            _this19.close();
+=======
           if (_this18.doneAnimating) {
             _this18.close();
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           }
         });
 
@@ -3706,7 +3981,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "close",
       value: function close() {
+<<<<<<< HEAD
+        var _this20 = this;
+=======
         var _this19 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         this._updateVars();
         this.doneAnimating = false;
@@ -3734,8 +4013,13 @@ $jscomp.polyfill = function (e, r, p, m) {
           duration: this.options.outDuration,
           easing: 'easeOutQuad',
           complete: function () {
+<<<<<<< HEAD
+            _this20.overlayActive = false;
+            _this20.$overlay.remove();
+=======
             _this19.overlayActive = false;
             _this19.$overlay.remove();
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           }
         });
 
@@ -3749,7 +4033,11 @@ $jscomp.polyfill = function (e, r, p, m) {
             duration: this.options.outDuration,
             easing: 'easeOutQuad',
             complete: function () {
+<<<<<<< HEAD
+              _this20.$photoCaption.remove();
+=======
               _this19.$photoCaption.remove();
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             }
           });
         }
@@ -3799,30 +4087,53 @@ $jscomp.polyfill = function (e, r, p, m) {
     function Parallax(el, options) {
       _classCallCheck(this, Parallax);
 
+<<<<<<< HEAD
+      var _this21 = _possibleConstructorReturn(this, (Parallax.__proto__ || Object.getPrototypeOf(Parallax)).call(this, Parallax, el, options));
+
+      _this21.el.M_Parallax = _this21;
+=======
       var _this20 = _possibleConstructorReturn(this, (Parallax.__proto__ || Object.getPrototypeOf(Parallax)).call(this, Parallax, el, options));
 
       _this20.el.M_Parallax = _this20;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Options for the Parallax
        * @member Parallax#options
        * @prop {Number} responsiveThreshold
        */
+<<<<<<< HEAD
+      _this21.options = $.extend({}, Parallax.defaults, options);
+      _this21._enabled = window.innerWidth > _this21.options.responsiveThreshold;
+
+      _this21.$img = _this21.$el.find('img').first();
+      _this21.$img.each(function () {
+=======
       _this20.options = $.extend({}, Parallax.defaults, options);
       _this20._enabled = window.innerWidth > _this20.options.responsiveThreshold;
 
       _this20.$img = _this20.$el.find('img').first();
       _this20.$img.each(function () {
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
         var el = this;
         if (el.complete) $(el).trigger('load');
       });
 
+<<<<<<< HEAD
+      _this21._updateParallax();
+      _this21._setupEventHandlers();
+      _this21._setupStyles();
+
+      Parallax._parallaxes.push(_this21);
+      return _this21;
+=======
       _this20._updateParallax();
       _this20._setupEventHandlers();
       _this20._setupStyles();
 
       Parallax._parallaxes.push(_this20);
       return _this20;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(Parallax, [{
@@ -3976,9 +4287,15 @@ $jscomp.polyfill = function (e, r, p, m) {
     function Tabs(el, options) {
       _classCallCheck(this, Tabs);
 
+<<<<<<< HEAD
+      var _this22 = _possibleConstructorReturn(this, (Tabs.__proto__ || Object.getPrototypeOf(Tabs)).call(this, Tabs, el, options));
+
+      _this22.el.M_Tabs = _this22;
+=======
       var _this21 = _possibleConstructorReturn(this, (Tabs.__proto__ || Object.getPrototypeOf(Tabs)).call(this, Tabs, el, options));
 
       _this21.el.M_Tabs = _this21;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Options for the Tabs
@@ -3988,6 +4305,28 @@ $jscomp.polyfill = function (e, r, p, m) {
        * @prop {Boolean} swipeable
        * @prop {Number} responsiveThreshold
        */
+<<<<<<< HEAD
+      _this22.options = $.extend({}, Tabs.defaults, options);
+
+      // Setup
+      _this22.$tabLinks = _this22.$el.children('li.tab').children('a');
+      _this22.index = 0;
+      _this22._setupActiveTabLink();
+
+      // Setup tabs content
+      if (_this22.options.swipeable) {
+        _this22._setupSwipeableTabs();
+      } else {
+        _this22._setupNormalTabs();
+      }
+
+      // Setup tabs indicator after content to ensure accurate widths
+      _this22._setTabsAndTabWidth();
+      _this22._createIndicator();
+
+      _this22._setupEventHandlers();
+      return _this22;
+=======
       _this21.options = $.extend({}, Tabs.defaults, options);
 
       // Setup
@@ -4005,6 +4344,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
       _this21._setupEventHandlers();
       return _this21;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(Tabs, [{
@@ -4075,7 +4415,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_handleTabClick",
       value: function _handleTabClick(e) {
+<<<<<<< HEAD
+        var _this23 = this;
+=======
         var _this22 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         var tab = $(e.target).closest('li.tab');
         var tabLink = $(e.target).closest('a');
@@ -4095,8 +4439,11 @@ $jscomp.polyfill = function (e, r, p, m) {
           return;
         }
 
+<<<<<<< HEAD
+=======
         this._setTabsAndTabWidth();
 
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
         // Make the old tab inactive.
         this.$activeTabLink.removeClass('active');
         var $oldContent = this.$content;
@@ -4115,8 +4462,13 @@ $jscomp.polyfill = function (e, r, p, m) {
         if (this.options.swipeable) {
           if (this._tabsCarousel) {
             this._tabsCarousel.set(this.index, function () {
+<<<<<<< HEAD
+              if (typeof _this23.options.onShow === 'function') {
+                _this23.options.onShow.call(_this23, _this23.$content[0]);
+=======
               if (typeof _this22.options.onShow === 'function') {
                 _this22.options.onShow.call(_this22, _this22.$content[0]);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
               }
             });
           }
@@ -4135,6 +4487,12 @@ $jscomp.polyfill = function (e, r, p, m) {
           }
         }
 
+<<<<<<< HEAD
+        // Update widths after content is swapped (scrollbar bugfix)
+        this._setTabsAndTabWidth();
+
+=======
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
         // Update indicator
         this._animateIndicator(prevIndex);
 
@@ -4149,7 +4507,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_createIndicator",
       value: function _createIndicator() {
+<<<<<<< HEAD
+        var _this24 = this;
+=======
         var _this23 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         var indicator = document.createElement('li');
         indicator.classList.add('indicator');
@@ -4158,8 +4520,13 @@ $jscomp.polyfill = function (e, r, p, m) {
         this._indicator = indicator;
 
         setTimeout(function () {
+<<<<<<< HEAD
+          _this24._indicator.style.left = _this24._calcLeftPos(_this24.$activeTabLink) + 'px';
+          _this24._indicator.style.right = _this24._calcRightPos(_this24.$activeTabLink) + 'px';
+=======
           _this23._indicator.style.left = _this23._calcLeftPos(_this23.$activeTabLink) + 'px';
           _this23._indicator.style.right = _this23._calcRightPos(_this23.$activeTabLink) + 'px';
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
         }, 0);
       }
 
@@ -4199,7 +4566,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_setupSwipeableTabs",
       value: function _setupSwipeableTabs() {
+<<<<<<< HEAD
+        var _this25 = this;
+=======
         var _this24 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         // Change swipeable according to responsive threshold
         if (window.innerWidth > this.options.responsiveThreshold) {
@@ -4225,6 +4596,16 @@ $jscomp.polyfill = function (e, r, p, m) {
           fullWidth: true,
           noWrap: true,
           onCycleTo: function (item) {
+<<<<<<< HEAD
+            var prevIndex = _this25.index;
+            _this25.index = $(item).index();
+            _this25.$activeTabLink.removeClass('active');
+            _this25.$activeTabLink = _this25.$tabLinks.eq(_this25.index);
+            _this25.$activeTabLink.addClass('active');
+            _this25._animateIndicator(prevIndex);
+            if (typeof _this25.options.onShow === 'function') {
+              _this25.options.onShow.call(_this25, _this25.$content[0]);
+=======
             var prevIndex = _this24.index;
             _this24.index = $(item).index();
             _this24.$activeTabLink.removeClass('active');
@@ -4233,6 +4614,7 @@ $jscomp.polyfill = function (e, r, p, m) {
             _this24._animateIndicator(prevIndex);
             if (typeof _this24.options.onShow === 'function') {
               _this24.options.onShow.call(_this24, _this24.$content[0]);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             }
           }
         });
@@ -4327,6 +4709,10 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "updateTabIndicator",
       value: function updateTabIndicator() {
+<<<<<<< HEAD
+        this._setTabsAndTabWidth();
+=======
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
         this._animateIndicator(this.index);
       }
 
@@ -4404,7 +4790,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     return Tabs;
   }(Component);
 
+<<<<<<< HEAD
+  M.Tabs = Tabs;
+=======
   window.M.Tabs = Tabs;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
   if (M.jQueryLoaded) {
     M.initializeJqueryWrapper(Tabs, 'tabs', 'M_Tabs');
@@ -4441,6 +4831,19 @@ $jscomp.polyfill = function (e, r, p, m) {
     function Tooltip(el, options) {
       _classCallCheck(this, Tooltip);
 
+<<<<<<< HEAD
+      var _this26 = _possibleConstructorReturn(this, (Tooltip.__proto__ || Object.getPrototypeOf(Tooltip)).call(this, Tooltip, el, options));
+
+      _this26.el.M_Tooltip = _this26;
+      _this26.options = $.extend({}, Tooltip.defaults, options);
+
+      _this26.isOpen = false;
+      _this26.isHovered = false;
+      _this26.isFocused = false;
+      _this26._appendTooltipEl();
+      _this26._setupEventHandlers();
+      return _this26;
+=======
       var _this25 = _possibleConstructorReturn(this, (Tooltip.__proto__ || Object.getPrototypeOf(Tooltip)).call(this, Tooltip, el, options));
 
       _this25.el.M_Tooltip = _this25;
@@ -4452,6 +4855,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       _this25._appendTooltipEl();
       _this25._setupEventHandlers();
       return _this25;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(Tooltip, [{
@@ -4506,15 +4910,27 @@ $jscomp.polyfill = function (e, r, p, m) {
       }
     }, {
       key: "open",
+<<<<<<< HEAD
+      value: function open(isManual) {
+        if (this.isOpen) {
+          return;
+        }
+        isManual = isManual === undefined ? true : undefined; // Default value true
+=======
       value: function open() {
         if (this.isOpen) {
           return;
         }
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
         this.isOpen = true;
         // Update tooltip content with HTML attribute options
         this.options = $.extend({}, this.options, this._getAttributeOptions());
         this._updateTooltipContent();
+<<<<<<< HEAD
+        this._setEnterDelayTimeout(isManual);
+=======
         this._setEnterDelayTimeout();
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
       }
     }, {
       key: "close",
@@ -4536,16 +4952,28 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_setExitDelayTimeout",
       value: function _setExitDelayTimeout() {
+<<<<<<< HEAD
+        var _this27 = this;
+=======
         var _this26 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         clearTimeout(this._exitDelayTimeout);
 
         this._exitDelayTimeout = setTimeout(function () {
+<<<<<<< HEAD
+          if (_this27.isHovered || _this27.isFocused) {
+            return;
+          }
+
+          _this27._animateOut();
+=======
           if (_this26.isHovered || _this26.isFocused) {
             return;
           }
 
           _this26._animateOut();
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
         }, this.options.exitDelay);
       }
 
@@ -4555,17 +4983,30 @@ $jscomp.polyfill = function (e, r, p, m) {
 
     }, {
       key: "_setEnterDelayTimeout",
+<<<<<<< HEAD
+      value: function _setEnterDelayTimeout(isManual) {
+        var _this28 = this;
+=======
       value: function _setEnterDelayTimeout() {
         var _this27 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         clearTimeout(this._enterDelayTimeout);
 
         this._enterDelayTimeout = setTimeout(function () {
+<<<<<<< HEAD
+          if (!_this28.isHovered && !_this28.isFocused && !isManual) {
+            return;
+          }
+
+          _this28._animateIn();
+=======
           if (!_this27.isHovered && !_this27.isFocused) {
             return;
           }
 
           _this27._animateIn();
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
         }, this.options.enterDelay);
       }
     }, {
@@ -4679,7 +5120,11 @@ $jscomp.polyfill = function (e, r, p, m) {
       value: function _handleMouseEnter() {
         this.isHovered = true;
         this.isFocused = false; // Allows close of tooltip when opened by focus.
+<<<<<<< HEAD
+        this.open(false);
+=======
         this.open();
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
       }
     }, {
       key: "_handleMouseLeave",
@@ -4693,7 +5138,11 @@ $jscomp.polyfill = function (e, r, p, m) {
       value: function _handleFocus() {
         if (M.tabPressed) {
           this.isFocused = true;
+<<<<<<< HEAD
+          this.open(false);
+=======
           this.open();
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
         }
       }
     }, {
@@ -5191,11 +5640,24 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_setTimer",
       value: function _setTimer() {
+<<<<<<< HEAD
+        var _this29 = this;
+=======
         var _this28 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         if (this.timeRemaining !== Infinity) {
           this.counterInterval = setInterval(function () {
             // If toast is not being dragged, decrease its time remaining
+<<<<<<< HEAD
+            if (!_this29.panning) {
+              _this29.timeRemaining -= 20;
+            }
+
+            // Animate toast out
+            if (_this29.timeRemaining <= 0) {
+              _this29.dismiss();
+=======
             if (!_this28.panning) {
               _this28.timeRemaining -= 20;
             }
@@ -5203,6 +5665,7 @@ $jscomp.polyfill = function (e, r, p, m) {
             // Animate toast out
             if (_this28.timeRemaining <= 0) {
               _this28.dismiss();
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             }
           }, 20);
         }
@@ -5215,7 +5678,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "dismiss",
       value: function dismiss() {
+<<<<<<< HEAD
+        var _this30 = this;
+=======
         var _this29 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         window.clearInterval(this.counterInterval);
         var activationDistance = this.el.offsetWidth * this.options.activationPercent;
@@ -5234,12 +5701,21 @@ $jscomp.polyfill = function (e, r, p, m) {
           easing: 'easeOutExpo',
           complete: function () {
             // Call the optional callback
+<<<<<<< HEAD
+            if (typeof _this30.options.completeCallback === 'function') {
+              _this30.options.completeCallback();
+            }
+            // Remove toast from DOM
+            _this30.$el.remove();
+            Toast._toasts.splice(Toast._toasts.indexOf(_this30), 1);
+=======
             if (typeof _this29.options.completeCallback === 'function') {
               _this29.options.completeCallback();
             }
             // Remove toast from DOM
             _this29.$el.remove();
             Toast._toasts.splice(Toast._toasts.indexOf(_this29), 1);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             if (Toast._toasts.length === 0) {
               Toast._removeContainer();
             }
@@ -5465,10 +5941,17 @@ $jscomp.polyfill = function (e, r, p, m) {
     function Sidenav(el, options) {
       _classCallCheck(this, Sidenav);
 
+<<<<<<< HEAD
+      var _this31 = _possibleConstructorReturn(this, (Sidenav.__proto__ || Object.getPrototypeOf(Sidenav)).call(this, Sidenav, el, options));
+
+      _this31.el.M_Sidenav = _this31;
+      _this31.id = _this31.$el.attr('id');
+=======
       var _this30 = _possibleConstructorReturn(this, (Sidenav.__proto__ || Object.getPrototypeOf(Sidenav)).call(this, Sidenav, el, options));
 
       _this30.el.M_Sidenav = _this30;
       _this30.id = _this30.$el.attr('id');
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Options for the Sidenav
@@ -5482,24 +5965,52 @@ $jscomp.polyfill = function (e, r, p, m) {
        * @prop {Function} onCloseStart - Function called when sidenav starts exiting
        * @prop {Function} onCloseEnd - Function called when sidenav finishes exiting
        */
+<<<<<<< HEAD
+      _this31.options = $.extend({}, Sidenav.defaults, options);
+=======
       _this30.options = $.extend({}, Sidenav.defaults, options);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Describes open/close state of Sidenav
        * @type {Boolean}
        */
+<<<<<<< HEAD
+      _this31.isOpen = false;
+=======
       _this30.isOpen = false;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Describes if Sidenav is fixed
        * @type {Boolean}
        */
+<<<<<<< HEAD
+      _this31.isFixed = _this31.el.classList.contains('sidenav-fixed');
+=======
       _this30.isFixed = _this30.el.classList.contains('sidenav-fixed');
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Describes if Sidenav is being draggeed
        * @type {Boolean}
        */
+<<<<<<< HEAD
+      _this31.isDragged = false;
+
+      // Window size variables for window resize checks
+      _this31.lastWindowWidth = window.innerWidth;
+      _this31.lastWindowHeight = window.innerHeight;
+
+      _this31._createOverlay();
+      _this31._createDragTarget();
+      _this31._setupEventHandlers();
+      _this31._setupClasses();
+      _this31._setupFixed();
+
+      Sidenav._sidenavs.push(_this31);
+      return _this31;
+=======
       _this30.isDragged = false;
 
       // Window size variables for window resize checks
@@ -5514,6 +6025,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
       Sidenav._sidenavs.push(_this30);
       return _this30;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(Sidenav, [{
@@ -5525,6 +6037,10 @@ $jscomp.polyfill = function (e, r, p, m) {
        */
       value: function destroy() {
         this._removeEventHandlers();
+<<<<<<< HEAD
+        this._enableBodyScrolling();
+=======
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
         this._overlay.parentNode.removeChild(this._overlay);
         this.dragTarget.parentNode.removeChild(this.dragTarget);
         this.el.M_Sidenav = undefined;
@@ -5949,7 +6465,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_animateSidenavIn",
       value: function _animateSidenavIn() {
+<<<<<<< HEAD
+        var _this32 = this;
+=======
         var _this31 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         var slideOutPercent = this.options.edge === 'left' ? -1 : 1;
         if (this.isDragged) {
@@ -5964,8 +6484,13 @@ $jscomp.polyfill = function (e, r, p, m) {
           easing: 'easeOutQuad',
           complete: function () {
             // Run onOpenEnd callback
+<<<<<<< HEAD
+            if (typeof _this32.options.onOpenEnd === 'function') {
+              _this32.options.onOpenEnd.call(_this32, _this32.el);
+=======
             if (typeof _this31.options.onOpenEnd === 'function') {
               _this31.options.onOpenEnd.call(_this31, _this31.el);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             }
           }
         });
@@ -5999,7 +6524,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_animateSidenavOut",
       value: function _animateSidenavOut() {
+<<<<<<< HEAD
+        var _this33 = this;
+=======
         var _this32 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         var endPercent = this.options.edge === 'left' ? -1 : 1;
         var slideOutPercent = 0;
@@ -6015,8 +6544,13 @@ $jscomp.polyfill = function (e, r, p, m) {
           easing: 'easeOutQuad',
           complete: function () {
             // Run onOpenEnd callback
+<<<<<<< HEAD
+            if (typeof _this33.options.onCloseEnd === 'function') {
+              _this33.options.onCloseEnd.call(_this33, _this33.el);
+=======
             if (typeof _this32.options.onCloseEnd === 'function') {
               _this32.options.onCloseEnd.call(_this32, _this32.el);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             }
           }
         });
@@ -6024,7 +6558,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_animateOverlayOut",
       value: function _animateOverlayOut() {
+<<<<<<< HEAD
+        var _this34 = this;
+=======
         var _this33 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         anim.remove(this._overlay);
         anim({
@@ -6033,7 +6571,11 @@ $jscomp.polyfill = function (e, r, p, m) {
           duration: this.options.outDuration,
           easing: 'easeOutQuad',
           complete: function () {
+<<<<<<< HEAD
+            $(_this34._overlay).css('display', 'none');
+=======
             $(_this33._overlay).css('display', 'none');
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           }
         });
       }
@@ -6072,7 +6614,11 @@ $jscomp.polyfill = function (e, r, p, m) {
 
   Sidenav._sidenavs = [];
 
+<<<<<<< HEAD
+  M.Sidenav = Sidenav;
+=======
   window.M.Sidenav = Sidenav;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
   if (M.jQueryLoaded) {
     M.initializeJqueryWrapper(Sidenav, 'sidenav', 'M_Sidenav');
@@ -6107,9 +6653,15 @@ $jscomp.polyfill = function (e, r, p, m) {
     function ScrollSpy(el, options) {
       _classCallCheck(this, ScrollSpy);
 
+<<<<<<< HEAD
+      var _this35 = _possibleConstructorReturn(this, (ScrollSpy.__proto__ || Object.getPrototypeOf(ScrollSpy)).call(this, ScrollSpy, el, options));
+
+      _this35.el.M_ScrollSpy = _this35;
+=======
       var _this34 = _possibleConstructorReturn(this, (ScrollSpy.__proto__ || Object.getPrototypeOf(ScrollSpy)).call(this, ScrollSpy, el, options));
 
       _this34.el.M_ScrollSpy = _this34;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Options for the modal
@@ -6119,6 +6671,19 @@ $jscomp.polyfill = function (e, r, p, m) {
        * @prop {String} [activeClass='active'] - Class applied to active elements
        * @prop {Function} [getActiveElement] - Used to find active element
        */
+<<<<<<< HEAD
+      _this35.options = $.extend({}, ScrollSpy.defaults, options);
+
+      // setup
+      ScrollSpy._elements.push(_this35);
+      ScrollSpy._count++;
+      ScrollSpy._increment++;
+      _this35.tickId = -1;
+      _this35.id = ScrollSpy._increment;
+      _this35._setupEventHandlers();
+      _this35._handleWindowScroll();
+      return _this35;
+=======
       _this34.options = $.extend({}, ScrollSpy.defaults, options);
 
       // setup
@@ -6130,6 +6695,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       _this34._setupEventHandlers();
       _this34._handleWindowScroll();
       return _this34;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(ScrollSpy, [{
@@ -6282,7 +6848,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_exit",
       value: function _exit() {
+<<<<<<< HEAD
+        var _this36 = this;
+=======
         var _this35 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         ScrollSpy._visibleElements = ScrollSpy._visibleElements.filter(function (value) {
           return value.height() != 0;
@@ -6292,7 +6862,11 @@ $jscomp.polyfill = function (e, r, p, m) {
           $(this.options.getActiveElement(ScrollSpy._visibleElements[0].attr('id'))).removeClass(this.options.activeClass);
 
           ScrollSpy._visibleElements = ScrollSpy._visibleElements.filter(function (el) {
+<<<<<<< HEAD
+            return el.attr('id') != _this36.$el.attr('id');
+=======
             return el.attr('id') != _this35.$el.attr('id');
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           });
           if (ScrollSpy._visibleElements[0]) {
             // Check if empty
@@ -6427,9 +7001,15 @@ $jscomp.polyfill = function (e, r, p, m) {
     function Autocomplete(el, options) {
       _classCallCheck(this, Autocomplete);
 
+<<<<<<< HEAD
+      var _this37 = _possibleConstructorReturn(this, (Autocomplete.__proto__ || Object.getPrototypeOf(Autocomplete)).call(this, Autocomplete, el, options));
+
+      _this37.el.M_Autocomplete = _this37;
+=======
       var _this36 = _possibleConstructorReturn(this, (Autocomplete.__proto__ || Object.getPrototypeOf(Autocomplete)).call(this, Autocomplete, el, options));
 
       _this36.el.M_Autocomplete = _this36;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Options for the autocomplete
@@ -6443,6 +7023,22 @@ $jscomp.polyfill = function (e, r, p, m) {
        * @prop {Boolean} noWrap
        * @prop {Function} onCycleTo
        */
+<<<<<<< HEAD
+      _this37.options = $.extend({}, Autocomplete.defaults, options);
+
+      // Setup
+      _this37.isOpen = false;
+      _this37.count = 0;
+      _this37.activeIndex = -1;
+      _this37.oldVal;
+      _this37.$inputField = _this37.$el.closest('.input-field');
+      _this37.$active = $();
+      _this37._mousedown = false;
+      _this37._setupDropdown();
+
+      _this37._setupEventHandlers();
+      return _this37;
+=======
       _this36.options = $.extend({}, Autocomplete.defaults, options);
 
       // Setup
@@ -6457,6 +7053,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
       _this36._setupEventHandlers();
       return _this36;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(Autocomplete, [{
@@ -6528,7 +7125,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_setupDropdown",
       value: function _setupDropdown() {
+<<<<<<< HEAD
+        var _this38 = this;
+=======
         var _this37 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         this.container = document.createElement('ul');
         this.container.id = "autocomplete-options-" + M.guid();
@@ -6541,7 +7142,11 @@ $jscomp.polyfill = function (e, r, p, m) {
           closeOnClick: false,
           coverTrigger: false,
           onItemClick: function (itemEl) {
+<<<<<<< HEAD
+            _this38.selectOption($(itemEl));
+=======
             _this37.selectOption($(itemEl));
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           }
         });
 
@@ -6594,7 +7199,11 @@ $jscomp.polyfill = function (e, r, p, m) {
 
         // Check if the input isn't empty
         // Check if focus triggered by tab
+<<<<<<< HEAD
+        if (this.oldVal !== val && (M.tabPressed || e.type !== 'focus')) {
+=======
         if (this.oldVal !== val && M.tabPressed) {
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           this.open();
         }
 
@@ -6753,7 +7362,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_renderDropdown",
       value: function _renderDropdown(data, val) {
+<<<<<<< HEAD
+        var _this39 = this;
+=======
         var _this38 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         this._resetAutocomplete();
 
@@ -6780,7 +7393,11 @@ $jscomp.polyfill = function (e, r, p, m) {
         // Sort
         if (this.options.sortFunction) {
           var sortFunctionBound = function (a, b) {
+<<<<<<< HEAD
+            return _this39.options.sortFunction(a.key.toLowerCase(), b.key.toLowerCase(), val.toLowerCase());
+=======
             return _this38.options.sortFunction(a.key.toLowerCase(), b.key.toLowerCase(), val.toLowerCase());
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           };
           matchingData.sort(sortFunctionBound);
         }
@@ -7053,8 +7670,12 @@ $jscomp.polyfill = function (e, r, p, m) {
           formReset.find('select').each(function () {
             // check if initialized
             if (this.M_FormSelect) {
+<<<<<<< HEAD
+              $(this).trigger('change');
+=======
               var reset_text = $(this).find('option[selected]').text();
               $(this).siblings('input.select-dropdown')[0].value = reset_text;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             }
           });
         }, 0);
@@ -7162,9 +7783,15 @@ $jscomp.polyfill = function (e, r, p, m) {
     function Slider(el, options) {
       _classCallCheck(this, Slider);
 
+<<<<<<< HEAD
+      var _this40 = _possibleConstructorReturn(this, (Slider.__proto__ || Object.getPrototypeOf(Slider)).call(this, Slider, el, options));
+
+      _this40.el.M_Slider = _this40;
+=======
       var _this39 = _possibleConstructorReturn(this, (Slider.__proto__ || Object.getPrototypeOf(Slider)).call(this, Slider, el, options));
 
       _this39.el.M_Slider = _this39;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Options for the modal
@@ -7174,6 +7801,29 @@ $jscomp.polyfill = function (e, r, p, m) {
        * @prop {Number} [duration=500] - Length in ms of slide transition
        * @prop {Number} [interval=6000] - Length in ms of slide interval
        */
+<<<<<<< HEAD
+      _this40.options = $.extend({}, Slider.defaults, options);
+
+      // setup
+      _this40.$slider = _this40.$el.find('.slides');
+      _this40.$slides = _this40.$slider.children('li');
+      _this40.activeIndex = _this40.$slides.filter(function (item) {
+        return $(item).hasClass('active');
+      }).first().index();
+      if (_this40.activeIndex != -1) {
+        _this40.$active = _this40.$slides.eq(_this40.activeIndex);
+      }
+
+      _this40._setSliderHeight();
+
+      // Set initial positions of captions
+      _this40.$slides.find('.caption').each(function (el) {
+        _this40._animateCaptionIn(el, 0);
+      });
+
+      // Move img src into background-image
+      _this40.$slides.find('img').each(function (el) {
+=======
       _this39.options = $.extend({}, Slider.defaults, options);
 
       // setup
@@ -7195,6 +7845,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
       // Move img src into background-image
       _this39.$slides.find('img').each(function (el) {
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
         var placeholderBase64 = 'data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
         if ($(el).attr('src') !== placeholderBase64) {
           $(el).css('background-image', 'url("' + $(el).attr('src') + '")');
@@ -7202,6 +7853,28 @@ $jscomp.polyfill = function (e, r, p, m) {
         }
       });
 
+<<<<<<< HEAD
+      _this40._setupIndicators();
+
+      // Show active slide
+      if (_this40.$active) {
+        _this40.$active.css('display', 'block');
+      } else {
+        _this40.$slides.first().addClass('active');
+        anim({
+          targets: _this40.$slides.first()[0],
+          opacity: 1,
+          duration: _this40.options.duration,
+          easing: 'easeOutQuad'
+        });
+
+        _this40.activeIndex = 0;
+        _this40.$active = _this40.$slides.eq(_this40.activeIndex);
+
+        // Update indicators
+        if (_this40.options.indicators) {
+          _this40.$indicators.eq(_this40.activeIndex).addClass('active');
+=======
       _this39._setupIndicators();
 
       // Show active slide
@@ -7222,10 +7895,20 @@ $jscomp.polyfill = function (e, r, p, m) {
         // Update indicators
         if (_this39.options.indicators) {
           _this39.$indicators.eq(_this39.activeIndex).addClass('active');
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
         }
       }
 
       // Adjust height to current slide
+<<<<<<< HEAD
+      _this40.$active.find('img').each(function (el) {
+        anim({
+          targets: _this40.$active.find('.caption')[0],
+          opacity: 1,
+          translateX: 0,
+          translateY: 0,
+          duration: _this40.options.duration,
+=======
       _this39.$active.find('img').each(function (el) {
         anim({
           targets: _this39.$active.find('.caption')[0],
@@ -7233,15 +7916,24 @@ $jscomp.polyfill = function (e, r, p, m) {
           translateX: 0,
           translateY: 0,
           duration: _this39.options.duration,
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           easing: 'easeOutQuad'
         });
       });
 
+<<<<<<< HEAD
+      _this40._setupEventHandlers();
+
+      // auto scroll
+      _this40.start();
+      return _this40;
+=======
       _this39._setupEventHandlers();
 
       // auto scroll
       _this39.start();
       return _this39;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(Slider, [{
@@ -7265,14 +7957,22 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_setupEventHandlers",
       value: function _setupEventHandlers() {
+<<<<<<< HEAD
+        var _this41 = this;
+=======
         var _this40 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         this._handleIntervalBound = this._handleInterval.bind(this);
         this._handleIndicatorClickBound = this._handleIndicatorClick.bind(this);
 
         if (this.options.indicators) {
           this.$indicators.each(function (el) {
+<<<<<<< HEAD
+            el.addEventListener('click', _this41._handleIndicatorClickBound);
+=======
             el.addEventListener('click', _this40._handleIndicatorClickBound);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           });
         }
       }
@@ -7284,11 +7984,19 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_removeEventHandlers",
       value: function _removeEventHandlers() {
+<<<<<<< HEAD
+        var _this42 = this;
+
+        if (this.options.indicators) {
+          this.$indicators.each(function (el) {
+            el.removeEventListener('click', _this42._handleIndicatorClickBound);
+=======
         var _this41 = this;
 
         if (this.options.indicators) {
           this.$indicators.each(function (el) {
             el.removeEventListener('click', _this41._handleIndicatorClickBound);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           });
         }
       }
@@ -7373,13 +8081,21 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_setupIndicators",
       value: function _setupIndicators() {
+<<<<<<< HEAD
+        var _this43 = this;
+=======
         var _this42 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         if (this.options.indicators) {
           this.$indicators = $('<ul class="indicators"></ul>');
           this.$slides.each(function (el, index) {
             var $indicator = $('<li class="indicator-item"></li>');
+<<<<<<< HEAD
+            _this43.$indicators.append($indicator[0]);
+=======
             _this42.$indicators.append($indicator[0]);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           });
           this.$el.append(this.$indicators[0]);
           this.$indicators = this.$indicators.children('li.indicator-item');
@@ -7404,7 +8120,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "set",
       value: function set(index) {
+<<<<<<< HEAD
+        var _this44 = this;
+=======
         var _this43 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         // Wrap around indices.
         if (index >= this.$slides.length) index = 0;else if (index < 0) index = this.$slides.length - 1;
@@ -7421,7 +8141,11 @@ $jscomp.polyfill = function (e, r, p, m) {
             duration: this.options.duration,
             easing: 'easeOutQuad',
             complete: function () {
+<<<<<<< HEAD
+              _this44.$slides.not('.active').each(function (el) {
+=======
               _this43.$slides.not('.active').each(function (el) {
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
                 anim({
                   targets: el,
                   opacity: 0,
@@ -7620,9 +8344,15 @@ $jscomp.polyfill = function (e, r, p, m) {
     function Chips(el, options) {
       _classCallCheck(this, Chips);
 
+<<<<<<< HEAD
+      var _this45 = _possibleConstructorReturn(this, (Chips.__proto__ || Object.getPrototypeOf(Chips)).call(this, Chips, el, options));
+
+      _this45.el.M_Chips = _this45;
+=======
       var _this44 = _possibleConstructorReturn(this, (Chips.__proto__ || Object.getPrototypeOf(Chips)).call(this, Chips, el, options));
 
       _this44.el.M_Chips = _this44;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Options for the modal
@@ -7632,6 +8362,36 @@ $jscomp.polyfill = function (e, r, p, m) {
        * @prop {String} secondaryPlaceholder
        * @prop {Object} autocompleteOptions
        */
+<<<<<<< HEAD
+      _this45.options = $.extend({}, Chips.defaults, options);
+
+      _this45.$el.addClass('chips input-field');
+      _this45.chipsData = [];
+      _this45.$chips = $();
+      _this45._setupInput();
+      _this45.hasAutocomplete = Object.keys(_this45.options.autocompleteOptions).length > 0;
+
+      // Set input id
+      if (!_this45.$input.attr('id')) {
+        _this45.$input.attr('id', M.guid());
+      }
+
+      // Render initial chips
+      if (_this45.options.data.length) {
+        _this45.chipsData = _this45.options.data;
+        _this45._renderChips(_this45.chipsData);
+      }
+
+      // Setup autocomplete if needed
+      if (_this45.hasAutocomplete) {
+        _this45._setupAutocomplete();
+      }
+
+      _this45._setPlaceholder();
+      _this45._setupLabel();
+      _this45._setupEventHandlers();
+      return _this45;
+=======
       _this44.options = $.extend({}, Chips.defaults, options);
 
       _this44.$el.addClass('chips input-field');
@@ -7660,6 +8420,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       _this44._setupLabel();
       _this44._setupEventHandlers();
       return _this44;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(Chips, [{
@@ -7862,6 +8623,16 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_setupAutocomplete",
       value: function _setupAutocomplete() {
+<<<<<<< HEAD
+        var _this46 = this;
+
+        this.options.autocompleteOptions.onAutocomplete = function (val) {
+          _this46.addChip({
+            tag: val
+          });
+          _this46.$input[0].value = '';
+          _this46.$input[0].focus();
+=======
         var _this45 = this;
 
         this.options.autocompleteOptions.onAutocomplete = function (val) {
@@ -7870,6 +8641,7 @@ $jscomp.polyfill = function (e, r, p, m) {
           });
           _this45.$input[0].value = '';
           _this45.$input[0].focus();
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
         };
 
         this.autocomplete = M.Autocomplete.init(this.$input[0], this.options.autocompleteOptions);
@@ -8164,14 +8936,29 @@ $jscomp.polyfill = function (e, r, p, m) {
     function Pushpin(el, options) {
       _classCallCheck(this, Pushpin);
 
+<<<<<<< HEAD
+      var _this47 = _possibleConstructorReturn(this, (Pushpin.__proto__ || Object.getPrototypeOf(Pushpin)).call(this, Pushpin, el, options));
+
+      _this47.el.M_Pushpin = _this47;
+=======
       var _this46 = _possibleConstructorReturn(this, (Pushpin.__proto__ || Object.getPrototypeOf(Pushpin)).call(this, Pushpin, el, options));
 
       _this46.el.M_Pushpin = _this46;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Options for the modal
        * @member Pushpin#options
        */
+<<<<<<< HEAD
+      _this47.options = $.extend({}, Pushpin.defaults, options);
+
+      _this47.originalOffset = _this47.el.offsetTop;
+      Pushpin._pushpins.push(_this47);
+      _this47._setupEventHandlers();
+      _this47._updatePosition();
+      return _this47;
+=======
       _this46.options = $.extend({}, Pushpin.defaults, options);
 
       _this46.originalOffset = _this46.el.offsetTop;
@@ -8179,6 +8966,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       _this46._setupEventHandlers();
       _this46._updatePosition();
       return _this46;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(Pushpin, [{
@@ -8214,7 +9002,10 @@ $jscomp.polyfill = function (e, r, p, m) {
 
         if (this.options.top <= scrolled && this.options.bottom >= scrolled && !this.el.classList.contains('pinned')) {
           this._removePinClasses();
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           this.el.style.top = this.options.offset + "px";
           this.el.classList.add('pinned');
 
@@ -8251,7 +9042,14 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_removePinClasses",
       value: function _removePinClasses() {
+<<<<<<< HEAD
+        // IE 11 bug (can't remove multiple classes in one line)
+        this.el.classList.remove('pin-top');
+        this.el.classList.remove('pinned');
+        this.el.classList.remove('pin-bottom');
+=======
         this.el.classList.remove('pin-top', 'pinned', 'pin-bottom');
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
       }
     }], [{
       key: "init",
@@ -8329,9 +9127,15 @@ $jscomp.polyfill = function (e, r, p, m) {
     function FloatingActionButton(el, options) {
       _classCallCheck(this, FloatingActionButton);
 
+<<<<<<< HEAD
+      var _this48 = _possibleConstructorReturn(this, (FloatingActionButton.__proto__ || Object.getPrototypeOf(FloatingActionButton)).call(this, FloatingActionButton, el, options));
+
+      _this48.el.M_FloatingActionButton = _this48;
+=======
       var _this47 = _possibleConstructorReturn(this, (FloatingActionButton.__proto__ || Object.getPrototypeOf(FloatingActionButton)).call(this, FloatingActionButton, el, options));
 
       _this47.el.M_FloatingActionButton = _this47;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Options for the fab
@@ -8340,6 +9144,30 @@ $jscomp.polyfill = function (e, r, p, m) {
        * @prop {Boolean} [hoverEnabled=true] - Enable hover vs click
        * @prop {Boolean} [toolbarEnabled=false] - Enable toolbar transition
        */
+<<<<<<< HEAD
+      _this48.options = $.extend({}, FloatingActionButton.defaults, options);
+
+      _this48.isOpen = false;
+      _this48.$anchor = _this48.$el.children('a').first();
+      _this48.$menu = _this48.$el.children('ul').first();
+      _this48.$floatingBtns = _this48.$el.find('ul .btn-floating');
+      _this48.$floatingBtnsReverse = _this48.$el.find('ul .btn-floating').reverse();
+      _this48.offsetY = 0;
+      _this48.offsetX = 0;
+
+      _this48.$el.addClass("direction-" + _this48.options.direction);
+      if (_this48.options.direction === 'top') {
+        _this48.offsetY = 40;
+      } else if (_this48.options.direction === 'right') {
+        _this48.offsetX = -40;
+      } else if (_this48.options.direction === 'bottom') {
+        _this48.offsetY = -40;
+      } else {
+        _this48.offsetX = 40;
+      }
+      _this48._setupEventHandlers();
+      return _this48;
+=======
       _this47.options = $.extend({}, FloatingActionButton.defaults, options);
 
       _this47.isOpen = false;
@@ -8362,6 +9190,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       }
       _this47._setupEventHandlers();
       return _this47;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(FloatingActionButton, [{
@@ -8484,7 +9313,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_animateInFAB",
       value: function _animateInFAB() {
+<<<<<<< HEAD
+        var _this49 = this;
+=======
         var _this48 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         this.$el.addClass('active');
 
@@ -8494,8 +9327,13 @@ $jscomp.polyfill = function (e, r, p, m) {
             targets: el,
             opacity: 1,
             scale: [0.4, 1],
+<<<<<<< HEAD
+            translateY: [_this49.offsetY, 0],
+            translateX: [_this49.offsetX, 0],
+=======
             translateY: [_this48.offsetY, 0],
             translateX: [_this48.offsetX, 0],
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             duration: 275,
             delay: time,
             easing: 'easeInOutQuad'
@@ -8511,7 +9349,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_animateOutFAB",
       value: function _animateOutFAB() {
+<<<<<<< HEAD
+        var _this50 = this;
+=======
         var _this49 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         this.$floatingBtnsReverse.each(function (el) {
           anim.remove(el);
@@ -8519,12 +9361,21 @@ $jscomp.polyfill = function (e, r, p, m) {
             targets: el,
             opacity: 0,
             scale: 0.4,
+<<<<<<< HEAD
+            translateY: _this50.offsetY,
+            translateX: _this50.offsetX,
+            duration: 175,
+            easing: 'easeOutQuad',
+            complete: function () {
+              _this50.$el.removeClass('active');
+=======
             translateY: _this49.offsetY,
             translateX: _this49.offsetX,
             duration: 175,
             easing: 'easeOutQuad',
             complete: function () {
               _this49.$el.removeClass('active');
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             }
           });
         });
@@ -8537,7 +9388,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_animateInToolbar",
       value: function _animateInToolbar() {
+<<<<<<< HEAD
+        var _this51 = this;
+=======
         var _this50 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         var scaleFactor = void 0;
         var windowWidth = window.innerWidth;
@@ -8573,18 +9428,30 @@ $jscomp.polyfill = function (e, r, p, m) {
         });
 
         setTimeout(function () {
+<<<<<<< HEAD
+          _this51.$el.css({
+            transform: '',
+            transition: 'transform .2s cubic-bezier(0.550, 0.085, 0.680, 0.530), background-color 0s linear .2s'
+          });
+          _this51.$anchor.css({
+=======
           _this50.$el.css({
             transform: '',
             transition: 'transform .2s cubic-bezier(0.550, 0.085, 0.680, 0.530), background-color 0s linear .2s'
           });
           _this50.$anchor.css({
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             overflow: 'visible',
             transform: '',
             transition: 'transform .2s'
           });
 
           setTimeout(function () {
+<<<<<<< HEAD
+            _this51.$el.css({
+=======
             _this50.$el.css({
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
               overflow: 'hidden',
               'background-color': fabColor
             });
@@ -8592,14 +9459,24 @@ $jscomp.polyfill = function (e, r, p, m) {
               transform: 'scale(' + scaleFactor + ')',
               transition: 'transform .2s cubic-bezier(0.550, 0.055, 0.675, 0.190)'
             });
+<<<<<<< HEAD
+            _this51.$menu.children('li').children('a').css({
+=======
             _this50.$menu.children('li').children('a').css({
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
               opacity: 1
             });
 
             // Scroll to close.
+<<<<<<< HEAD
+            _this51._handleDocumentClickBound = _this51._handleDocumentClick.bind(_this51);
+            window.addEventListener('scroll', _this51._handleCloseBound, true);
+            document.body.addEventListener('click', _this51._handleDocumentClickBound, true);
+=======
             _this50._handleDocumentClickBound = _this50._handleDocumentClick.bind(_this50);
             window.addEventListener('scroll', _this50._handleCloseBound, true);
             document.body.addEventListener('click', _this50._handleDocumentClickBound, true);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           }, 100);
         }, 0);
       }
@@ -8611,7 +9488,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_animateOutToolbar",
       value: function _animateOutToolbar() {
+<<<<<<< HEAD
+        var _this52 = this;
+=======
         var _this51 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         var windowWidth = window.innerWidth;
         var windowHeight = window.innerHeight;
@@ -8642,13 +9523,32 @@ $jscomp.polyfill = function (e, r, p, m) {
           backdrop.remove();
 
           // Set initial state.
+<<<<<<< HEAD
+          _this52.$el.css({
+=======
           _this51.$el.css({
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             'text-align': '',
             width: '',
             bottom: '',
             left: '',
             overflow: '',
             'background-color': '',
+<<<<<<< HEAD
+            transform: 'translate3d(' + -_this52.offsetX + 'px,0,0)'
+          });
+          _this52.$anchor.css({
+            overflow: '',
+            transform: 'translate3d(0,' + _this52.offsetY + 'px,0)'
+          });
+
+          setTimeout(function () {
+            _this52.$el.css({
+              transform: 'translate3d(0,0,0)',
+              transition: 'transform .2s'
+            });
+            _this52.$anchor.css({
+=======
             transform: 'translate3d(' + -_this51.offsetX + 'px,0,0)'
           });
           _this51.$anchor.css({
@@ -8662,6 +9562,7 @@ $jscomp.polyfill = function (e, r, p, m) {
               transition: 'transform .2s'
             });
             _this51.$anchor.css({
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
               transform: 'translate3d(0,0,0)',
               transition: 'transform .2s cubic-bezier(0.550, 0.055, 0.675, 0.190)'
             });
@@ -8798,6 +9699,45 @@ $jscomp.polyfill = function (e, r, p, m) {
     function Datepicker(el, options) {
       _classCallCheck(this, Datepicker);
 
+<<<<<<< HEAD
+      var _this53 = _possibleConstructorReturn(this, (Datepicker.__proto__ || Object.getPrototypeOf(Datepicker)).call(this, Datepicker, el, options));
+
+      _this53.el.M_Datepicker = _this53;
+
+      _this53.options = $.extend({}, Datepicker.defaults, options);
+
+      // make sure i18n defaults are not lost when only few i18n option properties are passed
+      if (!!options && options.hasOwnProperty('i18n') && typeof options.i18n === 'object') {
+        _this53.options.i18n = $.extend({}, Datepicker.defaults.i18n, options.i18n);
+      }
+
+      // Remove time component from minDate and maxDate options
+      if (_this53.options.minDate) _this53.options.minDate.setHours(0, 0, 0, 0);
+      if (_this53.options.maxDate) _this53.options.maxDate.setHours(0, 0, 0, 0);
+
+      _this53.id = M.guid();
+
+      _this53._setupVariables();
+      _this53._insertHTMLIntoDOM();
+      _this53._setupModal();
+
+      _this53._setupEventHandlers();
+
+      if (!_this53.options.defaultDate) {
+        _this53.options.defaultDate = new Date(Date.parse(_this53.el.value));
+      }
+
+      var defDate = _this53.options.defaultDate;
+      if (Datepicker._isDate(defDate)) {
+        if (_this53.options.setDefaultDate) {
+          _this53.setDate(defDate, true);
+          _this53.setInputValue();
+        } else {
+          _this53.gotoDate(defDate);
+        }
+      } else {
+        _this53.gotoDate(new Date());
+=======
       var _this52 = _possibleConstructorReturn(this, (Datepicker.__proto__ || Object.getPrototypeOf(Datepicker)).call(this, Datepicker, el, options));
 
       _this52.el.M_Datepicker = _this52;
@@ -8835,14 +9775,20 @@ $jscomp.polyfill = function (e, r, p, m) {
         }
       } else {
         _this52.gotoDate(new Date());
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
       }
 
       /**
        * Describes open/close state of datepicker
        * @type {Boolean}
        */
+<<<<<<< HEAD
+      _this53.isOpen = false;
+      return _this53;
+=======
       _this52.isOpen = false;
       return _this52;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(Datepicker, [{
@@ -8891,19 +9837,31 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_setupModal",
       value: function _setupModal() {
+<<<<<<< HEAD
+        var _this54 = this;
+=======
         var _this53 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         this.modalEl.id = 'modal-' + this.id;
         this.modal = M.Modal.init(this.modalEl, {
           onCloseEnd: function () {
+<<<<<<< HEAD
+            _this54.isOpen = false;
+=======
             _this53.isOpen = false;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           }
         });
       }
     }, {
       key: "toString",
       value: function toString(format) {
+<<<<<<< HEAD
+        var _this55 = this;
+=======
         var _this54 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         format = format || this.options.format;
         if (!Datepicker._isDate(this.date)) {
@@ -8912,8 +9870,13 @@ $jscomp.polyfill = function (e, r, p, m) {
 
         var formatArray = format.split(/(d{1,4}|m{1,4}|y{4}|yy|!.)/g);
         var formattedDate = formatArray.map(function (label) {
+<<<<<<< HEAD
+          if (_this55.formats[label]) {
+            return _this55.formats[label]();
+=======
           if (_this54.formats[label]) {
             return _this54.formats[label]();
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           }
 
           return label;
@@ -9334,7 +10297,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_setupVariables",
       value: function _setupVariables() {
+<<<<<<< HEAD
+        var _this56 = this;
+=======
         var _this55 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         this.$modalEl = $(Datepicker._template);
         this.modalEl = this.$modalEl[0];
@@ -9351,6 +10318,38 @@ $jscomp.polyfill = function (e, r, p, m) {
 
         this.formats = {
           d: function () {
+<<<<<<< HEAD
+            return _this56.date.getDate();
+          },
+          dd: function () {
+            var d = _this56.date.getDate();
+            return (d < 10 ? '0' : '') + d;
+          },
+          ddd: function () {
+            return _this56.options.i18n.weekdaysShort[_this56.date.getDay()];
+          },
+          dddd: function () {
+            return _this56.options.i18n.weekdays[_this56.date.getDay()];
+          },
+          m: function () {
+            return _this56.date.getMonth() + 1;
+          },
+          mm: function () {
+            var m = _this56.date.getMonth() + 1;
+            return (m < 10 ? '0' : '') + m;
+          },
+          mmm: function () {
+            return _this56.options.i18n.monthsShort[_this56.date.getMonth()];
+          },
+          mmmm: function () {
+            return _this56.options.i18n.months[_this56.date.getMonth()];
+          },
+          yy: function () {
+            return ('' + _this56.date.getFullYear()).slice(2);
+          },
+          yyyy: function () {
+            return _this56.date.getFullYear();
+=======
             return _this55.date.getDate();
           },
           dd: function () {
@@ -9381,6 +10380,7 @@ $jscomp.polyfill = function (e, r, p, m) {
           },
           yyyy: function () {
             return _this55.date.getFullYear();
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           }
         };
       }
@@ -9669,6 +10669,23 @@ $jscomp.polyfill = function (e, r, p, m) {
     function Timepicker(el, options) {
       _classCallCheck(this, Timepicker);
 
+<<<<<<< HEAD
+      var _this57 = _possibleConstructorReturn(this, (Timepicker.__proto__ || Object.getPrototypeOf(Timepicker)).call(this, Timepicker, el, options));
+
+      _this57.el.M_Timepicker = _this57;
+
+      _this57.options = $.extend({}, Timepicker.defaults, options);
+
+      _this57.id = M.guid();
+      _this57._insertHTMLIntoDOM();
+      _this57._setupModal();
+      _this57._setupVariables();
+      _this57._setupEventHandlers();
+
+      _this57._clockSetup();
+      _this57._pickerSetup();
+      return _this57;
+=======
       var _this56 = _possibleConstructorReturn(this, (Timepicker.__proto__ || Object.getPrototypeOf(Timepicker)).call(this, Timepicker, el, options));
 
       _this56.el.M_Timepicker = _this56;
@@ -9684,6 +10701,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       _this56._clockSetup();
       _this56._pickerSetup();
       return _this56;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(Timepicker, [{
@@ -9778,7 +10796,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_handleDocumentClickEnd",
       value: function _handleDocumentClickEnd(e) {
+<<<<<<< HEAD
+        var _this58 = this;
+=======
         var _this57 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         e.preventDefault();
         document.removeEventListener('mouseup', this._handleDocumentClickEndBound);
@@ -9795,7 +10817,11 @@ $jscomp.polyfill = function (e, r, p, m) {
         } else if (this.options.autoClose) {
           $(this.minutesView).addClass('timepicker-dial-out');
           setTimeout(function () {
+<<<<<<< HEAD
+            _this58.done();
+=======
             _this57.done();
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           }, this.options.duration / 2);
         }
 
@@ -9825,17 +10851,28 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_setupModal",
       value: function _setupModal() {
+<<<<<<< HEAD
+        var _this59 = this;
+=======
         var _this58 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         this.modal = M.Modal.init(this.modalEl, {
           onOpenStart: this.options.onOpenStart,
           onOpenEnd: this.options.onOpenEnd,
           onCloseStart: this.options.onCloseStart,
           onCloseEnd: function () {
+<<<<<<< HEAD
+            if (typeof _this59.options.onCloseEnd === 'function') {
+              _this59.options.onCloseEnd.call(_this59);
+            }
+            _this59.isOpen = false;
+=======
             if (typeof _this58.options.onCloseEnd === 'function') {
               _this58.options.onCloseEnd.call(_this58);
             }
             _this58.isOpen = false;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           }
         });
       }
@@ -10064,7 +11101,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "setHand",
       value: function setHand(x, y, roundBy5) {
+<<<<<<< HEAD
+        var _this60 = this;
+=======
         var _this59 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         var radian = Math.atan2(x, -y),
             isHours = this.currentView === 'hours',
@@ -10119,7 +11160,11 @@ $jscomp.polyfill = function (e, r, p, m) {
             if (!this.vibrateTimer) {
               navigator[this.vibrate](10);
               this.vibrateTimer = setTimeout(function () {
+<<<<<<< HEAD
+                _this60.vibrateTimer = null;
+=======
                 _this59.vibrateTimer = null;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
               }, 100);
             }
           }
@@ -10284,13 +11329,28 @@ $jscomp.polyfill = function (e, r, p, m) {
     function CharacterCounter(el, options) {
       _classCallCheck(this, CharacterCounter);
 
+<<<<<<< HEAD
+      var _this61 = _possibleConstructorReturn(this, (CharacterCounter.__proto__ || Object.getPrototypeOf(CharacterCounter)).call(this, CharacterCounter, el, options));
+
+      _this61.el.M_CharacterCounter = _this61;
+=======
       var _this60 = _possibleConstructorReturn(this, (CharacterCounter.__proto__ || Object.getPrototypeOf(CharacterCounter)).call(this, CharacterCounter, el, options));
 
       _this60.el.M_CharacterCounter = _this60;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Options for the character counter
        */
+<<<<<<< HEAD
+      _this61.options = $.extend({}, CharacterCounter.defaults, options);
+
+      _this61.isInvalid = false;
+      _this61.isValidLength = false;
+      _this61._setupCounter();
+      _this61._setupEventHandlers();
+      return _this61;
+=======
       _this60.options = $.extend({}, CharacterCounter.defaults, options);
 
       _this60.isInvalid = false;
@@ -10298,6 +11358,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       _this60._setupCounter();
       _this60._setupEventHandlers();
       return _this60;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(CharacterCounter, [{
@@ -10464,9 +11525,15 @@ $jscomp.polyfill = function (e, r, p, m) {
     function Carousel(el, options) {
       _classCallCheck(this, Carousel);
 
+<<<<<<< HEAD
+      var _this62 = _possibleConstructorReturn(this, (Carousel.__proto__ || Object.getPrototypeOf(Carousel)).call(this, Carousel, el, options));
+
+      _this62.el.M_Carousel = _this62;
+=======
       var _this61 = _possibleConstructorReturn(this, (Carousel.__proto__ || Object.getPrototypeOf(Carousel)).call(this, Carousel, el, options));
 
       _this61.el.M_Carousel = _this61;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Options for the carousel
@@ -10481,6 +11548,32 @@ $jscomp.polyfill = function (e, r, p, m) {
        * @prop {Boolean} noWrap
        * @prop {Function} onCycleTo
        */
+<<<<<<< HEAD
+      _this62.options = $.extend({}, Carousel.defaults, options);
+
+      // Setup
+      _this62.hasMultipleSlides = _this62.$el.find('.carousel-item').length > 1;
+      _this62.showIndicators = _this62.options.indicators && _this62.hasMultipleSlides;
+      _this62.noWrap = _this62.options.noWrap || !_this62.hasMultipleSlides;
+      _this62.pressed = false;
+      _this62.dragged = false;
+      _this62.offset = _this62.target = 0;
+      _this62.images = [];
+      _this62.itemWidth = _this62.$el.find('.carousel-item').first().innerWidth();
+      _this62.itemHeight = _this62.$el.find('.carousel-item').first().innerHeight();
+      _this62.dim = _this62.itemWidth * 2 + _this62.options.padding || 1; // Make sure dim is non zero for divisions.
+      _this62._autoScrollBound = _this62._autoScroll.bind(_this62);
+      _this62._trackBound = _this62._track.bind(_this62);
+
+      // Full Width carousel setup
+      if (_this62.options.fullWidth) {
+        _this62.options.dist = 0;
+        _this62._setCarouselHeight();
+
+        // Offset fixed items when indicators.
+        if (_this62.showIndicators) {
+          _this62.$el.find('.carousel-fixed-item').addClass('with-indicators');
+=======
       _this61.options = $.extend({}, Carousel.defaults, options);
 
       // Setup
@@ -10505,14 +11598,22 @@ $jscomp.polyfill = function (e, r, p, m) {
         // Offset fixed items when indicators.
         if (_this61.showIndicators) {
           _this61.$el.find('.carousel-fixed-item').addClass('with-indicators');
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
         }
       }
 
       // Iterate through slides
+<<<<<<< HEAD
+      _this62.$indicators = $('<ul class="indicators"></ul>');
+      _this62.$el.find('.carousel-item').each(function (el, i) {
+        _this62.images.push(el);
+        if (_this62.showIndicators) {
+=======
       _this61.$indicators = $('<ul class="indicators"></ul>');
       _this61.$el.find('.carousel-item').each(function (el, i) {
         _this61.images.push(el);
         if (_this61.showIndicators) {
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           var $indicator = $('<li class="indicator-item"></li>');
 
           // Add active to first by default.
@@ -10520,6 +11621,25 @@ $jscomp.polyfill = function (e, r, p, m) {
             $indicator[0].classList.add('active');
           }
 
+<<<<<<< HEAD
+          _this62.$indicators.append($indicator);
+        }
+      });
+      if (_this62.showIndicators) {
+        _this62.$el.append(_this62.$indicators);
+      }
+      _this62.count = _this62.images.length;
+
+      // Cap numVisible at count
+      _this62.options.numVisible = Math.min(_this62.count, _this62.options.numVisible);
+
+      // Setup cross browser string
+      _this62.xform = 'transform';
+      ['webkit', 'Moz', 'O', 'ms'].every(function (prefix) {
+        var e = prefix + 'Transform';
+        if (typeof document.body.style[e] !== 'undefined') {
+          _this62.xform = e;
+=======
           _this61.$indicators.append($indicator);
         }
       });
@@ -10537,14 +11657,21 @@ $jscomp.polyfill = function (e, r, p, m) {
         var e = prefix + 'Transform';
         if (typeof document.body.style[e] !== 'undefined') {
           _this61.xform = e;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           return false;
         }
         return true;
       });
 
+<<<<<<< HEAD
+      _this62._setupEventHandlers();
+      _this62._scroll(_this62.offset);
+      return _this62;
+=======
       _this61._setupEventHandlers();
       _this61._scroll(_this61.offset);
       return _this61;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(Carousel, [{
@@ -10566,7 +11693,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_setupEventHandlers",
       value: function _setupEventHandlers() {
+<<<<<<< HEAD
+        var _this63 = this;
+=======
         var _this62 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         this._handleCarouselTapBound = this._handleCarouselTap.bind(this);
         this._handleCarouselDragBound = this._handleCarouselDrag.bind(this);
@@ -10588,7 +11719,11 @@ $jscomp.polyfill = function (e, r, p, m) {
         if (this.showIndicators && this.$indicators) {
           this._handleIndicatorClickBound = this._handleIndicatorClick.bind(this);
           this.$indicators.find('.indicator-item').each(function (el, i) {
+<<<<<<< HEAD
+            el.addEventListener('click', _this63._handleIndicatorClickBound);
+=======
             el.addEventListener('click', _this62._handleIndicatorClickBound);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           });
         }
 
@@ -10606,7 +11741,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_removeEventHandlers",
       value: function _removeEventHandlers() {
+<<<<<<< HEAD
+        var _this64 = this;
+=======
         var _this63 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         if (typeof window.ontouchstart !== 'undefined') {
           this.el.removeEventListener('touchstart', this._handleCarouselTapBound);
@@ -10621,7 +11760,11 @@ $jscomp.polyfill = function (e, r, p, m) {
 
         if (this.showIndicators && this.$indicators) {
           this.$indicators.find('.indicator-item').each(function (el, i) {
+<<<<<<< HEAD
+            el.removeEventListener('click', _this64._handleIndicatorClickBound);
+=======
             el.removeEventListener('click', _this63._handleIndicatorClickBound);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           });
         }
 
@@ -10807,7 +11950,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_setCarouselHeight",
       value: function _setCarouselHeight(imageOnly) {
+<<<<<<< HEAD
+        var _this65 = this;
+=======
         var _this64 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         var firstSlide = this.$el.find('.carousel-item.active').length ? this.$el.find('.carousel-item.active').first() : this.$el.find('.carousel-item').first();
         var firstImage = firstSlide.find('img').first();
@@ -10827,7 +11974,11 @@ $jscomp.polyfill = function (e, r, p, m) {
           } else {
             // Get height when image is loaded normally
             firstImage.one('load', function (el, i) {
+<<<<<<< HEAD
+              _this65.$el.css('height', el.offsetHeight + 'px');
+=======
               _this64.$el.css('height', el.offsetHeight + 'px');
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             });
           }
         } else if (!imageOnly) {
@@ -10933,7 +12084,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_scroll",
       value: function _scroll(x) {
+<<<<<<< HEAD
+        var _this66 = this;
+=======
         var _this65 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         // Track scrolling state
         if (!this.$el.hasClass('scrolling')) {
@@ -10943,7 +12098,11 @@ $jscomp.polyfill = function (e, r, p, m) {
           window.clearTimeout(this.scrollingTimeout);
         }
         this.scrollingTimeout = window.setTimeout(function () {
+<<<<<<< HEAD
+          _this66.$el.removeClass('scrolling');
+=======
           _this65.$el.removeClass('scrolling');
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
         }, this.options.duration);
 
         // Start actual scroll
@@ -11130,7 +12289,11 @@ $jscomp.polyfill = function (e, r, p, m) {
         }
 
         var index = this.center + n;
+<<<<<<< HEAD
+        if (index >= this.count || index < 0) {
+=======
         if (index > this.count || index < 0) {
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           if (this.noWrap) {
             return;
           }
@@ -11153,7 +12316,11 @@ $jscomp.polyfill = function (e, r, p, m) {
         }
 
         var index = this.center - n;
+<<<<<<< HEAD
+        if (index >= this.count || index < 0) {
+=======
         if (index > this.count || index < 0) {
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
           if (this.noWrap) {
             return;
           }
@@ -11244,9 +12411,15 @@ $jscomp.polyfill = function (e, r, p, m) {
     function TapTarget(el, options) {
       _classCallCheck(this, TapTarget);
 
+<<<<<<< HEAD
+      var _this67 = _possibleConstructorReturn(this, (TapTarget.__proto__ || Object.getPrototypeOf(TapTarget)).call(this, TapTarget, el, options));
+
+      _this67.el.M_TapTarget = _this67;
+=======
       var _this66 = _possibleConstructorReturn(this, (TapTarget.__proto__ || Object.getPrototypeOf(TapTarget)).call(this, TapTarget, el, options));
 
       _this66.el.M_TapTarget = _this66;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Options for the select
@@ -11254,6 +12427,19 @@ $jscomp.polyfill = function (e, r, p, m) {
        * @prop {Function} onOpen - Callback function called when feature discovery is opened
        * @prop {Function} onClose - Callback function called when feature discovery is closed
        */
+<<<<<<< HEAD
+      _this67.options = $.extend({}, TapTarget.defaults, options);
+
+      _this67.isOpen = false;
+
+      // setup
+      _this67.$origin = $('#' + _this67.$el.attr('data-target'));
+      _this67._setup();
+
+      _this67._calculatePositioning();
+      _this67._setupEventHandlers();
+      return _this67;
+=======
       _this66.options = $.extend({}, TapTarget.defaults, options);
 
       _this66.isOpen = false;
@@ -11265,6 +12451,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       _this66._calculatePositioning();
       _this66._setupEventHandlers();
       return _this66;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(TapTarget, [{
@@ -11599,6 +12786,15 @@ $jscomp.polyfill = function (e, r, p, m) {
       _classCallCheck(this, FormSelect);
 
       // Don't init if browser default version
+<<<<<<< HEAD
+      var _this68 = _possibleConstructorReturn(this, (FormSelect.__proto__ || Object.getPrototypeOf(FormSelect)).call(this, FormSelect, el, options));
+
+      if (_this68.$el.hasClass('browser-default')) {
+        return _possibleConstructorReturn(_this68);
+      }
+
+      _this68.el.M_FormSelect = _this68;
+=======
       var _this67 = _possibleConstructorReturn(this, (FormSelect.__proto__ || Object.getPrototypeOf(FormSelect)).call(this, FormSelect, el, options));
 
       if (_this67.$el.hasClass('browser-default')) {
@@ -11606,11 +12802,26 @@ $jscomp.polyfill = function (e, r, p, m) {
       }
 
       _this67.el.M_FormSelect = _this67;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Options for the select
        * @member FormSelect#options
        */
+<<<<<<< HEAD
+      _this68.options = $.extend({}, FormSelect.defaults, options);
+
+      _this68.isMultiple = _this68.$el.prop('multiple');
+
+      // Setup
+      _this68.el.tabIndex = -1;
+      _this68._keysSelected = {};
+      _this68._valueDict = {}; // Maps key to original and generated option element.
+      _this68._setupDropdown();
+
+      _this68._setupEventHandlers();
+      return _this68;
+=======
       _this67.options = $.extend({}, FormSelect.defaults, options);
 
       _this67.isMultiple = _this67.$el.prop('multiple');
@@ -11623,6 +12834,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
       _this67._setupEventHandlers();
       return _this67;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(FormSelect, [{
@@ -11645,14 +12857,22 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_setupEventHandlers",
       value: function _setupEventHandlers() {
+<<<<<<< HEAD
+        var _this69 = this;
+=======
         var _this68 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         this._handleSelectChangeBound = this._handleSelectChange.bind(this);
         this._handleOptionClickBound = this._handleOptionClick.bind(this);
         this._handleInputClickBound = this._handleInputClick.bind(this);
 
         $(this.dropdownOptions).find('li:not(.optgroup)').each(function (el) {
+<<<<<<< HEAD
+          el.addEventListener('click', _this69._handleOptionClickBound);
+=======
           el.addEventListener('click', _this68._handleOptionClickBound);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
         });
         this.el.addEventListener('change', this._handleSelectChangeBound);
         this.input.addEventListener('click', this._handleInputClickBound);
@@ -11665,10 +12885,17 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_removeEventHandlers",
       value: function _removeEventHandlers() {
+<<<<<<< HEAD
+        var _this70 = this;
+
+        $(this.dropdownOptions).find('li:not(.optgroup)').each(function (el) {
+          el.removeEventListener('click', _this70._handleOptionClickBound);
+=======
         var _this69 = this;
 
         $(this.dropdownOptions).find('li:not(.optgroup)').each(function (el) {
           el.removeEventListener('click', _this69._handleOptionClickBound);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
         });
         this.el.removeEventListener('change', this._handleSelectChangeBound);
         this.input.removeEventListener('click', this._handleInputClickBound);
@@ -11714,8 +12941,17 @@ $jscomp.polyfill = function (e, r, p, m) {
           }
 
           // Set selected on original select option
+<<<<<<< HEAD
+          // Only trigger if selected state changed
+          var prevSelected = $(this._valueDict[key].el).prop('selected');
+          if (prevSelected !== selected) {
+            $(this._valueDict[key].el).prop('selected', selected);
+            this.$el.trigger('change');
+          }
+=======
           $(this._valueDict[key].el).prop('selected', selected);
           this.$el.trigger('change');
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
         }
 
         e.stopPropagation();
@@ -11741,7 +12977,11 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_setupDropdown",
       value: function _setupDropdown() {
+<<<<<<< HEAD
+        var _this71 = this;
+=======
         var _this70 = this;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
         this.wrapper = document.createElement('div');
         $(this.wrapper).addClass('select-wrapper ' + this.options.classes);
@@ -11764,6 +13004,23 @@ $jscomp.polyfill = function (e, r, p, m) {
             if ($(el).is('option')) {
               // Direct descendant option.
               var optionEl = void 0;
+<<<<<<< HEAD
+              if (_this71.isMultiple) {
+                optionEl = _this71._appendOptionWithIcon(_this71.$el, el, 'multiple');
+              } else {
+                optionEl = _this71._appendOptionWithIcon(_this71.$el, el);
+              }
+
+              _this71._addOptionToValueDict(el, optionEl);
+            } else if ($(el).is('optgroup')) {
+              // Optgroup.
+              var selectOptions = $(el).children('option');
+              $(_this71.dropdownOptions).append($('<li class="optgroup"><span>' + el.getAttribute('label') + '</span></li>')[0]);
+
+              selectOptions.each(function (el) {
+                var optionEl = _this71._appendOptionWithIcon(_this71.$el, el, 'optgroup-option');
+                _this71._addOptionToValueDict(el, optionEl);
+=======
               if (_this70.isMultiple) {
                 optionEl = _this70._appendOptionWithIcon(_this70.$el, el, 'multiple');
               } else {
@@ -11779,6 +13036,7 @@ $jscomp.polyfill = function (e, r, p, m) {
               selectOptions.each(function (el) {
                 var optionEl = _this70._appendOptionWithIcon(_this70.$el, el, 'optgroup-option');
                 _this70._addOptionToValueDict(el, optionEl);
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
               });
             }
           });
@@ -11809,11 +13067,29 @@ $jscomp.polyfill = function (e, r, p, m) {
 
           // Add callback for centering selected option when dropdown content is scrollable
           dropdownOptions.onOpenEnd = function (el) {
+<<<<<<< HEAD
+            var selectedOption = $(_this71.dropdownOptions).find('.selected').first();
+
+            if (selectedOption.length) {
+              // Focus selected option in dropdown
+              M.keyDown = true;
+              _this71.dropdown.focusedIndex = selectedOption.index();
+              _this71.dropdown._focusFocusedItem();
+              M.keyDown = false;
+
+              // Handle scrolling to selected option
+              if (_this71.dropdown.isScrollable) {
+                var scrollOffset = selectedOption[0].getBoundingClientRect().top - _this71.dropdownOptions.getBoundingClientRect().top; // scroll to selected option
+                scrollOffset -= _this71.dropdownOptions.clientHeight / 2; // center in dropdown
+                _this71.dropdownOptions.scrollTop = scrollOffset;
+              }
+=======
             var selectedOption = $(_this70.dropdownOptions).find('.selected').first();
             if (_this70.dropdown.isScrollable && selectedOption.length) {
               var scrollOffset = selectedOption[0].getBoundingClientRect().top - _this70.dropdownOptions.getBoundingClientRect().top; // scroll to selected option
               scrollOffset -= _this70.dropdownOptions.clientHeight / 2; // center in dropdown
               _this70.dropdownOptions.scrollTop = scrollOffset;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
             }
           };
 
@@ -12057,14 +13333,31 @@ $jscomp.polyfill = function (e, r, p, m) {
     function Range(el, options) {
       _classCallCheck(this, Range);
 
+<<<<<<< HEAD
+      var _this72 = _possibleConstructorReturn(this, (Range.__proto__ || Object.getPrototypeOf(Range)).call(this, Range, el, options));
+
+      _this72.el.M_Range = _this72;
+=======
       var _this71 = _possibleConstructorReturn(this, (Range.__proto__ || Object.getPrototypeOf(Range)).call(this, Range, el, options));
 
       _this71.el.M_Range = _this71;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
 
       /**
        * Options for the range
        * @member Range#options
        */
+<<<<<<< HEAD
+      _this72.options = $.extend({}, Range.defaults, options);
+
+      _this72._mousedown = false;
+
+      // Setup
+      _this72._setupThumb();
+
+      _this72._setupEventHandlers();
+      return _this72;
+=======
       _this71.options = $.extend({}, Range.defaults, options);
 
       _this71._mousedown = false;
@@ -12074,6 +13367,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
       _this71._setupEventHandlers();
       return _this71;
+>>>>>>> 2f3ffd970de8a1e0502ec84e467dad0f6f90c06e
     }
 
     _createClass(Range, [{
