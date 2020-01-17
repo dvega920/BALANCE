@@ -15,13 +15,25 @@ CREATE TABLE questions
     (id)
 );
 
-    CREATE TABLE activities
+    CREATE TABLE moods
     (
         id INTEGER
         AUTO_INCREMENT NOT NULL,
-    name VARCHAR
+    mood_name VARCHAR
         (255) NOT NULL,
+        rating INTEGER,
     createdAt DATETIME,
     PRIMARY KEY
         (id) 
+);
+
+        CREATE TABLE activities
+        (
+            id INTEGER
+            AUTO_INCREMENT NOT NULL,
+    name VARCHAR
+            (255) NOT NULL,
+    createdAt DATETIME,
+    PRIMARY KEY
+            (id) 
 )
