@@ -2,43 +2,44 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-    <title>BALANCE</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>BALANCE</title>
 
-    <!-- CSS  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
 <body>
     <main>
         <nav class="main navbar indigo darken-4" role="navigation">
-            <div class="nav-wrapper container"><a href="#" class="brand-logo"><img
+            <div class="nav-wrapper container"><a href="index.html" class="brand-logo"><img
                         src="./assets/images/Balance-2_white.png" alt="logo-img-white"><span
                         style="margin-left: 4rem">BALANCE</span>
                 </a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contactUs.html">Contact</a></li>
+              </ul>
 
-                </ul>
-
-                <ul id="nav-mobile" class="sidenav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-
-                </ul>
+              <ul id="nav-mobile" class="sidenav">
+                  <div class="background center" style="max-height: 100px">
+                      <img src="./assets/images/Balance-2.png" style="max-height: 50px; margin: 20px;">
+                    </div>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contactUs.html">Contact</a></li>
+              </ul>
                 <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             </div>
         </nav>
         <div class="section no-pad-bot" id="index-banner">
             <div class="container">
                 <br>
-                <img src="assets/images/Balance-2.png" alt="logo-img-white" class="centerImage">
+                <img src="./assets/images/Balance-2.png" alt="logo-img-white" class="centerImage">
                 <br>
                 <h1 class="header center indigo-text" style="margin-top: 0.5rem">BALANCE</h1>
                 <div class="row center">
@@ -59,35 +60,43 @@
         </div>
 
         <div class="container">
-            <div class="section">
-
+        <div class="section">
         <div class="col l6 s12">
-            <div class="card-panel">
+            <div class="card-panel center">
               <h4 class="header2">Form with placeholder</h4>
-              <div class="row">
+<br>
+              <h6 class="header2">1-5 Range Below</h6>
+              <div class="row center">
                 <form class="col s12">
+                  <div class="row">
+                      <form action="#">
+                          <p class="range-field">
+                            <input type="range" id="test5" min="1" max="5" />
+                          </p>
+                        </form>
+                  </div>
                   <div class="row">
                     <div class="input-field col s12">
                       <input placeholder="John Doe" id="name2" type="text">
-                      <label for="first_name" class="active">Name</label>
+                      <label for="first_name" class="">Name</label>
                     </div>
                   </div>
                   <div class="row">
                     <div class="input-field col s12">
-                      <input placeholder="john@domainname.com" id="email2" type="email">
-                      <label for="email" class="active">Email</label>
+                      <input placeholder="john@domainname.com" id="email2" type="text">
+                      <label for="email" class="">Email</label>
                     </div>
                   </div>
                   <div class="row">
                     <div class="input-field col s12">
-                      <input placeholder="YourPassword" id="password2" type="password">
-                      <label for="password" class="active">Password</label>
+                      <input placeholder="YourPassword" id="password2" type="text">
+                      <label for="password" class="">Password</label>
                     </div>
                   </div>
                   <div class="row">
                     <div class="input-field col s12">
                       <textarea placeholder="Oh WoW! Let me check this one too." id="message2" class="materialize-textarea"></textarea>
-                      <label for="message" class="active">Message</label>
+                      <label for="message" class="">Message</label>
                     </div>
                     <div class="row">
                       <div class="input-field col s12">
@@ -97,12 +106,12 @@
                       </div>
                     </div>
                   </div>
-                </form>
-              </div>
+                </div>
+              </form>
             </div>
           </div>
         
-          <br>
+    <br>
     <hr style="max-width: 50%; color: #3f51b5">
     <br>
     
@@ -113,28 +122,29 @@
                   <h4 class="header2">Inline form</h4>
                   <div class="row">
                     <div class="input-field col s4">
-                      <i class="mdi-action-account-circle prefix"></i>
-                      <input id="icon_prefix" type="text" class="validate">
+                      
+                      <input id="icon_prefix" type="text">
                       <label for="icon_prefix">First Name</label>
                     </div>
                     <div class="input-field col s4">
-                      <i class="mdi-action-lock-outline prefix"></i>
-                      <input id="icon_password" type="password" class="validate">
+                      
+                      <input id="icon_password" type="text"">
                       <label for="icon_password">Password</label>
                     </div>
                     <div class="input-field col s4">
                       <div class="input-field col s12">
-                        <button class="btn cyan waves-effect waves-light" type="submit" name="action"><i class="mdi-action-lock-open"></i> Login</button>
+                        <button class="btn indigo waves-effect waves-light" type="submit" name="action"><i class="mdi-action-lock-open"></i> Login</button>
                       </div>
                     </div>
                   </div>
-                </form>
                 </div>
-              </div>
+              </form>
             </div>
-         
-
+          </div>
         </div>
+
+
+      </div>
     </div>
 
     <br>
@@ -142,11 +152,11 @@
     <br>
     <br>
 
-        <footer class="page-footer indigo darken-4 text-center">
-            <div class="container" style="text-align: center;">
-                <div class="row" style="margin-bottom: 0px; padding-bottom: 20px;">
-                    <div class="col l6 s12">
-                        <h5 class="indigo-text text-lighten-5">BALANCE</h5>
+    <footer class="page-footer indigo darken-4 text-center">
+      <div class="container" style="text-align: center;">
+        <div class="row" style="margin-bottom: 0px; padding-bottom: 20px;">
+          <div class="col l6 s12">
+            <h5 class="indigo-text text-lighten-5">BALANCE</h5>
 
                         <p class="indigo-text text-lighten-3">
                             Balance your daily life with keeping
@@ -154,24 +164,23 @@
                             track of your mood and activities.</p>
                     </div>
                     <div class="col l3 s6">
-                        <h5 class="indigo-text text-lighten-5">Settings</h5>
-                        <ul>
-                            <li><a class="indigo-text text-lighten-3 hoverable" href="#!">Link 1</a></li>
-                            <li><a class="indigo-text text-lighten-3 hoverable" href="#!">Link 2</a></li>
-                            <li><a class="indigo-text text-lighten-3 hoverable" href="#!">Link 3</a></li>
-                        </ul>
-                    </div>
-                    <div class="col l3 s6">
-                        <h5 class="indigo-text text-lighten-5">Connect</h5>
-                        <ul>
-                            <li><a class="indigo-text text-lighten-3 hoverable" href="#!">Link 1</a></li>
-                            <li><a class="indigo-text text-lighten-3 hoverable" href="#!">Link 2</a></li>
-                            <li><a class="indigo-text text-lighten-3 hoverable" href="#!">Link 3</a></li>
-                        </ul>
-                    </div>
+                      <h5 class="indigo-text text-lighten-5">Get Started</h5>
+                      <ul>
+                          <li><a class="indigo-text text-lighten-3 hoverable" href="tracker.html">Track Your Mood</a></li>
+                          <li><a class="indigo-text text-lighten-3 hoverable" href="tracker.html">Track Activities</a></li>
+                          <li><a class="indigo-text text-lighten-3 hoverable" href="">Reports</a></li>
+                      </ul>
+                  </div>
+                  <div class="col l3 s6">
+                      <h5 class="indigo-text text-lighten-5">Navigate</h5>
+                      <ul>
+                          <li><a class="indigo-text text-lighten-3 hoverable" href="index.html">Home</a></li>
+                          <li><a class="indigo-text text-lighten-3 hoverable" href="about.html">About</a></li>
+                          <li><a class="indigo-text text-lighten-3 hoverable" href="contactUs.html">Contact</a></li>
+                      </ul>
+                  </div>
                 </div>
             </div>
-   
         </footer>
     </main>
 

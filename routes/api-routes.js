@@ -1,7 +1,25 @@
 const router = require('express').Router();
+<<<<<<< HEAD
 const db = require("../models");
+=======
+const db = require('../models');
+>>>>>>> 94a52424f08915bd68b9978706026b5e832ac33f
 
-router.get('/', (req, res) => res.json('Sample API get endpoint'));
+router.get('/moods', (req, res) => {
+  db.Mood.findAll({})
+    .then((dbMoods) => {
+      res.json(dbMoods);
+    });
+});
+router.post('/moods', (req, res) => {
+    db.Mood.create({
+        emotion: "Sad",
+        rating: "1"
+  })
+    .then((dbMoods) => {
+      res.json(dbMoods);
+    });
+});
 
 router.post('/moods', (req, res) => {
     db.mood.create(
