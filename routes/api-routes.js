@@ -21,6 +21,17 @@ router.get('/moods', (req, res) => {
     )
         .then(moods => {
             res.json(moods);
+            // create new array
+            // loop over all mood items
+            // create new variable for date - moment object - moment package 
+            // const data = moment mood.created at
+            // Use moment to get month number
+            // data.index of array - for each
+            // npm install moment
+            // group by month number 
+            // loop over month - inside loop over items in that month - can use a reduce - array reduce javascript
+
+
         });
 
 });

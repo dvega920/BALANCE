@@ -15,26 +15,7 @@ $(document).ready(function () {
         })
     });
 
-    // Green
-    // $("#green").click(function () {
-    //     alert("Handler for green emoji called.");
-    // });
-
-    // // Yellow
-    // $("#yellow").click(function () {
-    //     alert("Handler for yellow emoji called.");
-    // });
-
-    // // Blue Violet
-    // $("#blueviolet").click(function () {
-    //     alert("Handler for blue violet emoji called.");
-    // });
-
-    // // Red 
-    // $("#red").click(function () {
-    //     alert("Handler for red emoji called.");
-    // });
-
+    // Add data attributes to all icons
 
     // // Test Calendar Javscript
 
