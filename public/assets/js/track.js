@@ -49,22 +49,9 @@ $(document).ready(function () {
 
     });
 
-    // Test activity data: 
-
-    // $(".activity-button").click(function () {
-    //     // alert("Handler for blue emoji called.");
-    //     $.ajax({
-    //         method: "POST",
-    //         url: "/api/activity",
-    //         data: {
-    //             mood_name: $(this).data("mood-name"),
-    //             rating: $(this).data("rating")
-    //         }
-
-    //     })
-    // });
-
-    // Add data attributes to all icons
+    $(".mood-button").click(function () {
+        window.location.href = '/activities.html';
+    })
 
     // // Test Calendar Javscript
 
