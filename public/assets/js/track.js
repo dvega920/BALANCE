@@ -2,41 +2,41 @@ $(document).ready(function () {
     // Start click events for emojis - testing only 
     // Blue 
 
-    $("#blue").click(function () {
+    $(".mood-button").click(function () {
         // alert("Handler for blue emoji called.");
         $.ajax({
             method: "POST",
-            url: "/api/moods" + id,
+            url: "/api/moods",
             data: {
-                mood: ("test"),
-                rating: 1
+                mood_name: $(this).data("mood-name"),
+                rating: $(this).data("rating")
             }
 
         })
     });
 
     // Green
-    $("#green").click(function () {
-        alert("Handler for green emoji called.");
-    });
+    // $("#green").click(function () {
+    //     alert("Handler for green emoji called.");
+    // });
 
-    // Yellow
-    $("#yellow").click(function () {
-        alert("Handler for yellow emoji called.");
-    });
+    // // Yellow
+    // $("#yellow").click(function () {
+    //     alert("Handler for yellow emoji called.");
+    // });
 
-    // Blue Violet
-    $("#blueviolet").click(function () {
-        alert("Handler for blue violet emoji called.");
-    });
+    // // Blue Violet
+    // $("#blueviolet").click(function () {
+    //     alert("Handler for blue violet emoji called.");
+    // });
 
-    // Red 
-    $("#red").click(function () {
-        alert("Handler for red emoji called.");
-    });
+    // // Red 
+    // $("#red").click(function () {
+    //     alert("Handler for red emoji called.");
+    // });
 
 
-    // Test Calendar Javscript
+    // // Test Calendar Javscript
 
     // today = new Date();
     // currentMonth = today.getMonth();

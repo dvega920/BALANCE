@@ -36,4 +36,17 @@ CREATE TABLE questions
     createdAt DATETIME,
     PRIMARY KEY
             (id) 
-)
+);
+
+            CREATE TABLE moods
+            (
+                id INTEGER
+                AUTO_INCREMENT NOT NULL,
+    mood_name VARCHAR
+                (255) NOT NULL,
+        rating INTEGER,
+        createdAt DATETIME,
+    PRIMARY KEY
+                (id) 
+);
+

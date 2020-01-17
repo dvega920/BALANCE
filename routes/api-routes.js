@@ -3,12 +3,11 @@ const db = require("../models");
 
 router.get('/', (req, res) => res.json('Sample API get endpoint'));
 
-router.get('/moods', (req, res) => {
-    db.mood.findAll({
-        // Query parameters
-        // mood_name: req.body.mood,
-        // rating: req.body.rating
-    })
+router.post('/moods', (req, res) => {
+    db.mood.create(
+        req.body
+
+    )
         .then(moods => {
             res.json(moods);
         });
@@ -16,18 +15,17 @@ router.get('/moods', (req, res) => {
     // res.json("Test");
 });
 
+router.get('/moods', (req, res) => {
+    db.mood.findAll(
 
-// module.exports = (sequelize, DataTypes) => {
-//     const Mood = sequelize.define('mood', {
-//       mood_name: DataTypes.STRING,
-//       rating: DataTypes.INTEGER
-//     });
-//     return Mood;
-//   };
+    )
+        .then(moods => {
+            res.json(moods);
+        });
 
-// Model.findAll({
-//     attributes: ['foo', 'bar']
-//   });
+});
+
+
 
 
 
