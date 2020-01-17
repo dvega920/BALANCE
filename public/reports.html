@@ -19,12 +19,12 @@
     <script src="assets/js/reports.js"></script>
 
 
-    <!-- <script src="moment.js"></script> -->
+
 
 
 </head>
 
-<body>
+<div>
     <main>
         <nav class="main navbar indigo darken-4" role="navigation">
             <div class="nav-wrapper container"><a href="#" class="brand-logo"><img
@@ -46,18 +46,24 @@
                 <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             </div>
         </nav>
+        <div class="section no-pad-bot" id="index-banner">
+            <div class="container">
+                <!-- <br>
+                <img src="assets/images/Balance-2.png" alt="logo-img-white" class="centerImage">
+                <br> -->
+                <h1 class="header center indigo-text" style="margin-top: 0.5rem">BALANCE</h1>
+                <h4 id="currentDay" class="lead"></h4>
+                <!-- Start Chart - Emotions - Months -->
+                <div id="chart" style="width:90%; height:400px;"></div>
+                <!-- End Chart - Emotions - Months -->
 
-        <!-- Start Chart - Emotions - Months -->
-        <div id="chart" style="width:90%; height:400px;"></div>
-        <!-- End Chart - Emotions - Months -->
+                <!-- Start activities pie chart -->
+                <div id="pie" style="width:90%; height:400px;"></div>
+                <!-- End activities pie chart -->
 
-        <!-- Start activities pie chart -->
-        <div id="pie" style="width:90%; height:400px;"></div>
-        <!-- End activities pie chart -->
-
-        <!-- Start Blog Area -->
-        <!-- <div id="activity" style="width:90%; height:400px;"></div> -->
-        <!-- Start Blog Area -->
+                <!-- Start Blog Area -->
+                <!-- <div id="activity" style="width:90%; height:400px;"></div> -->
+                <!-- Start Blog Area -->
 
     </main>
 
@@ -90,14 +96,17 @@
                 </div>
             </div>
         </div>
-    </footer>
+</div>
+</footer>
+<!-- Moment JS Scripts -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="assets/js/materialize.js"></script>
+<script src="assets/js/init.js"></script>
+<script src="assets/js/script.js"></script>
 
-
-    <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="assets/js/materialize.js"></script>
-    <script src="assets/js/init.js"></script>
-    <script src="assets/js/script.js"></script>
 
 </body>
 

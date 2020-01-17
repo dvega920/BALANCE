@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+
     // Start click events for emojis - testing only 
     // Blue 
 

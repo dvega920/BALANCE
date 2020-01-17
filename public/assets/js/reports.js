@@ -2,6 +2,9 @@
 // https://www.highcharts.com/demo/chart-update
 document.addEventListener('DOMContentLoaded', function () {
 
+    moment(Date);
+    $("#currentDay").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
+
     axios.get("/api/moods")
         .then((response) => {
             var chart = Highcharts.chart('chart', {
