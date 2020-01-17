@@ -1,65 +1,33 @@
 // Chart 3rd party API 
 // https://www.highcharts.com/demo/chart-update
 document.addEventListener('DOMContentLoaded', function () {
-    var chart = Highcharts.chart('chart', {
 
-        title: {
-            text: 'Your Mood Chart'
-        },
+    axios.get("/api/moods")
+        .then((response) => {
+            var chart = Highcharts.chart('chart', {
 
-        subtitle: {
-            text: 'Your Year'
-        },
+                title: {
+                    text: 'Your Mood Chart'
+                },
 
-        xAxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-        },
+                subtitle: {
+                    text: 'Your Year'
+                },
 
-        series: [{
-            type: 'column',
-            colorByPoint: true,
-            data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
-            showInLegend: false
-        }]
+                xAxis: {
+                    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                },
 
-    });
-
-
-    $('#plain').click(function () {
-        chart.update({
-            chart: {
-                inverted: false,
-                polar: false
-            },
-            subtitle: {
-                text: 'Plain'
-            }
+                series: [{
+                    type: 'column',
+                    colorByPoint: true,
+                    data: response.data,
+                    showInLegend: false
+                }]
+                // High charts change y-values
+            });
         });
-    });
 
-    $('#inverted').click(function () {
-        chart.update({
-            chart: {
-                inverted: true,
-                polar: false
-            },
-            subtitle: {
-                text: 'Inverted'
-            }
-        });
-    });
-
-    $('#polar').click(function () {
-        chart.update({
-            chart: {
-                inverted: false,
-                polar: true
-            },
-            subtitle: {
-                text: 'Polar'
-            }
-        });
-    });
 
     // Emotions and Activities 3rd party API 
     // https://www.highcharts.com/demo/area-basic
@@ -74,11 +42,11 @@ document.addEventListener('DOMContentLoaded', function () {
         title: {
             text: 'Your moods and activities together!'
         },
-        subtitle: {
-            text: 'Sources: <a href="https://thebulletin.org/2006/july/global-nuclear-stockpiles-1945-2006">' +
-                'thebulletin.org</a> &amp; <a href="https://www.armscontrol.org/factsheets/Nuclearweaponswhohaswhat">' +
-                'armscontrol.org</a>'
-        },
+        // subtitle: {
+        //     text: 'Sources: <a href="https://thebulletin.org/2006/july/global-nuclear-stockpiles-1945-2006">' +
+        //         'thebulletin.org</a> &amp; <a href="https://www.armscontrol.org/factsheets/Nuclearweaponswhohaswhat">' +
+        //         'armscontrol.org</a>'
+        // },
         xAxis: {
             allowDecimals: false,
             labels: {
@@ -87,12 +55,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             },
             accessibility: {
-                rangeDescription: 'Range: 1940 to 2017.'
+                rangeDescription: 'Month Jan to Dec'
             }
         },
         yAxis: {
             title: {
-                text: 'Nuclear weapon states'
+                text: 'Mood Range'
             },
             labels: {
                 formatter: function () {
@@ -119,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         },
         series: [{
-            name: 'USA',
+            name: 'Mood',
             data: [
                 null, null, null, null, null, 6, 11, 32, 110, 235,
                 369, 640, 1005, 1436, 2063, 3057, 4618, 6444, 9822, 15468,
@@ -131,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 5113, 5113, 4954, 4804, 4761, 4717, 4368, 4018
             ]
         }, {
-            name: 'USSR/Russia',
+            name: 'Activity',
             data: [null, null, null, null, null, null, null, null, null, null,
                 5, 25, 50, 120, 150, 200, 426, 660, 869, 1060,
                 1605, 2471, 3322, 4238, 5221, 6129, 7089, 8339, 9399, 10538,
