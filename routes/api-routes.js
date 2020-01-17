@@ -106,26 +106,17 @@ router.get("/activity", function (req, res) {
     db.Activity.findAll({}).then(function (dbActivity) {
         // We have access to the todos as an argument inside of the callback function
         var activityEntry = [
-            [], [], [], [], [], [], [], [], [], [], [], [], []
+            [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
         ];
         // loop over all mood items
         dbActivity.forEach((Activity) => {
             // create new variable for date - moment object - moment package 
-            // var date = moment(Date);
-            // const data = moment mood.created at
-            // const date = moment(Activity.createdAt);
-            // // Use moment to get month number
-            // const monthNumber = date.month();
+            const date = moment(Activity.createdAt);
+            // Use moment to get month number
+            const monthNumber = date.month();
 
-            // activityEntry[monthNumber].push(Activity);
+            activityEntry[monthNumber].push(Activity);
 
-            activityEntry.push(Activity);
-            // // data.index of array - for each
-            // forEach(number[0]) {
-            //     // group by month number 
-            //     console.log(number);
-            //     moodEntry.reduce(monthNumber);
-            // }
         })
         // Assistance from Instructor
         const data = [];
@@ -148,6 +139,7 @@ router.get("/activity", function (req, res) {
 
         })
         res.json(data);
+
     });
 });
 

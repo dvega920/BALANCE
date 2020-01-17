@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
 
                 subtitle: {
-                    text: 'Your Year'
+                    text: ['Very Happy = 5', ' Somewhat Happy = 4', ' Just Okay = 3', ' Somewhat Unhappy = 2', ' Very Unhappy']
+
+
                 },
 
                 xAxis: {
@@ -36,8 +38,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     axios.get("/api/activity")
         .then((response) => {
+            // console.log("Look at the response!" + response.data);
             // Start pie
-            Highcharts.chart('pie', {
+            var pie = Highcharts.chart('pie', {
                 chart: {
                     plotBackgroundColor: null,
                     plotBorderWidth: null,
