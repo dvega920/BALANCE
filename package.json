@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/kylewhittemore/full-stack-sequelize#readme",
   "dependencies": {
+    "chart.js": "^2.9.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "highcharts": "^8.0.0",
@@ -30,6 +31,6 @@
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.19.1"
+    "eslint-plugin-import": "^2.20.0"
   }
 }
