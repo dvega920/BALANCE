@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>BALANCE</title>
+
+    <!--favicon-->
+    <link rel="icon" href="assets/images/favicon.ico.png" type="image/x-icon">
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+    <main>
+        <nav class="main navbar indigo darken-4" role="navigation">
+            <div class="nav-wrapper container"><a href="#" class="brand-logo"><img
+                        src="./assets/images/Balance-2_white.png" alt="logo-img-white"><span
+                        style="margin-left: 4rem">BALANCE</span>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+
+                <ul id="nav-mobile" class="sidenav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+        <div class="section no-pad-bot" id="index-banner">
+            <div class="container">
+                <br>
+                <img src="assets/images/Balance-2.png" alt="logo-img-white" class="centerImage">
+                <br>
+                <h1 class="header center indigo-text" style="margin-top: 0.5rem">BALANCE</h1>
+                <!-- Added ID for on click events -->
+                <div class="track-div">
+                    <h3 class="track-header">How Are You Feeling Today?</h3>
+
+                    <div class="row" id="moods">
+
+                        <i class="material-icons mood-button" id="blue" data-rating="5"
+                            data-mood-name="very_dissatisfied" style="font-size:60px;color:blue">insert_emoticon</i>
+
+                        <i class="material-icons mood-button" id="green" data-rating="4"
+                            data-mood-name="sentiment_satisfied"
+                            style="font-size:60px;color:green">sentiment_satisfied</i>
+
+                        <i class="material-icons mood-button" id="blueviolet" data-rating="3"
+                            data-mood-name="sentiment_neutral"
+                            style="font-size:60px;color: blueviolet">sentiment_neutral</i>
+
+                        <i class="material-icons mood-button" id="yellow" data-rating="2"
+                            data-mood-name="sentiment_dissatisfied"
+                            style="font-size:60px;color:yellow">sentiment_dissatisfied</i>
+
+                        <i class="material-icons mood-button" id="red" data-rating="1"
+                            data-mood-name="sentiment_very_dissatisfied"
+                            style="font-size:60px;color:red">sentiment_very_dissatisfied</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start Calendar HMTL -->
+        <!-- 
+        <div class="calendar-div">
+            <h2 id="calendar-header">Below is where you'll see all of your aquired data by month.
+                <br>
+                Use the 'previous' and 'next' buttons to toggle between them.</h2>
+            <div class="container col-sm-4 col-md-7 col-lg-4 mt-5">
+                <div class="card">
+                    <h3 class="card-header" id="monthAndYear"></h3>
+                    <table class="table table-bordered table-responsive-sm" id="calendar">
+                        <thead>
+                            <tr>
+                                <th>Sun</th>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                                <th>Sat</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="calendar-body">
+
+                        </tbody>
+                    </table>
+
+                    <div class="form-inline">
+
+                        <button class="btn btn-outline-primary col-sm-6" id="previous"
+                            onclick="previous()">Previous</button>
+
+                        <button class="btn btn-outline-primary col-sm-6" id="next" onclick="next()">Next</button>
+                    </div>
+                    <br />
+                    <form class="form-inline">
+                        <select class="form-control col-sm-4" name="month" id="month" onchange="jump()">
+                            <option value=0>Jan</option>
+                            <option value=1>Feb</option>
+                            <option value=2>Mar</option>
+                            <option value=3>Apr</option>
+                            <option value=4>May</option>
+                            <option value=5>Jun</option>
+                            <option value=6>Jul</option>
+                            <option value=7>Aug</option>
+                            <option value=8>Sep</option>
+                            <option value=9>Oct</option>
+                            <option value=10>Nov</option>
+                            <option value=11>Dec</option>
+                        </select>
+
+
+                        <label for="year"></label><select class="form-control col-sm-4" name="year" id="year"
+                            onchange="jump()">
+                            <option value=2019>2019</option>
+                            <option value=2020>2020</option>
+                            <option value=2021>2021</option>
+                            <option value=2022>2022</option>
+                            <option value=2023>2023</option>
+                            <option value=2024>2024</option>
+                            <option value=2025>2025</option>
+                            <option value=2026>2026</option>
+                            <option value=2027>2027</option>
+                            <option value=2028>2028</option>
+                            <option value=2029>2029</option>
+                            <option value=2030>2030</option>
+                        </select></form>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- End Calendar HTML -->
+
+    </main>
+    <footer class="page-footer indigo darken-4 text-center">
+        <div class="container" style="text-align: center;">
+            <div class="row" style="margin-bottom: 0px; padding-bottom: 20px;">
+                <div class="col l6 s12">
+                    <h5 class="indigo-text text-lighten-5">BALANCE</h5>
+
+                    <p class="indigo-text text-lighten-3">
+                        Balance your daily life with keeping
+                        <br>
+                        track of your mood and activities.</p>
+                </div>
+                <div class="col l3 s6">
+                    <h5 class="indigo-text text-lighten-5">Settings</h5>
+                    <ul>
+                        <li><a class="indigo-text text-lighten-3 hoverable" href="#!">Link 1</a></li>
+                        <li><a class="indigo-text text-lighten-3 hoverable" href="#!">Link 2</a></li>
+                        <li><a class="indigo-text text-lighten-3 hoverable" href="#!">Link 3</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s6">
+                    <h5 class="indigo-text text-lighten-5">Connect</h5>
+                    <ul>
+                        <li><a class="indigo-text text-lighten-3 hoverable" href="#!">Link 1</a></li>
+                        <li><a class="indigo-text text-lighten-3 hoverable" href="#!">Link 2</a></li>
+                        <li><a class="indigo-text text-lighten-3 hoverable" href="#!">Link 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="assets/js/init.js"></script>
+    <script src="assets/js/track.js"></script>
+
+</body>
+
+</html>

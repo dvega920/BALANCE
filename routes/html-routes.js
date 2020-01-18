@@ -21,6 +21,9 @@ router.get('/stats', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/stats.html'));
 });
 
+
+
+
 // Place this route below all others to send the index.html file
 // to any request that is not explicitly defined above
 router.get('*', (req, res) => {
