@@ -9,20 +9,25 @@ router.get('/about', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/about.html'));
 });
 
-router.get('/contact', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/contact.html'));
+router.get('/contactUs', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/contactUs.html'));
 });
 
-router.get('/getStarted', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/getStarted.html'));
+router.get('/track', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/track.html'));
 });
 
-router.get('/stats', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/stats.html'));
+router.get('/activities', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/activities.html'));
 });
 
-// Start blog copy paste
+router.get('/reports', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/reports.html'));
+});
 
+router.get('/resources', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/resources.html'));
+});
 
 
 // Place this route below all others to send the index.html file
