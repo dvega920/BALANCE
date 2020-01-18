@@ -22,6 +22,14 @@
    margin-top: 1.373333rem;
  }
 
+ h3{
+   font-size: 30px;
+ }
+
+ h3::first-letter{
+   font-size: 40px;
+ }
+
 .icon-block {
   padding: 0 15px;
 }
