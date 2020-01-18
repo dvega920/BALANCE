@@ -11,7 +11,7 @@
 * ['Project-2 - BALANCE - Git Hub IO'](https://dvega920.github.io/BALANCE/)
 * ['Project-2 - BALANCE - Heroku'](https://radiant-plains-19401.herokuapp.com/)
 * ['Project-2 - BALANCE - Demo Video'](https://drive.google.com/file/d/19C2XH2Gyb7xl5vr2OkOyy9X45SbsmsHQ/view)
-* ['Project-2 - BALANCE - Prototype'](https://drive.google.com/file/d/1PexQTvkab1gUu6sVF-98MZOOHGslAe1Y/view)
+* ['Project-2 - BALANCE - Adobe Prototype'](https://drive.google.com/file/d/1PexQTvkab1gUu6sVF-98MZOOHGslAe1Y/view)
 
 
 
