@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         y: 4.18
                     }, {
                         name: 'Drinking',
-                        y: 1.64
+                        y: 25.64
                     }, {
                         name: 'Love',
                         y: 1.6

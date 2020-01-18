@@ -1,18 +1,10 @@
 const router = require('express').Router();
 const db = require('../models');
+// npm install moment
 var moment = require('moment');
 
-// router.post('/moods', (req, res) => {
-//     db.Mood.create({
-//         mood_name: req.body.mood_name,
-//         rating: "1"
-//     })
-//         .then((dbMoods) => {
-//             res.json(dbMoods);
-//         });
-// });
-
-// Start route for moods
+// Start routes for moods
+// POST Method
 router.post('/moods', (req, res) => {
     db.Mood.create(
         req.body
@@ -24,7 +16,7 @@ router.post('/moods', (req, res) => {
     // return 
     // res.json("Test");
 });
-
+// GET Method
 router.get('/moods', (req, res) => {
     db.Mood.findAll()
         .then(moods => {
@@ -34,20 +26,13 @@ router.get('/moods', (req, res) => {
             ];
             // loop over all mood items
             moods.forEach((Mood) => {
-                // create new variable for date - moment object - moment package 
-                // var date = moment(Date);
-                // const data = moment mood.created at
+                // New variable for date - moment object - moment package 
                 const date = moment(Mood.createdAt);
                 // Use moment to get month number
                 const monthNumber = date.month();
 
                 moodEntry[monthNumber].push(Mood);
-                // // data.index of array - for each
-                // forEach(number[0]) {
-                //     // group by month number 
-                //     console.log(number);
-                //     moodEntry.reduce(monthNumber);
-                // }
+                // data.index of array - for each
             })
             // Assistance from Instructor
             const data = [];
@@ -70,17 +55,14 @@ router.get('/moods', (req, res) => {
 
             })
             res.json(data);
-            // npm install moment
+
             // loop over month - inside loop over items in that month - can use a reduce - array reduce javascript
         });
 });
-// // End Route for moods
+// // End Routes for moods
 
 // // Start Route for activities
-
-
-
-// POST route for saving a new todo
+// POST route for saving a new Activity
 router.post("/activity", function (req, res) {
     console.log(req.body);
     // create takes an argument of an object describing the item we want to
@@ -90,17 +72,13 @@ router.post("/activity", function (req, res) {
         req.body
 
     ).then(function (dbActivity) {
-
-
         // We have access to the new todo as an argument inside of the callback function
         res.json(dbActivity);
 
-        // console.log(data);
-        // console.log(dbActivity);
     });
 });
 
-// GET route for getting all of the todos
+// GET route for getting all of the activity
 router.get("/activity", function (req, res) {
     // findAll returns all entries for a table when used with no options
     db.Activity.findAll({}).then(function (dbActivity) {
@@ -142,18 +120,6 @@ router.get("/activity", function (req, res) {
 
     });
 });
-
-// DELETE route for deleting todos. We can get the id of the todo we want to delete from
-// req.params.id
-// router.delete("/api/todos/:id", function (req, res) {
-
-// });
-
-// // PUT route for updating todos. We can get the updated todo from req.body
-// router.put("/api/todos", function (req, res) {
-
-// });
-
 
 
 module.exports = router;
