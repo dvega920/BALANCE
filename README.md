@@ -1,3 +1,108 @@
+# Project-2
+# BALANCE
+## Group Project-2 - BALANCE
+# Members
+## David Vega
+## Mandolin Foster
+## Adam Toomey
+## Jamie Morris
+
+* ['Project-2 - BALANCE - Git Hub'](https://github.com/dvega920/BALANCE)
+* ['Project-2 - BALANCE - Git Hub IO'](https://dvega920.github.io/BALANCE/)
+* ['Project-2 - BALANCE - Heroku'](https://radiant-plains-19401.herokuapp.com/)
+* ['Project-2 - BALANCE - Demo Video'](https://drive.google.com/file/d/19C2XH2Gyb7xl5vr2OkOyy9X45SbsmsHQ/view)
+* ['Project-2 - BALANCE - Adobe Prototype'](https://drive.google.com/file/d/1PexQTvkab1gUu6sVF-98MZOOHGslAe1Y/view)
+
+
+
+### Summary
+* HTML and CSS and Javascript documents create a comprehensive website for mood and activity tracking.
+* This project emphasizes the use of api-routes and html-routes as well as the MVC format
+* This project utilizes the use of npm packages: sequelize and express
+* This project utilizes the use of Models to populate database
+
+### This project has the following features: 
+* An Index page
+    * This has easy navigation using a nav bar, and hyperlinked sections summarizing its features
+    * This page directs a user to get started
+* An About page
+    * This has personal bios of each team member
+* A Contact Us page
+    * This uses provides a contact page for the user
+ * A Resources page
+    * This provides mental health resources for the user
+* A Track page
+    * This captures user data by selecting an emoji
+    * Data then populates the "moods" table in the balance database
+    * This page redirects user to activities page
+* An Activities page
+    * This captures user data by select an activity icon
+    * Data then populates the "activity" table in the balance database
+    * This page redirects user to reports page
+* A Reports page
+    * This populates two graphs from the user data in the database
+    * This shows the user a summary of both their moods and activities 
+    * This uses API GET and POST resquests using axios
+
+### Psuedo code:  
+## Application Requirements
+* Must use a Node and Express server
+* Must be backed by a MySQL database and an ORM (not necessarily Sequelize)
+* Must utilize both GET and POST routes for retrieving and adding new data
+* Must be deployed using Heroku (with data)
+* Must utilize at least one new third-party API
+* Must have a polished UI
+* Must use a CSS framework other than Bootstrap
+* Must follow MVC paradigm
+* Must meet good quality coding standards (indentation, scoping, naming)
+
+### This project has Models for:
+* Index for Sequelize set up
+* Activity Table
+* Mood Table 
+
+### This project features responsive design
+### Has responsive layout for: 
+* Small devices (landscape phones, 576px and up)
+* Medium devices (tablets, 768px and up)
+* Large devices (desktops, 992px and up)
+* Extra large devices (large desktops, 1200px and up)
+* Foundation Media Query for 40em
+
+### To Execute File:
+> Open in browser
+
+### Features: 
+* Seven HTML Pages
+    * Index.html 
+    * about.html
+    * contactUs.html
+    * resources.html
+    * track.html
+    * activities.html
+    * reports.html
+* One CSS Page
+    * Styles.css
+    * Materalize CSS files
+* Six Public Javascript Pages
+    * init.js
+    * track.js
+    * activities.js
+    * reports.js
+* Three Route Javascript Pages
+    * api-routes.js
+    * html-routes.js
+    * index.js
+* One Server file
+    * server.js
+* One Config file
+    * config.js
+* One Database file
+    * Schema.sql
+
+
+
+# Instructions for template use and deployment
 # **Full-Stack Sequelize Template**
 this template is meant to get you up-and-running with a full-stack web application scaffolded out and ready to run using node, express, and sequelize.  happy coding.
 
