@@ -2,22 +2,12 @@
   "name": "full-stack-sequelize",
   "version": "1.0.0",
   "description": "A full-stack application template using node, express, and sequelize",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kylewhittemore/full-stack-sequelize.git"
-  },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kylewhittemore/full-stack-sequelize/issues"
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/kylewhittemore/full-stack-sequelize#readme",
+  "main": "index.js",
   "dependencies": {
     "chart.js": "^2.9.3",
     "dotenv": "^8.2.0",
@@ -26,11 +16,27 @@
     "moment": "^2.24.0",
     "mysql2": "^2.1.0",
     "nodemon": "^2.0.2",
-    "sequelize": "^5.21.3"
+    "sequelize": "^5.21.3",
+    "vuetify": "^2.2.11"
   },
   "devDependencies": {
+    "@vue/cli-plugin-router": "^4.2.3",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.20.0"
+    "eslint-plugin-import": "^2.20.0",
+    "sass": "^1.19.0",
+    "sass-loader": "^8.0.0",
+    "vue-cli-plugin-vuetify": "~2.0.5",
+    "vuetify-loader": "^1.3.0"
+  },
+  "bugs": {
+    "url": "https://github.com/kylewhittemore/full-stack-sequelize/issues"
+  },
+  "homepage": "https://github.com/kylewhittemore/full-stack-sequelize#readme",
+  "keywords": [],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylewhittemore/full-stack-sequelize.git"
   }
 }
