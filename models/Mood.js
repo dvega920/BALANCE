@@ -1,7 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-  const Mood = sequelize.define('Mood', {
-    mood_name: DataTypes.STRING,
-    rating: DataTypes.INTEGER
-  });
+  const Mood = sequelize.define('Moods', {
+    emotion: DataTypes.STRING,
+  })
   return Mood;
 };
