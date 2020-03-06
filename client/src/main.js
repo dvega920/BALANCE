@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
-import HelloWorld from './components/HelloWorld';
-import Patient from './components/Patient';
-import Provider from './components/Provider';
+import Home from './components/Home';
+import PatientLogin from './components/PatientLogin';
+import ProviderLogin from './components/ProviderLogin';
 import vuetify from './plugins/vuetify';
 
 Vue.use(VueRouter);
@@ -13,9 +13,9 @@ Vue.config.productionTip = false
 
 const router = new VueRouter({
   routes: [
-    { path: '/', component: HelloWorld },
-    { path: '/Patient', component: Patient },
-    { path: '/Provider', component: Provider }
+    { path: '/', component: Home },
+    { path: '/Patient-Login', component: PatientLogin },
+    { path: '/Provider-Login', component: ProviderLogin },
   ],
   mode: 'history'
 })
