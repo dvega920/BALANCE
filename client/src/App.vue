@@ -1,18 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <ul>
-      <router-view></router-view>
-      <li>
-        <router-link to="/">Home</router-link>
-      </li>
-      <li>
-        <router-link to="/Patient">Patient</router-link>
-      </li>
-      <li>
-        <router-link to="/Provider">Provider</router-link>
-      </li>
-    </ul>
+    <v-app>
+      <v-content>
+        <v-container>
+          <router-view></router-view>
+          <ul>
+            <li>
+              <router-link to="/">Home</router-link>
+            </li>
+            <li>
+              <router-link to="/Patient">Patient</router-link>
+            </li>
+            <li>
+              <router-link to="/Provider">Provider</router-link>
+            </li>
+          </ul>
+        </v-container>
+      </v-content>
+    </v-app>
   </div>
 </template>
 
