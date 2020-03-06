@@ -122,4 +122,42 @@ router.get("/activity", function (req, res) {
 });
 
 
+
+
+// Test API routes
+
+// GET route for getting all of the physician
+
+router.get("/physician", function (req, res) {
+    // findAll returns all entries for a table when used with no options
+    db.Physician.findAll({}).then(function (dbPhysician) {
+        console.log("Physician info!")
+        // We have access to the todos as an argument inside of the callback function
+        res.json(dbPhysician);
+    });
+});
+
+// GET route for getting all of the patient
+
+router.get("/patient", function (req, res) {
+    // findAll returns all entries for a table when used with no options
+    db.Patient.findAll({}).then(function (dbPatient) {
+        console.log("Patient info!")
+        // We have access to the todos as an argument inside of the callback function
+        res.json(dbPatient);
+    });
+});
+
+// GET route for getting all of the patient
+
+router.get("/questions", function (req, res) {
+    // findAll returns all entries for a table when used with no options
+    db.Questions.findAll({}).then(function (dbQuestions) {
+        console.log("Questionnaire!")
+        // We have access to the todos as an argument inside of the callback function
+        res.json(dbQuestions);
+    });
+});
+
+
 module.exports = router;
