@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "PatientLogin"
+  name: "Patient"
 };
 </script>
 
