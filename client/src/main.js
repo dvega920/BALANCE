@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 import HelloWorld from './components/HelloWorld';
 import Patient from './components/Patient';
 import Provider from './components/Provider';
+import vuetify from './plugins/vuetify';
 
 Vue.use(VueRouter);
 
@@ -21,5 +22,6 @@ const router = new VueRouter({
 
 new Vue({
   router,
+  vuetify,
   render: h => h(App)
 }).$mount('#app')
