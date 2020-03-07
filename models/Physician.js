@@ -9,11 +9,11 @@ module.exports = (sequelize, DataTypes) => {
 
     Physician.associate = function (models) {
 
-        Physician.HasOne(models.Patient, {
+        Physician.hasMany(models.Patient, {
             // or HasMany?
             // on what?
             // Example: 
-            // onDelete: "cascade",
+            onDelete: "cascade"
             // onUpdate: 'cascade'
 
 

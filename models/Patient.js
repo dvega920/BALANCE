@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
 
     Patient.associate = function (models) {
 
-        Patient.BelongsTo(models.Physician, {
+        Patient.belongsTo(models.Physician, {
             foreignKey: {
                 allowNull: false
             }

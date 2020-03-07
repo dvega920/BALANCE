@@ -8,6 +8,7 @@ module.exports = {
         age: "18",
         patient_email:
           "email@email.com",
+        PhysicianId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
 
@@ -17,6 +18,7 @@ module.exports = {
         age: "80",
         patient_email:
           "email@email.com",
+        PhysicianId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
 
@@ -26,6 +28,7 @@ module.exports = {
         age: "40",
         patient_email:
           "email@email.com",
+        PhysicianId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
 
