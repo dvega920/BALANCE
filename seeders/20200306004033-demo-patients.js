@@ -7,7 +7,25 @@ module.exports = {
         patient_name: "Johnny Appleseed",
         age: "18",
         patient_email:
-          "patient_email",
+          "email@email.com",
+        createdAt: new Date(),
+        updatedAt: new Date()
+
+      },
+      {
+        patient_name: "Jimney Cricket",
+        age: "80",
+        patient_email:
+          "email@email.com",
+        createdAt: new Date(),
+        updatedAt: new Date()
+
+      },
+      {
+        patient_name: "Mary Poppins",
+        age: "40",
+        patient_email:
+          "email@email.com",
         createdAt: new Date(),
         updatedAt: new Date()
 

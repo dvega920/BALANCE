@@ -124,8 +124,10 @@ router.get("/activity", function (req, res) {
 
 
 
-// Test API routes
+// NEW API routes
 
+
+// Physician
 // GET route for getting all of the physician
 
 router.get("/physician", function (req, res) {
@@ -137,6 +139,7 @@ router.get("/physician", function (req, res) {
     });
 });
 
+// Patient
 // GET route for getting all of the patient
 
 router.get("/patient", function (req, res) {
@@ -148,6 +151,8 @@ router.get("/patient", function (req, res) {
     });
 });
 
+
+// Questions
 // GET route for getting all of the patient
 
 router.get("/questions", function (req, res) {

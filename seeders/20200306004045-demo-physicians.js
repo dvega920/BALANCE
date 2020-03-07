@@ -11,6 +11,24 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
 
+      },
+      {
+        physician_name: "Dr. Samsa",
+        physician_email: "email@email.com",
+        phone:
+          "8675555",
+        createdAt: new Date(),
+        updatedAt: new Date()
+
+      },
+      {
+        physician_name: "Dr. Sleep",
+        physician_email: "email@email.com",
+        phone:
+          "9995555",
+        createdAt: new Date(),
+        updatedAt: new Date()
+
       }
     ], {});
   },
