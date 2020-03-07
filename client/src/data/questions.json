@@ -1,0 +1,71 @@
+{
+    "name": "questionnaire",
+    "title": "Mental Health Questionnaire",
+  "questions": [
+    {
+      "text": "Do you experience little interest in pleasure in doing things?",
+      "responses": [
+        {"text": "Not at all"}, 
+        {"text": "Some days"},
+        {"text": "More than half the time"}, 
+        {"text": "Most of the time"} 
+      ]
+    }, {
+      "text": "Are you feeling down, depressed, or hopeless?",
+      "responses": [
+        {"text": "Not at all"}, 
+        {"text": "Some days"},
+        {"text": "More than half the time"}, 
+        {"text": "Most of the time"}  
+      ]
+    }, {
+      "text": "Trouble falling or staying asleep, or sleeping too much?",
+      "responses": [
+        {"text": "Not at all"}, 
+        {"text": "Some days"},
+        {"text": "More than half the time"}, 
+        {"text": "Most of the time"}  
+      ]
+    }, {
+      "text": "Feeling tired or having little energy?",
+      "responses": [
+        {"text": "Not at all"}, 
+        {"text": "Some days"},
+        {"text": "More than half the time"}, 
+        {"text": "Most of the time"} 
+      ]
+    }, {
+      "text": "Poor appetite or overeating?",
+      "responses": [
+        {"text": "Not at all"}, 
+        {"text": "Some days"},
+        {"text": "More than half the time"}, 
+        {"text": "Most of the time"}  
+      ]
+    }, {
+      "text": "Feeling bad about yourself — or that you are a failure or have let yourself or your family down?",
+      "responses": [
+        {"text": "Not at all"}, 
+        {"text": "Some days"},
+        {"text": "More than half the time"}, 
+        {"text": "Most of the time"}
+      ]
+    }, {
+      "text": "Moving or speaking so slowly that other people could have noticed? Or so fidgety or restless that you have been moving a lot more than usual?",
+      "responses": [
+        {"text": "Not at all"}, 
+        {"text": "Some days"},
+        {"text": "More than half the time"}, 
+        {"text": "Most of the time"} 
+      ]
+    }, {
+      "text": "Thoughts that you would be better off dead, or thoughts of hurting yourself in some way?",
+      "responses": [
+        {"text": "Not at all"}, 
+        {"text": "Some days"},
+        {"text": "More than half the time"}, 
+        {"text": "Most of the time"}
+      ]
+    }
+  ]
+}

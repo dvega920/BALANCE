@@ -3,7 +3,7 @@
     <v-app-bar app color="primary" dark>
       <v-spacer></v-spacer>
     </v-app-bar>
-
+    <Questionnaire />
     <v-content>
       <router-view></router-view>
     </v-content>
@@ -13,7 +13,9 @@
 <script>
 export default {
   name: "App",
-  components: {},
+  components: {
+    Questionnaire
+  },
   data: () => ({
     //
   })
