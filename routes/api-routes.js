@@ -126,7 +126,6 @@ router.get("/activity", function (req, res) {
 
 // NEW API routes
 
-
 // Physician
 // GET route for getting all of the physician
 
@@ -139,6 +138,46 @@ router.get("/physician", function (req, res) {
     });
 });
 
+// Get :id
+
+// router.get("/api/physician/:id", function(req, res) {
+
+//     db.Physician.findOne({
+//       where: {
+//         id: req.params.id
+//       }
+//     }).then(function(dbPhysician) {
+//       res.json(dbPhysician);
+//     });
+//   });
+
+// Post
+
+// Should this be patient?
+// router.post("/api/physician", function(req, res) {
+
+//     console.log(req.body);
+//     db.Physician.create(req.body).then(function(dbPhysician) {
+//       res.json(dbPhysician);
+//     });
+//   });
+
+
+// Delete
+
+// router.delete("/api/physician/:id", function(req, res) {
+
+//     db.Physician.destroy({
+//       where: {
+//         id: req.params.id
+//       }
+//     }).then(function(dbPhysician) {
+//       res.json(dbPhysician);
+//     });
+//   });
+
+
+
 // Patient
 // GET route for getting all of the patient
 
@@ -150,6 +189,71 @@ router.get("/patient", function (req, res) {
         res.json(dbPatient);
     });
 });
+
+// Get needs Query
+// GET route for getting all of the patients
+//   router.get("/api/patient", function(req, res) {
+//     var query = {};
+// Where is "patient_id" initialized?
+//     if (req.query.patient_id) {
+//       query.patientId = req.query.patient_id;
+//     }
+//     db.Patient.findAll({
+//       where: query
+//     }).then(function(dbPatient) {
+//       res.json(dbPatient);
+//     });
+//   });
+
+
+// Get :id
+
+// router.get("/api/patient/:id", function(req, res) {
+//     db.Patient.findOne({
+//       where: {
+//         id: req.params.id
+//       }
+//     }).then(function(dbPatient) {
+//       console.log(dbPatient);
+//       res.json(dbPatient);
+//     });
+//   });
+
+// Post
+
+// router.post("/api/patient", function(req, res) {
+//     db.Patient.create(req.body).then(function(dbPatient) {
+//       res.json(dbPatient);
+//     });
+//   });
+
+// Delete
+
+// router.delete("/api/patient/:id", function(req, res) {
+//     db.Patient.destroy({
+//       where: {
+//         id: req.params.id
+//       }
+//     }).then(function(dbPatient) {
+//       res.json(dbPatient);
+//     });
+//   });
+
+// Put
+
+// router.put("/api/patient", function(req, res) {
+//     db.Patient.update(
+//       req.body,
+//       {
+//         where: {
+//           id: req.body.id
+//         }
+//       }).then(function(dbPatient) {
+//       res.json(dbPatient);
+//     });
+//   });
+
+
 
 
 // Questions
