@@ -29,9 +29,36 @@
 </template>
 
 <script>
+import router from '../main.js'
+import axios from 'axios'
+
 export default {
-  props: {
-    source: String
+  name: 'PatientLogin',
+  methods: {
+    login: (e)=>{
+      e.preventDefault();
+      let email='dvega920@gmail.com'
+      let password='balance'
+      let login = ()=>{
+        let data = {
+          email: email,
+          password: password
+        }
+        axios.post('/api/login', data)
+        .then((res) =>{
+          console.log('Logged in')
+          router.push('/dashboard')
+        })
+        .catch((err)=>{
+          console.log('Cannot log in')
+        })
+      }
+      login()
+    }
+
   }
+  // props: {
+  //   source: String
+  // }
 };
 </script>
