@@ -5,6 +5,7 @@ import Home from './components/Home';
 import PatientLogin from './components/PatientLogin';
 import ProviderLogin from './components/ProviderLogin';
 import vuetify from './plugins/vuetify';
+import Questionnaire from './components/Questionnaire';
 
 Vue.use(VueRouter);
 
@@ -16,6 +17,7 @@ const router = new VueRouter({
     { path: '/', component: Home },
     { path: '/Patient-Login', component: PatientLogin },
     { path: '/Provider-Login', component: ProviderLogin },
+    { path: '/Questionnaire', component: Questionnaire },
   ],
   mode: 'history'
 })
