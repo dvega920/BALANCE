@@ -4,7 +4,7 @@ import VueRouter from 'vue-router';
 import Home from './components/Home';
 import PatientLogin from './components/PatientLogin';
 import ProviderLogin from './components/ProviderLogin';
-import vuetify from '../plugins/vuetify';
+import vuetify from './plugins/vuetify';
 
 Vue.use(VueRouter);
 
