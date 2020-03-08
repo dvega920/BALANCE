@@ -1,12 +1,19 @@
 <template>
-  <v-app>
-    <v-container>
-      <h1>Mental Health Questionnaire</h1>
-      <h3>{{questions[0].text}}</h3>
-      <div class="responseOptions"></div>
-    </v-container>
+<v-app>
+  <v-container>
+  <div>
+    <h1 class="title">Mental Health Questionnaire</h1>
+    <b-form-group v-for="(question, i) in questions" :key="i" label="">
+      <p>{{questions[i].text}}</p>
+      <b-form-radio v-for="(response, j) in responses" :key="j" v-model="selected" name="some-radios" value="A">{{responses[j].text}}</b-form-radio>
+      <!-- <b-form-radio v-model="selected" name="some-radios" value="B">Option B</b-form-radio> -->
+    </b-form-group>
+
+    <div class="mt-3">Selected: <strong>{{ selected }}</strong></div>
+  </div>
+  </v-container>
   </v-app>
-</template>  
+</template>
 
     <script>
 export default {
@@ -43,3 +50,11 @@ export default {
   }
 };
 </script>
+
+<style>
+.title {
+  text-align: center;
+  font-size: 24px;
+}
+
+</style>
