@@ -1,5 +1,6 @@
 <template>
 <v-app>
+  <v-content>
   <v-container>
   <div>
     <h1 class="title">Mental Health Questionnaire</h1>
@@ -15,6 +16,7 @@
     <div class="mt-3">Selected: <strong>{{ selected }}</strong></div>
   </div>
   </v-container>
+  </v-content>
   </v-app>
 </template>
 
@@ -55,9 +57,8 @@ export default {
 </script>
 
 <style>
-.title {
+.title{
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
 }
-
 </style>
