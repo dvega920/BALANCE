@@ -3,11 +3,14 @@
   <v-container>
   <div>
     <h1 class="title">Mental Health Questionnaire</h1>
-    <b-form-group v-for="(question, i) in questions" :key="i" label="">
+    <b-form v-for="(question, i) in questions" :key="i" label="">
       <p>{{questions[i].text}}</p>
-      <b-form-radio v-for="(response, j) in responses" :key="j" v-model="selected" name="some-radios" value="A">{{responses[j].text}}</b-form-radio>
+      <b-form-radio v-for="(response, j) in responses" :key="j" v-model="selected" name="some-radios" value="responses[j].text.value">{{responses[j].text}}</b-form-radio>
       <!-- <b-form-radio v-model="selected" name="some-radios" value="B">Option B</b-form-radio> -->
-    </b-form-group>
+    
+    <!-- still need to figure out how to grab the selected data and store it -->
+    
+    </b-form>
 
     <div class="mt-3">Selected: <strong>{{ selected }}</strong></div>
   </div>
