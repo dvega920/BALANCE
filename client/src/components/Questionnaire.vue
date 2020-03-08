@@ -10,6 +10,7 @@
       <!-- <b-form-radio v-model="selected" name="some-radios" value="B">Option B</b-form-radio> -->
     
     <!-- still need to figure out how to grab the selected data and store it -->
+    <!-- maybe do a computed property that returns the sum of all the values of each question? -->
     
     </b-form>
 
