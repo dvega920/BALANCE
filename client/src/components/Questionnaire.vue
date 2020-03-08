@@ -1,27 +1,35 @@
 <template>
-<v-app>
-  <v-content>
-  <v-container>
-  <div>
-    <h1 class="title">Mental Health Questionnaire</h1>
-    <b-form v-for="(question, i) in questions" :key="i" label="">
-      <p>{{questions[i].text}}</p>
-      <b-form-radio v-for="(response, j) in responses" :key="j" v-model="selected" name="some-radios" value="responses[j].text.value">{{responses[j].text}}</b-form-radio>
-      <!-- <b-form-radio v-model="selected" name="some-radios" value="B">Option B</b-form-radio> -->
-    
-    <!-- still need to figure out how to grab the selected data and store it -->
-    <!-- maybe do a computed property that returns the sum of all the values of each question? -->
-    
-    </b-form>
+  <v-app>
+    <v-content>
+      <h1 class="title">Mental Health Questionnaire</h1>
 
-    <div class="mt-3">Selected: <strong>{{ selected }}</strong></div>
-  </div>
-  </v-container>
-  </v-content>
+      <v-container>
+        <div>
+          <b-form v-for="(question, i) in questions" :key="i" label="Questions" i>
+            <h5>{{i+1}}. {{questions[i].text}}</h5>
+
+            <b-form-radio
+              v-for="(response, j) in responses"
+              :key="j"
+              v-model="selected"
+              name="radios"
+              :value="responses[j].value"
+              label="Responses"
+            >{{responses[j].value}}</b-form-radio>
+
+            <div class="mt-3">
+              Score:
+              <strong>{{selected}}</strong>
+            </div>
+            <br />
+          </b-form>
+        </div>
+      </v-container>
+    </v-content>
   </v-app>
 </template>
 
-    <script>
+<script>
 export default {
   data() {
     return {
@@ -47,21 +55,13 @@ export default {
         }
       ],
       responses: [
-        { text: "Not At All", value: "1" },
-        { text: "Some Days", value: "2" },
-        { text: "More Than Half The Time", value: "3" },
-        { text: "Most Of The Time", value: "4" }
-      ]
+        { text: "Not At All", value: 1 },
+        { text: "Some Days", value: 2 },
+        { text: "More Than Half The Time", value: 3 },
+        { text: "Most Of The Time", value: 4 }
+      ],
+      selected: 0
     };
   }
 };
 </script>
-
-<style>
-.title{
-  text-align: center;
-
-  /* font-size is NOT changing */
-  font-size: 20px;  
-}
-</style>
