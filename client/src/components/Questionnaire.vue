@@ -59,6 +59,8 @@ export default {
 <style>
 .title{
   text-align: center;
-  font-size: 20px;
+
+  /* font-size is NOT changing */
+  font-size: 20px;  
 }
 </style>
