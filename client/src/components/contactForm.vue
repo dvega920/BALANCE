@@ -2,13 +2,8 @@
   <div>
     <v-container fluid>
       <v-row justify="center">
-         <v-col xs="12" sm="12" md="4">
-          <v-card
-            max-height="500x"
-            height="100%"
-            color="#3f51b5"
-            dark
-          >
+        <v-col xs="12" sm="12" md="4">
+          <v-card max-height="500x" height="100%" color="#3f51b5" dark>
             <v-card-text>
               <div class="overline font-weight-bold mb-4">Where to find us</div>
               <v-divider class="mb-3"></v-divider>
@@ -26,17 +21,12 @@
                 <br />
               </div>
             </v-card-text>
-            <v-card-item>
-           
+            <!-- <v-card-item> -->
           </v-card>
         </v-col>
 
-         <v-col xs="12" sm="12" md="6">
-          <v-card
-            max-height="500x"
-            height="100%"
-          
-          >
+        <v-col xs="12" sm="12" md="6">
+          <v-card max-height="500x" height="100%">
             <v-toolbar color="indigo" dark>
               <v-toolbar-title>Contact Us!</v-toolbar-title>
               <v-spacer />
