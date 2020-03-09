@@ -1,31 +1,25 @@
 <template>
-  <div>
-    <!-- Questions -->
-    <b-form-group v-for="(question, i) in questions" :key="i">
-      <h5>{{i+1}}. {{questions[i].text}}</h5>
+  <v-app>
+    <v-container fluid>
+      <h1>Mental Health Questionnaire</h1>
 
-      <!-- Radio Button Responses -->
-      <b-form-radio-group
-        id="radio-slots"
-        v-model="selected"
-        :options="options"
-        name="radio-options-slots"
-      >
-        <template v-slot:first>
-          <b-form-radio value="1">Not At All</b-form-radio>
-        </template>
+      <v-content v-for="(question, i) in questions" :key="i" v-model="selected">
+        <p>{{i+1}}. {{ questions[i].text}}</p>
 
-        <b-form-radio value="2">Some Days</b-form-radio>
-        <b-form-radio value="3">More Than Half The Time</b-form-radio>
-        <b-form-radio value="4">Most Of The Time</b-form-radio>
-      </b-form-radio-group>
-    </b-form-group>
-    <h3>
-      Scored:
-      <strong>{{selected}}</strong>
-    </h3>
-  </div>
+        <v-radio-group v-model="answers[i]" row>
+          <v-radio label="Not At All" value="1"></v-radio>
+          <v-radio label="Some Days" value="2"></v-radio>
+          <v-radio label="More Than Half The Time" value="3"></v-radio>
+          <v-radio label="Most Of The Time" value="4"></v-radio>
+        </v-radio-group>
+        <h5>Score: {{answers[i]}}</h5>
+      </v-content>
+      <br />
+      <h3>Total Score:</h3>
+    </v-container>
+  </v-app>
 </template>
+
 <script>
 export default {
   data() {
@@ -34,10 +28,15 @@ export default {
         {
           text: "Do you experience little interest in pleasure in doing things?"
         },
-        { text: "Are you feeling down, depressed, or hopeless?" },
-        { text: "Trouble falling or staying asleep, or sleeping too much?" },
-        { text: "Feeling tired or having little energy?" },
-        { text: "Poor appetite or overeating?" },
+        {
+          text: "Are you feeling down, depressed, or hopeless?"
+        },
+        {
+          text: "Trouble falling or staying asleep, or sleeping too much?"
+        },
+        {
+          text: "Feeling tired or having little energy?"
+        },
         {
           text:
             "Feeling bad about yourself — or that you are a failure or have let yourself or your family down?"
@@ -51,21 +50,19 @@ export default {
             "Thoughts that you would be better off dead, or thoughts of hurting yourself in some way?"
         }
       ],
-      selected: ""
-      // options: [
-      //   { text: "Toggle this custom radio", value: "first" },
-      //   { text: "Or toggle this other custom radio", value: "second" },
-      //   { text: "This one is Disabled", value: "3", disabled: true },
-      //   { text: "This is the 4th radio", value: "4" }
-      // ]
+      answers: {
+        label1: "Not At All",
+        label2: "Some Days",
+        label3: "More Than Half The Time",
+        label4: "Most Of The Time"
+      }
     };
   }
 };
 </script>
 
 <style scoped>
-.title {
+h1 {
   text-align: center;
-  color: red;
 }
 </style>>
