@@ -6,16 +6,17 @@ import PatientLogin from './components/PatientLogin';
 import ProviderLogin from './components/ProviderLogin';
 // import Dashboard from './components/Dashboard';
 import Questionnaire from './components/Questionnaire'
+// import Survey from "./components/Survey"
 import vuetify from './plugins/vuetify';
-// import Vuetify from 'vuetify/lib';
-import { BootstrapVue } from 'bootstrap-vue';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-vue/dist/bootstrap-vue.css';
+import Vuetify from 'vuetify/lib';
+// import { BootstrapVue } from 'bootstrap-vue';
+// import 'bootstrap-vue/dist/bootstrap-vue.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 
 
 Vue.use(VueRouter);
-Vue.use(BootstrapVue);
-// Vue.use(Vuetify);
+// Vue.use(BootstrapVue);
+Vue.use(Vuetify);
 
 Vue.config.productionTip = false
 
@@ -25,7 +26,6 @@ const router = new VueRouter({
     { path: '/', name: 'Home', component: Home },
     { path: '/PatientLogin', name: 'PatientLogin', component: PatientLogin },
     { path: '/ProviderLogin', name: 'ProviderLogin', component: ProviderLogin },
-    // { path: '/Dashboard', name:'Dashboard', component: Dashboard },
     { path: '/Questionnaire', name: 'Questionnaire', component: Questionnaire },
   ],
   mode: 'history'
