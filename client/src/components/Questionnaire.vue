@@ -16,7 +16,10 @@
         <h5>Score: {{answers[i]}}</h5>
       </v-content>
       <br />
-      <h3>Total Score:</h3>
+
+      <div class="submit">
+        <v-btn color="primary">Submit</v-btn>
+      </div>
     </v-container>
   </v-app>
 </template>
@@ -67,6 +70,9 @@ export default {
 
 <style scoped>
 h1 {
+  text-align: center;
+}
+.submit {
   text-align: center;
 }
 </style>>
