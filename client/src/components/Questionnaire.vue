@@ -12,6 +12,7 @@
           <v-radio label="More Than Half The Time" value="3"></v-radio>
           <v-radio label="Most Of The Time" value="4"></v-radio>
         </v-radio-group>
+
         <h5>Score: {{answers[i]}}</h5>
       </v-content>
       <br />
@@ -36,6 +37,9 @@ export default {
         },
         {
           text: "Feeling tired or having little energy?"
+        },
+        {
+          text: "Poor appetite or overeating?"
         },
         {
           text:
