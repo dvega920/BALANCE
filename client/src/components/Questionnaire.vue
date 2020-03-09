@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-container fluid>
+    <v-container>
       <h1>Mental Health Questionnaire</h1>
 
       <v-content v-for="(question, i) in questions" :key="i" v-model="selected">
