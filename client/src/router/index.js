@@ -21,25 +21,25 @@ const routes = [
     component: () => import('../views/Login.vue')
   },
   {
-  path: '/Data',
-  name: 'Data',
-  component: () => import('../views/Data.vue')
-},
-{
-  path: '/Profile',
-  name: 'Profile',
-  component: () => import('../views/Profile.vue')
-},
-{
-  path: '/Survey',
-  name: 'Survey',
-  component: () => import('../views/Survey.vue')
-},
-{
-  path: '/Component',
-  name: 'Component',
-  component: () => import('../views/Component.vue')
-},
+    path: '/Data',
+    name: 'Data',
+    component: () => import('../views/Data.vue')
+  },
+  {
+    path: '/Profile',
+    name: 'Profile',
+    component: () => import('../views/Profile.vue')
+  },
+  {
+    path: '/Survey',
+    name: 'Survey',
+    component: () => import('../views/Survey.vue')
+  },
+  {
+    path: '/Component',
+    name: 'Component',
+    component: () => import('../views/Component.vue')
+  },
 ]
 
 const router = new VueRouter({
