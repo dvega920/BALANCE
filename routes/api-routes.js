@@ -121,5 +121,141 @@ router.get("/activity", function (req, res) {
     });
 });
 
+// NEW API routes
+
+// Physician
+// GET route for getting all of the physician
+
+router.get("/physician", function (req, res) {
+    // findAll returns all entries for a table when used with no options
+    db.Physician.findAll({
+        include: [db.Patient]
+    }).then(function (dbPhysician) {
+        console.log("Physician info!")
+        // We have access to the todos as an argument inside of the callback function
+        res.json(dbPhysician);
+    });
+});
+
+// Get :id
+// router.get("/api/physician/:id", function (req, res) {
+//     // Here we add an "include" property to our options in our findOne query
+//     // We set the value to an array of the models we want to include in a left outer join
+//     // In this case, just db.Post
+//     db.Physician.findOne({
+//         where: {
+//             id: req.params.id
+//         },
+//         include: [db.Patient]
+//     }).then(function (dbPhysician) {
+//         res.json(dbPhysician);
+//     });
+// });
+
+
+// Post
+// router.post("/api/physician", function (req, res) {
+//     db.Physician.create(req.body).then(function (dbPhysician) {
+//         res.json(dbPhysician);
+//     });
+// });
+
+
+
+// Delete
+// router.delete("/api/physician/:id", function (req, res) {
+//     db.Physician.destroy({
+//         where: {
+//             id: req.params.id
+//         }
+//     }).then(function (dbPhysician) {
+//         res.json(dbPhysician);
+//     });
+// });
+
+
+
+
+// Patient
+// GET route for getting all of the patient
+
+router.get("/patient", function (req, res) {
+    // findAll returns all entries for a table when used with no options
+    db.Patient.findAll({
+        include: [db.Physician]
+    }).then(function (dbPatient) {
+        console.log("Patient info!")
+        // We have access to the todos as an argument inside of the callback function
+        res.json(dbPatient);
+    });
+});
+
+
+// Get :id
+
+// // Get route for retrieving a single patient
+// router.get("/api/patient/:id", function (req, res) {
+//     // Here we add an "include" property to our options in our findOne query
+//     // We set the value to an array of the models we want to include in a left outer join
+//     // In this case, just db.Author
+//     db.Patient.findOne({
+//         where: {
+//             id: req.params.id
+//         },
+//         include: [db.Patient]
+//     }).then(function (dbPatient) {
+//         res.json(dbPatient);
+//     });
+// });
+
+
+// Post
+// router.post("/api/patient", function (req, res) {
+//     db.Patient.create(req.body).then(function (dbPatient) {
+//         res.json(dbPatient);
+//     });
+// });
+
+
+// Delete
+// router.delete("/api/patient/:id", function (req, res) {
+//     db.Patient.destroy({
+//         where: {
+//             id: req.params.id
+//         }
+//     }).then(function (dbPatient) {
+//         res.json(dbPatient);
+//     });
+// });
+
+
+// Put
+// router.put("/api/patient", function (req, res) {
+//     db.Patient.update(
+//         req.body,
+//         {
+//             where: {
+//                 id: req.body.id
+//             }
+//         }).then(function (dbPatient) {
+//             res.json(dbPatient);
+//         });
+// });
+
+
+
+
+// Questions
+// GET route for getting all of the patient
+
+router.get("/questions", function (req, res) {
+    // findAll returns all entries for a table when used with no options
+    db.Questions.findAll({}).then(function (dbQuestions) {
+        console.log("Questionnaire!")
+        // We have access to the todos as an argument inside of the callback function
+        res.json(dbQuestions);
+    });
+});
+
 
 module.exports = router;

@@ -3,7 +3,7 @@ const db = require('./models');
 const routes = require('./routes');
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -14,7 +14,7 @@ app.use('/', routes);
 
 // Sync sequelize models then start Express app
 // =============================================
-db.sequelize.sync().then(() => {
+db.sequelize.sync(/*{ force: true }*/).then(() => {
   app.listen(PORT, () => {
     console.log(`App listening on PORT ${PORT}`);
   });
