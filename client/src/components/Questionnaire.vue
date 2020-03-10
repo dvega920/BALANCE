@@ -6,14 +6,14 @@
       <v-content v-for="(question, i) in questions" :key="i" v-model="selected">
         <p>{{i+1}}. {{ questions[i].text}}</p>
 
-        <v-radio-group v-model="answers[i]" row>
+        <v-radio-group v-model="questions[i].answer" row>
           <v-radio label="Not At All" value="1"></v-radio>
           <v-radio label="Some Days" value="2"></v-radio>
           <v-radio label="More Than Half The Time" value="3"></v-radio>
           <v-radio label="Most Of The Time" value="4"></v-radio>
         </v-radio-group>
 
-        <h5>Score: {{answers[i]}}</h5>
+        <h5>Score: {{questions[i].answer}}</h5>
       </v-content>
       <br />
 
@@ -64,6 +64,16 @@ export default {
         label4: "Most Of The Time"
       }
     };
+  },
+  computed: {
+    totalScore: function() {
+      return this.questions.reduce((total, question) => {
+        if ("answer" in question) {
+          return total + parseInt(question.answer);
+        }
+        return total;
+      }, 0);
+    }
   }
 };
 </script>
