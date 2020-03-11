@@ -20,6 +20,8 @@
       <div class="submit">
         <v-btn color="primary">Submit</v-btn>
       </div>
+
+      <h1>Total Score: {{totalScore}}</h1>
     </v-container>
   </v-app>
 </template>
