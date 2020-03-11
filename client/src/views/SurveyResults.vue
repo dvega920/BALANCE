@@ -2,25 +2,22 @@
   <v-container>
     <v-layout>
       <v-flex justify-center>
-         <v-container fluid>
-       <Data />
-    
-  
-  </v-container> 
-    
+        <v-container fluid>
+          <SurveyResults />
+        </v-container>
       </v-flex>
     </v-layout>
   </v-container>
 </template>
 
 <script>
-import Data from "../components/myData";
+import SurveyResults from "../components/SurveyResults";
 // @ is an alias to /src
 
 export default {
   name: "App",
   components: {
-    Data
-  },
-}
+    SurveyResults
+  }
+};
 </script>
