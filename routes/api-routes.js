@@ -163,7 +163,9 @@ router.put("/physicians/:id", function (req, res) {
     db.Physician.update({
         firstName: req.body.firstname,
         lastName: req.body.lastname,
-        physician_email: req.body.physician_email
+        physician_email: req.body.physician_email,
+        phone: req.body.phone,
+        patients: req.body.Patients
     }, {
         where: {
             id: req.params.id

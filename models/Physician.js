@@ -11,12 +11,8 @@ module.exports = (sequelize, DataTypes) => {
     Physician.associate = function (models) {
 
         Physician.hasMany(models.Patient, {
-            // or HasMany?
-            // on what?
-            // Example: 
-            onDelete: "cascade"
-            // onUpdate: 'cascade'
 
+            onDelete: "cascade"
 
         });
     };

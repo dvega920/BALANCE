@@ -4,7 +4,7 @@
       <v-flex xs12 md8>
         <v-card height="400px">
           <v-toolbar color="indigo" dark>
-            <v-toolbar-title>My Profile</v-toolbar-title>
+            <v-toolbar-title>Enter Your Credentials</v-toolbar-title>
             <v-spacer />
           </v-toolbar>
           <v-container>
@@ -16,21 +16,16 @@
                 <v-text-field v-model="lastname" label="Last Name" class="purple-input" />
               </v-flex>
               <v-flex xs12 md12>
-                <v-text-field
-                  v-model="physician_email"
-                  label="Email Address"
-                  class="purple-input"
-                  readonly="yes"
-                />
+                <v-text-field v-model="physician_email" label="Email Address" class="purple-input" />
               </v-flex>
-              <v-flex xs12 md4>
+              <!-- <v-flex xs12 md4>
                 <v-text-field label="City" class="purple-input" />
-              </v-flex>
-              <v-flex xs12 md4>
+              </v-flex>-->
+              <!-- <v-flex xs12 md4>
                 <v-text-field label="State" class="purple-input" />
-              </v-flex>
+              </v-flex>-->
               <v-flex xs12 md4>
-                <v-text-field class="purple-input" label="Postal Code" type="number" />
+                <v-text-field class="purple-input" label="Phone Number" type="number" />
               </v-flex>
               <v-flex xs12 text-xs-right>
                 <v-btn class="mx-0" text medium color="#3f51b5">Edit Profile</v-btn>
@@ -65,10 +60,12 @@
             </v-avatar>
             <v-card-text class="text-xs-center">
               <h6 class="category text-gray font-weight-thin mb-3">Sample Text</h6>
-              <h4 class="card-title font-weight-light">John Doe{{firstname}}</h4>
+              <h4 class="card-title font-weight-light">Welcome! Dr. {{firstname}} {{lastname}}</h4>
+              <p class="card-description font-weight-light">Email: {{physician_email}}</p>
+              <p class="card-description font-weight-light">Phone: {{phone}}</p>
               <p
                 class="card-description font-weight-light"
-              >SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT</p>
+              >Your Patients: SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT</p>
             </v-card-text>
           </material-card>
         </v-card>
@@ -88,7 +85,8 @@ export default {
     return {
       firstname: null,
       lastname: null,
-      physician_email: null
+      physician_email: null,
+      patients: []
     };
   },
   mounted() {
@@ -96,6 +94,8 @@ export default {
       this.firstname = response.data.firstName;
       this.lastname = response.data.lastName;
       this.physician_email = response.data.physician_email;
+      this.phone = response.data.phone;
+      this.patient = response.data.patient;
     });
   },
 
@@ -107,7 +107,9 @@ export default {
         .put("api/physicians/1", {
           firstname: this.firstname,
           lastname: this.lastname,
-          physician_email: this.physician_email
+          physician_email: this.physician_email,
+          phone: this.phone,
+          patient: this.patient
         })
         .then(response => console.log(response.data));
     }
