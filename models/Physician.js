@@ -1,6 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
     const Physician = sequelize.define('Physician', {
-        physician_name: DataTypes.STRING,
+        firstName: DataTypes.STRING,
+        lastName: DataTypes.STRING,
         physician_email: DataTypes.STRING,
         phone: DataTypes.INTEGER,
     });
