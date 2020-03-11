@@ -3,7 +3,7 @@
     <v-container>
       <h1>Mental Health Questionnaire</h1>
 
-      <v-content v-for="(question, i) in questions" :key="i" v-model="selected">
+      <v-content v-for="(question, i) in questions" :key="i">
         <p>{{i+1}}. {{ questions[i].text}}</p>
 
         <v-radio-group v-model="questions[i].answer" row>
@@ -16,7 +16,7 @@
         <h5>Score: {{questions[i].answer}}</h5>
       </v-content>
       <br />
-
+      <h1></h1>
       <div class="submit">
         <v-btn color="primary">Submit</v-btn>
       </div>
@@ -57,12 +57,7 @@ export default {
             "Thoughts that you would be better off dead, or thoughts of hurting yourself in some way?"
         }
       ],
-      answers: {
-        label1: "Not At All",
-        label2: "Some Days",
-        label3: "More Than Half The Time",
-        label4: "Most Of The Time"
-      }
+      answers: {}
     };
   },
   computed: {
