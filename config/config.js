@@ -1,4 +1,5 @@
 require('dotenv').config();
+const mysql2 = require('mysql2');
 
 module.exports = {
   development: {
@@ -7,6 +8,7 @@ module.exports = {
     database: process.env.DB_NAME,
     host: process.env.DB_HOST,
     dialect: 'mysql',
+    dialectModule: mysql2
   },
   test: {
     username: process.env.DB_USER,
@@ -14,6 +16,7 @@ module.exports = {
     database: process.env.DB_NAME,
     host: process.env.DB_HOST,
     dialect: 'mysql',
+    dialectModule: mysql2
   },
   production: {
     use_env_variable: 'JAWSDB_URL',
@@ -22,5 +25,6 @@ module.exports = {
     database: process.env.DB_NAME,
     host: process.env.DB_HOST,
     dialect: 'mysql',
+    dialectModule: mysql2
   },
 };

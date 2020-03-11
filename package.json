@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "npx sequelize-cli db:seed:all"
   },
   "dependencies": {
     "chart.js": "^2.9.3",
@@ -49,7 +48,6 @@
     },
     "rules": {}
   },
-
   "browserslist": [
     "> 1%",
     "last 2 versions"
