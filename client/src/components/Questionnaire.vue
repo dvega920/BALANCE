@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-container>
-      <h1>Mental Health Questionnaire</h1>
+      <h1 id="title">Mental Health Survey</h1>
 
       <v-content v-for="(question, i) in questions" :key="i">
         <p>{{i+1}}. {{ questions[i].text}}</p>
@@ -17,11 +17,47 @@
       </v-content>
       <br />
       <h1></h1>
-      <div class="submit">
-        <v-btn color="primary">Submit</v-btn>
+      <div>
+        <h2>Mental Health Score: {{totalScore}}</h2>
       </div>
-
-      <h1>Total Score: {{totalScore}}</h1>
+      <div>
+        <br />
+        <h3 class="text-center">Mental Health Legend</h3>
+        <p class="subtext text-center">
+          (Your mood score should
+          <strong>NOT</strong> be construed as a dignosis but rather an indicator that professional services may be needed)
+        </p>
+        <v-row>
+          <v-col>
+            <v-card class="success" dark>
+              <v-card-title class="justify-center">
+                <p>0-8 (No Risk)</p>
+              </v-card-title>
+            </v-card>
+          </v-col>
+          <v-col>
+            <v-card class="info" dark>
+              <v-card-title class="justify-center">
+                <p>8-16 (Mild Risk)</p>
+              </v-card-title>
+            </v-card>
+          </v-col>
+          <v-col>
+            <v-card class="warning" dark>
+              <v-card-title class="justify-center">
+                <p>16-24 (Moderate Risk)</p>
+              </v-card-title>
+            </v-card>
+          </v-col>
+          <v-col>
+            <v-card class="error" dark>
+              <v-card-title class="justify-center">
+                <p>24-32 (Severe Risk)</p>
+              </v-card-title>
+            </v-card>
+          </v-col>
+        </v-row>
+      </div>
     </v-container>
   </v-app>
 </template>
@@ -30,6 +66,7 @@
 export default {
   data() {
     return {
+      a: true,
       questions: [
         {
           text: "Do you experience little interest in pleasure in doing things?"
@@ -76,10 +113,11 @@ export default {
 </script>
 
 <style scoped>
-h1 {
+#title {
   text-align: center;
 }
-.submit {
+
+.align {
   text-align: center;
 }
 </style>>
