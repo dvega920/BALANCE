@@ -24,7 +24,7 @@
         <br />
         <h3 class="text-center">Mental Health Legend</h3>
         <p class="subtext text-center">
-          (Your mood score should
+          (Your mental health score should
           <strong>NOT</strong> be construed as a dignosis but rather an indicator that professional services may be needed)
         </p>
         <v-row>
