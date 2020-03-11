@@ -7,13 +7,13 @@
         </v-subheader>
       </v-row>
 
-      <v-card class="mx-auto text-center" color="#3f51b5" dark width="900px%">
+      <v-card class="mx-auto" color="#3f51b5" dark width="900px%">
         <v-card-text>
           <v-sheet color="rgba(0, 0, 0, .12)"></v-sheet>
         </v-card-text>
 
         <v-card-text>
-          <div class="display-1 font-weight-thin">My Survey</div>
+          <div class="display-1 font-weight-thin text-center">My Survey</div>
         </v-card-text>
 
         <!-- Renders the survey -->
