@@ -165,7 +165,7 @@ router.put("/physicians/:id", function (req, res) {
         lastName: req.body.lastname,
         physician_email: req.body.physician_email,
         phone: req.body.phone,
-        patients: req.body.Patients
+        patients: req.body.patients
     }, {
         where: {
             id: req.params.id

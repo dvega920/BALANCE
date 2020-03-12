@@ -63,9 +63,10 @@
               <h4 class="card-title font-weight-light">Welcome! Dr. {{firstname}} {{lastname}}</h4>
               <p class="card-description font-weight-light">Email: {{physician_email}}</p>
               <p class="card-description font-weight-light">Phone: {{phone}}</p>
-              <p
-                class="card-description font-weight-light"
-              >Your Patients: SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT</p>
+              <p class="card-description font-weight-light">Your Patients:</p>
+              <div v-for="(patient, i) in patients" :key="i">
+                <p>{{patient.patient_name}}</p>
+              </div>
             </v-card-text>
           </material-card>
         </v-card>
@@ -95,7 +96,7 @@ export default {
       this.lastname = response.data.lastName;
       this.physician_email = response.data.physician_email;
       this.phone = response.data.phone;
-      this.patient = response.data.patient;
+      this.patients = response.data.Patients;
     });
   },
 
@@ -109,7 +110,7 @@ export default {
           lastname: this.lastname,
           physician_email: this.physician_email,
           phone: this.phone,
-          patient: this.patient
+          patient: this.Patients
         })
         .then(response => console.log(response.data));
     }
