@@ -17,12 +17,12 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer />
-              <v-btn color="indigo" dark to="/">Login</v-btn>
+              <v-btn color="indigo" dark to="/Home">Login</v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
 
-         <v-col xs="12" sm="4" md="4">
+        <v-col xs="12" sm="4" md="4">
           <v-card>
             <v-toolbar color="indigo" dark>
               <v-toolbar-title>Physician Login</v-toolbar-title>
@@ -37,7 +37,7 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer />
-              <v-btn color="indigo" dark>Login</v-btn>
+              <v-btn color="indigo" to="/pDash" dark>Login</v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
