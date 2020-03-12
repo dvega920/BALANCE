@@ -56,7 +56,7 @@
         <v-card class="pa-4" height="400px" outlined>
           <material-card class="v-card-profile">
             <v-avatar slot="offset" class="mx-auto d-block" size="130">
-              <img src="../assets/happydoctor.jpg" />
+              <img src="../assets/mcdreamy.jpg" />
             </v-avatar>
             <v-card-text class="text-xs-center">
               <h6 class="category text-gray font-weight-thin mb-3">Balance</h6>
@@ -65,7 +65,10 @@
               <p class="card-description font-weight-light">Phone: {{phone}}</p>
               <p class="card-description font-weight-light">Your Patients:</p>
               <div v-for="(patient, i) in patients" :key="i">
-                <p>{{patient.patient_name}}</p>
+                <!-- <p>{{patient.patient_name}}</p> -->
+                <ul>
+                  <li>{{patient.patient_name}}</li>
+                </ul>
               </div>
             </v-card-text>
           </material-card>
@@ -98,23 +101,23 @@ export default {
       this.phone = response.data.phone;
       this.patients = response.data.Patients;
     });
-  },
+  }
 
   // new Vue({
-  el: "submit",
-  methods: {
-    submit() {
-      axios
-        .put("api/physicians/1", {
-          firstname: this.firstname,
-          lastname: this.lastname,
-          physician_email: this.physician_email,
-          phone: this.phone,
-          patient: this.Patients
-        })
-        .then(response => console.log(response.data));
-    }
-  }
+  // el: "submit",
+  // methods: {
+  //   submit() {
+  //     axios
+  //       .put("api/physicians/1", {
+  //         firstname: this.firstname,
+  //         lastname: this.lastname,
+  //         physician_email: this.physician_email,
+  //         phone: this.phone,
+  //         patient: this.Patients
+  //       })
+  //       .then(response => console.log(response.data));
+  //   }
+  // }
   // })
 };
 </script>
