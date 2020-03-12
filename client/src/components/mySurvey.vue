@@ -21,7 +21,7 @@
         <v-divider></v-divider>
 
         <v-card-actions class="justify-center">
-          <v-btn block text to="/">Back to Dashboard</v-btn>
+          <v-btn block text to="/Home">Back to Dashboard</v-btn>
         </v-card-actions>
       </v-card>
     </v-container>

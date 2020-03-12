@@ -17,7 +17,7 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer />
-              <v-btn color="indigo" dark to="/">Login</v-btn>
+              <v-btn color="indigo" dark to="/Home">Login</v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
@@ -37,7 +37,7 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer />
-              <v-btn color="indigo" dark>Login</v-btn>
+              <v-btn color="indigo" to="/pDash" dark>Login</v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
