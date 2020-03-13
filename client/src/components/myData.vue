@@ -14,9 +14,9 @@
           </v-sheet>
         </v-card-text>
 
-        <v-card-text>
-          <div class="display-1 font-weight-thin">My Mood Tracker</div>
-        </v-card-text>
+        <!-- <v-card-text>
+          <div class="display-1 font-weight-light">My Mental Health Tracker</div>
+        </v-card-text>-->
 
         <v-divider></v-divider>
 
@@ -49,6 +49,7 @@ export default {
   }),
   props: {
     source: String
-  }
+  },
+  components: {}
 };
 </script>
