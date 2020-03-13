@@ -11,13 +11,13 @@
 </template>
 
 <script>
-import SurveyResults from "../components/SurveyResults";
+// import SurveyResults from "../components/SurveyResults";
 // @ is an alias to /src
 
 export default {
   name: "App",
   components: {
-    SurveyResults
+    // SurveyResults
   }
 };
 </script>
