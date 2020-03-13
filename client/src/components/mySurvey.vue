@@ -17,11 +17,12 @@
         </v-card-text>
 
         <v-divider></v-divider>
+        <Questionnaire />
+
         <v-card-actions class="justify-center">
           <v-btn block text to="/Home">Back to Dashboard</v-btn>
         </v-card-actions>
       </v-card>
-      <Questionnaire />
     </v-container>
   </div>
 </template>
