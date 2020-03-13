@@ -3,7 +3,6 @@
     <v-layout>
       <v-flex justify-center>
         <v-container fluid>
-          <!-- <SurveyResults /> -->
           <v-data-table
             :headers="headers"
             :items="questions"
