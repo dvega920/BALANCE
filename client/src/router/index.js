@@ -20,11 +20,11 @@ const routes = [
     name: 'Login',
     component: () => import('../views/Login.vue')
   },
-  {
-    path: '/Data',
-    name: 'Data',
-    component: () => import('../views/Data.vue')
-  },
+  // {
+  //   path: '/Data',
+  //   name: 'Data',
+  //   component: () => import('../views/Data.vue')
+  // },
   {
     path: '/Profile',
     name: 'Profile',
