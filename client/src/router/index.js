@@ -20,17 +20,11 @@ const routes = [
     name: 'Login',
     component: () => import('../views/Login.vue')
   },
-  {
-<<<<<<< HEAD
-    path: '/SurveyResults',
-    name: 'SurveyResults',
-    component: () => import('../views/SurveyResults.vue')
-=======
-    path: '/Data',
-    name: 'Data',
-    component: () => import('../views/Data.vue')
->>>>>>> 89c54d0756f12ceca79fb1ce01ae984ace0efdcc
-  },
+  // {
+  //   path: '/Data',
+  //   name: 'Data',
+  //   component: () => import('../views/Data.vue')
+  // },
   {
     path: '/Profile',
     name: 'Profile',
@@ -42,11 +36,6 @@ const routes = [
     component: () => import('../views/Survey.vue')
   },
   {
-<<<<<<< HEAD
-    path: '/Component',
-    name: 'Component',
-    component: () => import('../views/Component.vue')
-=======
     path: '/Provider',
     name: 'Provider',
     component: () => import('../views/Provider.vue')
@@ -65,7 +54,6 @@ const routes = [
     path: '/providerData',
     name: 'providerData',
     component: () => import('../views/providerData.vue')
->>>>>>> 89c54d0756f12ceca79fb1ce01ae984ace0efdcc
   },
 ]
 
