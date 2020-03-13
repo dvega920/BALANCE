@@ -7,7 +7,7 @@
             <v-col cols="12">
               <v-img
                 class="home-image"
-                src="../assets/0313Asset4@3x-100.jpg"
+                src="../assets/0313Asset5@2x.png"
                 contain
                 max-height="250px"
               ></v-img>
