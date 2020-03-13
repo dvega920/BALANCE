@@ -64,12 +64,12 @@
               <p class="card-description font-weight-light">Age: {{age}}</p>
               <p class="card-description font-weight-light">Email: {{patient_email}}</p>
               <p class="card-description font-weight-light">Your Physician:</p>
-              <div v-for="(physician, i) in physician" :key="i">
-                <!-- <p>{{patient.patient_name}}</p> -->
-                <ul>
-                  <li>Dr. {{physician.firstname}} {{physician.lastname}}</li>
-                </ul>
-              </div>
+              <!-- <div v-for="(physician, i) in physician" :key="i"> -->
+              <!-- <p>{{patient.patient_name}}</p> -->
+              <!-- <ul> -->
+              <p>Dr. {{physician.firstName}} {{physician.lastName}}</p>
+              <!-- </ul> -->
+              <!-- </div> -->
             </v-card-text>
           </material-card>
         </v-card>
@@ -90,7 +90,7 @@ export default {
       patient_name: null,
       age: null,
       patient_email: null,
-      physician: []
+      physician: null
     };
   },
   mounted() {
@@ -98,7 +98,7 @@ export default {
       this.patient_name = response.data.patient_name;
       this.age = response.data.age;
       this.patient_email = response.data.patient_email;
-      this.physician = response.data.physician;
+      this.physician = response.data.Physician;
     });
   }
 };
