@@ -66,7 +66,7 @@
 export default {
   data() {
     return {
-      a: true,
+      // a: true,
       questions: [
         {
           text: "Do you experience little interest in pleasure in doing things?"
@@ -112,12 +112,8 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 #title {
-  text-align: center;
-}
-
-.align {
   text-align: center;
 }
 </style>>
