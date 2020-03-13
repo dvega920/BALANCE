@@ -56,18 +56,18 @@
         <v-card class="pa-4" height="400px" outlined>
           <material-card class="v-card-profile">
             <v-avatar slot="offset" class="mx-auto d-block" size="130">
-              <img src="../assets/mcdreamy.jpg" />
+              <img src="../assets/lollipop.jpg" />
             </v-avatar>
             <v-card-text class="text-xs-center">
               <h6 class="category text-gray font-weight-thin mb-3">Balance</h6>
-              <h4 class="card-title font-weight-light">Welcome! Dr. {{firstname}} {{lastname}}</h4>
-              <p class="card-description font-weight-light">Email: {{physician_email}}</p>
-              <p class="card-description font-weight-light">Phone: {{phone}}</p>
-              <p class="card-description font-weight-light">Your Patients:</p>
-              <div v-for="(patient, i) in patients" :key="i">
+              <h4 class="card-title font-weight-light">Welcome! {{patient_name}}</h4>
+              <p class="card-description font-weight-light">Age: {{age}}</p>
+              <p class="card-description font-weight-light">Email: {{patient_email}}</p>
+              <p class="card-description font-weight-light">Your Physician:</p>
+              <div v-for="(physician, i) in physician" :key="i">
                 <!-- <p>{{patient.patient_name}}</p> -->
                 <ul>
-                  <li>{{patient.patient_name}}</li>
+                  <li>Dr. {{physician.firstname}} {{physician.lastname}}</li>
                 </ul>
               </div>
             </v-card-text>
@@ -87,37 +87,19 @@ export default {
   },
   data: function() {
     return {
-      firstname: null,
-      lastname: null,
-      physician_email: null,
-      patients: []
+      patient_name: null,
+      age: null,
+      patient_email: null,
+      physician: []
     };
   },
   mounted() {
-    axios.get("/api/physicians/1").then(response => {
-      this.firstname = response.data.firstName;
-      this.lastname = response.data.lastName;
-      this.physician_email = response.data.physician_email;
-      this.phone = response.data.phone;
-      this.patients = response.data.Patients;
+    axios.get("/api/patients/1").then(response => {
+      this.patient_name = response.data.patient_name;
+      this.age = response.data.age;
+      this.patient_email = response.data.patient_email;
+      this.physician = response.data.physician;
     });
   }
-
-  // new Vue({
-  // el: "submit",
-  // methods: {
-  //   submit() {
-  //     axios
-  //       .put("api/physicians/1", {
-  //         firstname: this.firstname,
-  //         lastname: this.lastname,
-  //         physician_email: this.physician_email,
-  //         phone: this.phone,
-  //         patient: this.Patients
-  //       })
-  //       .then(response => console.log(response.data));
-  //   }
-  // }
-  // })
 };
 </script>

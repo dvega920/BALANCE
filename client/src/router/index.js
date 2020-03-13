@@ -55,6 +55,11 @@ const routes = [
     name: 'providerData',
     component: () => import('../views/providerData.vue')
   },
+  {
+    path: '/patients',
+    name: 'patients',
+    component: () => import('../views/patients.vue')
+  },
 ]
 
 const router = new VueRouter({

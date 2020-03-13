@@ -177,33 +177,13 @@ router.put("/physicians/:id", function (req, res) {
 });
 
 
-// Post
-// router.post("/physicians", function (req, res) {
-//     db.Physician.create(req.body).then(function (dbPhysician) {
-//         res.json(dbPhysician);
-//     });
-// });
-
-
-
-// Delete
-// router.delete("/physicians/:id", function (req, res) {
-//     db.Physician.destroy({
-//         where: {
-//             id: req.params.id
-//         }
-//     }).then(function (dbPhysician) {
-//         res.json(dbPhysician);
-//     });
-// });
-
 
 
 
 // Patient
 // GET route for getting all of the patient
 
-router.get("/patient", function (req, res) {
+router.get("/patients", function (req, res) {
     // findAll returns all entries for a table when used with no options
     db.Patient.findAll({
         include: [db.Physician]
@@ -213,6 +193,47 @@ router.get("/patient", function (req, res) {
         res.json(dbPatient);
     });
 });
+
+// Start copy paste 
+
+
+// Get :id
+router.get("/patients/:id", function (req, res) {
+
+    db.Patient.findOne({
+        where: {
+            id: req.params.id
+        },
+        include: [db.Physician]
+    }).then(function (dbPatient) {
+        res.json(dbPatient);
+    });
+});
+
+
+// Put 
+
+router.put("/patients/:id", function (req, res) {
+
+    console.log(req.body);
+
+
+    db.Patient.update({
+        patient_name: req.body.patient_name,
+        age: req.body.age,
+        patient_email: req.body.physician_email,
+        phone: req.body.phone,
+        physician: req.body.physician
+    }, {
+        where: {
+            id: req.params.id
+        },
+        include: [db.Physician]
+    }).then(function (dbPatient) {
+        res.json(dbPatient);
+    });
+});
+// End copy paste 
 
 
 // Get :id

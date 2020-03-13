@@ -42,7 +42,7 @@
           </v-card>
         </v-col>
         <v-col cols="6">
-          <v-card height="100%" width="750px" color="#b53f74" dark hover ripple to="/Patients">
+          <v-card height="100%" width="750px" color="#b53f74" dark hover ripple to="/patients">
             <v-card-media class="pa-0 pb-3"></v-card-media>
             <v-card-title class="pt-0">
               <v-list-item three-line>
