@@ -5,7 +5,12 @@
         <v-container fluid>
           <v-row>
             <v-col cols="12">
-              <v-img src="../assets/Asset 1.png" contain max-height="200px"></v-img>
+              <v-img
+                class="home-image"
+                src="../assets/0313Asset4@3x-100.jpg"
+                contain
+                max-height="250px"
+              ></v-img>
             </v-col>
           </v-row>
           <v-row>
@@ -28,3 +33,5 @@ export default {
   }
 };
 </script>
+<style>
+</style>
