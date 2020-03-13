@@ -11,15 +11,15 @@
           <v-card     
           height="100%" width="750px"
           color="#3f51b5" dark
-          hover ripple to=""
+          class="no-click"
           >
             <v-card-media class="pa-0 pb-3"></v-card-media>
             <v-card-title class="pt-0">
               <v-list-item three-line>
                 <v-list-item-content>
-                  <div class="overline font-weight-bold mb-4">???</div>
-                  <v-list-item-title class="headline mb-1">???</v-list-item-title>
-                  <v-list-item-subtitle>???</v-list-item-subtitle>
+                  <div class="overline font-weight-bold mb-4">B A L A N C E</div>
+                  <v-list-item-title class="headline mb-1"> Hello Doctor. </v-list-item-title>
+                  <v-list-item-subtitle></v-list-item-subtitle>
                 </v-list-item-content>
                 <v-list-item-avatar tile size="80">
                   <v-icon size="80px" light>mdi-clipboard-text-outline</v-icon>
@@ -37,9 +37,9 @@
             <v-card-title class="pt-0">
               <v-list-item three-line>
                 <v-list-item-content>
-                  <div class="overline font-weight-bold mb-4">PROVIDER DATA</div>
-                  <v-list-item-title class="headline mb-1">DATA </v-list-item-title>
-                  <v-list-item-subtitle>COLLECTED PATIENT DATA</v-list-item-subtitle>
+                  <div class="overline font-weight-bold mb-4">Patient Data</div>
+                  <v-list-item-title class="headline mb-1">My Data </v-list-item-title>
+                  <v-list-item-subtitle>View my patient's data here.</v-list-item-subtitle>
                 </v-list-item-content>
                 <v-list-item-avatar tile size="80">
                   <v-icon size="80px" light>mdi-chart-bar</v-icon>
@@ -58,8 +58,8 @@
               <v-list-item three-line>
                 <v-list-item-content>
                   <div class="overline font-weight-bold mb-4">LIST OF PATIENTS</div>
-                  <v-list-item-title class="headline mb-1">PATIENTS</v-list-item-title>
-                  <v-list-item-subtitle> ??? </v-list-item-subtitle>
+                  <v-list-item-title class="headline mb-1">View Patients</v-list-item-title>
+                  <v-list-item-subtitle> See your list of patients here. </v-list-item-subtitle>
                 </v-list-item-content>
                 <v-list-item-avatar tile size="80">
                   <v-icon size="80px" light> mdi-account-group </v-icon>
