@@ -1,8 +1,12 @@
 <template>
   <v-app>
+<<<<<<< HEAD
     <v-navigation-drawer v-model="drawer" app>
+=======
+    <v-navigation-drawer v-model="drawer" disable-resize-watcher="false" app>
+>>>>>>> 89c54d0756f12ceca79fb1ce01ae984ace0efdcc
       <v-list dense>
-        <v-list-item to="/">
+        <v-list-item to="/Home">
           <v-list-item-action>
             <v-icon>mdi-home</v-icon>
           </v-list-item-action>
@@ -10,6 +14,7 @@
             <v-list-item-title>Dashboard</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+
         <v-list-item to="/Survey">
           <v-list-item-action>
             <v-icon>mdi-clipboard-text-outline</v-icon>
@@ -18,30 +23,37 @@
             <v-list-item-title>My Survey</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+<<<<<<< HEAD
         <v-list-item to="/SurveyResults">
+=======
+
+        <v-list-item to="/Data">
+>>>>>>> 89c54d0756f12ceca79fb1ce01ae984ace0efdcc
           <v-list-item-action>
             <v-icon>mdi-chart-bar</v-icon>
           </v-list-item-action>
           <v-list-item-content>
+<<<<<<< HEAD
             <v-list-item-title>Survey Results</v-list-item-title>
+=======
+            <v-list-item-title>My Data</v-list-item-title>
+>>>>>>> 89c54d0756f12ceca79fb1ce01ae984ace0efdcc
           </v-list-item-content>
         </v-list-item>
-        <v-list-item to="/Component">
+
+        <v-list-item to="/Provider">
           <v-list-item-action>
-            <v-icon>mdi-book-open-variant</v-icon>
+            <v-icon>mdi-medical-bag</v-icon>
           </v-list-item-action>
           <v-list-item-content>
+<<<<<<< HEAD
             <v-list-item-title>My Journal</v-list-item-title>
+=======
+            <v-list-item-title>My Provider</v-list-item-title>
+>>>>>>> 89c54d0756f12ceca79fb1ce01ae984ace0efdcc
           </v-list-item-content>
         </v-list-item>
-        <v-list-item to="/Contact">
-          <v-list-item-action>
-            <v-icon>mdi-mailbox-up</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Contact</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+
         <v-list-item to="/Profile">
           <v-list-item-action>
             <v-icon>mdi-account</v-icon>
@@ -50,9 +62,19 @@
             <v-list-item-title>My Profile</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item to="/login">
+
+        <v-list-item to="/Contact">
           <v-list-item-action>
-            <v-icon>mdi-account-arrow-right</v-icon>
+            <v-icon>mdi-mailbox-up</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Contact</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-list-item to="/">
+          <v-list-item-action>
+            <v-icon>mdi-logout</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>Logout</v-list-item-title>
@@ -75,11 +97,19 @@
 
       <v-tooltip left color="indigo">
         <template v-slot:activator="{ on }">
+<<<<<<< HEAD
           <v-btn icon dark v-on="on" to="/Profile" class="mr-3">
             <v-icon>mdi-account</v-icon>
           </v-btn>
         </template>
         <span>My Profile</span>
+=======
+          <v-btn icon dark v-on="on" to="/" class="mr-3">
+            <v-icon>mdi-logout</v-icon>
+          </v-btn>
+        </template>
+        <span>Logout</span>
+>>>>>>> 89c54d0756f12ceca79fb1ce01ae984ace0efdcc
       </v-tooltip>
     </v-app-bar>
 

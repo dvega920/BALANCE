@@ -21,14 +21,13 @@
                 <br />
               </div>
             </v-card-text>
-            <!-- <v-card-item> -->
           </v-card>
         </v-col>
 
         <v-col xs="12" sm="12" md="6">
           <v-card max-height="500x" height="100%">
             <v-toolbar color="indigo" dark>
-              <v-toolbar-title>Contact Us!</v-toolbar-title>
+              <v-toolbar-title>Contact Your Provider</v-toolbar-title>
               <v-spacer />
             </v-toolbar>
             <v-card-text>
