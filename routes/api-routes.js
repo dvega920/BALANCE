@@ -126,7 +126,7 @@ router.get("/activity", function (req, res) {
 // Physician
 // GET route for getting all of the physician
 
-router.get("/physician", function (req, res) {
+router.get("/physicians", function (req, res) {
     // findAll returns all entries for a table when used with no options
     db.Physician.findAll({
         include: [db.Patient]
@@ -138,40 +138,44 @@ router.get("/physician", function (req, res) {
 });
 
 // Get :id
-// router.get("/api/physician/:id", function (req, res) {
-//     // Here we add an "include" property to our options in our findOne query
-//     // We set the value to an array of the models we want to include in a left outer join
-//     // In this case, just db.Post
-//     db.Physician.findOne({
-//         where: {
-//             id: req.params.id
-//         },
-//         include: [db.Patient]
-//     }).then(function (dbPhysician) {
-//         res.json(dbPhysician);
-//     });
-// });
+router.get("/physicians/:id", function (req, res) {
+    // Here we add an "include" property to our options in our findOne query
+    // We set the value to an array of the models we want to include in a left outer join
+    // In this case, just db.Post
+    db.Physician.findOne({
+        where: {
+            id: req.params.id
+        },
+        include: [db.Patient]
+    }).then(function (dbPhysician) {
+        res.json(dbPhysician);
+    });
+});
 
 
-// Post
-// router.post("/api/physician", function (req, res) {
-//     db.Physician.create(req.body).then(function (dbPhysician) {
-//         res.json(dbPhysician);
-//     });
-// });
+// Put 
 
+router.put("/physicians/:id", function (req, res) {
 
+    console.log(req.body);
+    // res.send(req.params.id);
 
-// Delete
-// router.delete("/api/physician/:id", function (req, res) {
-//     db.Physician.destroy({
-//         where: {
-//             id: req.params.id
-//         }
-//     }).then(function (dbPhysician) {
-//         res.json(dbPhysician);
-//     });
-// });
+    db.Physician.update({
+        firstName: req.body.firstname,
+        lastName: req.body.lastname,
+        physician_email: req.body.physician_email,
+        phone: req.body.phone,
+        patients: req.body.patients
+    }, {
+        where: {
+            id: req.params.id
+        },
+        include: [db.Patient]
+    }).then(function (dbPhysician) {
+        res.json(dbPhysician);
+    });
+});
+
 
 
 
@@ -179,7 +183,7 @@ router.get("/physician", function (req, res) {
 // Patient
 // GET route for getting all of the patient
 
-router.get("/patient", function (req, res) {
+router.get("/patients", function (req, res) {
     // findAll returns all entries for a table when used with no options
     db.Patient.findAll({
         include: [db.Physician]
@@ -189,6 +193,47 @@ router.get("/patient", function (req, res) {
         res.json(dbPatient);
     });
 });
+
+// Start copy paste 
+
+
+// Get :id
+router.get("/patients/:id", function (req, res) {
+
+    db.Patient.findOne({
+        where: {
+            id: req.params.id
+        },
+        include: [db.Physician]
+    }).then(function (dbPatient) {
+        res.json(dbPatient);
+    });
+});
+
+
+// Put 
+
+router.put("/patients/:id", function (req, res) {
+
+    console.log(req.body);
+
+
+    db.Patient.update({
+        patient_name: req.body.patient_name,
+        age: req.body.age,
+        patient_email: req.body.physician_email,
+        phone: req.body.phone,
+        physician: req.body.physician
+    }, {
+        where: {
+            id: req.params.id
+        },
+        include: [db.Physician]
+    }).then(function (dbPatient) {
+        res.json(dbPatient);
+    });
+});
+// End copy paste 
 
 
 // Get :id

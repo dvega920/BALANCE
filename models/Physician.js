@@ -1,6 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
     const Physician = sequelize.define('Physician', {
-        physician_name: DataTypes.STRING,
+        firstName: DataTypes.STRING,
+        lastName: DataTypes.STRING,
         physician_email: DataTypes.STRING,
         phone: DataTypes.INTEGER,
     });
@@ -10,12 +11,8 @@ module.exports = (sequelize, DataTypes) => {
     Physician.associate = function (models) {
 
         Physician.hasMany(models.Patient, {
-            // or HasMany?
-            // on what?
-            // Example: 
-            onDelete: "cascade"
-            // onUpdate: 'cascade'
 
+            onDelete: "cascade"
 
         });
     };

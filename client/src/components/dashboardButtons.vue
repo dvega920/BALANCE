@@ -3,7 +3,7 @@
     <v-container fluid>
       <v-row>
         <v-subheader>
-          <div class="headline">My Dashboard</div>
+          <div class="headline">My Dashboard - {{patient_name}}</div>
         </v-subheader>
       </v-row>
       <v-row dense>
@@ -84,9 +84,27 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   props: {
     source: String
+  },
+  data: function() {
+    return {
+      patient_name: null,
+      age: null,
+      patient_email: null,
+      physician: []
+    };
+  },
+  mounted() {
+    axios.get("/api/patients/1").then(response => {
+      this.patient_name = response.data.patient_name;
+      this.age = response.data.age;
+      this.patient_email = response.data.patient_email;
+      this.physician = response.data.physician;
+    });
   }
 };
 </script>
