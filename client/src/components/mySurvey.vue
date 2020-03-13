@@ -7,7 +7,7 @@
         </v-subheader>
       </v-row>
 
-      <v-card class="mx-auto text-center" color="#3f51b5" dark width="900px%">
+      <v-card class="mx-auto" color="#3f51b5" dark width="900px%">
         <v-card-text>
           <v-sheet color="rgba(0, 0, 0, .12)"></v-sheet>
         </v-card-text>
@@ -17,6 +17,7 @@
         </v-card-text>
 
         <v-divider></v-divider>
+        <Questionnaire />
 
         <v-card-actions class="justify-center">
           <v-btn block text to="/Home">Back to Dashboard</v-btn>
@@ -27,9 +28,13 @@
 </template>
 
 <script>
+import Questionnaire from "./Questionnaire";
 export default {
   props: {
     source: String
+  },
+  components: {
+    Questionnaire
   }
 };
 </script>

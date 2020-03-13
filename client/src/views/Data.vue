@@ -3,7 +3,7 @@
     <v-layout>
       <v-flex justify-center>
         <v-container fluid>
-          <SurveyResults />
+          <Data />
         </v-container>
       </v-flex>
     </v-layout>
@@ -11,13 +11,12 @@
 </template>
 
 <script>
-// import SurveyResults from "../components/SurveyResults";
+import Data from "../components/myData";
 // @ is an alias to /src
-
 export default {
   name: "App",
   components: {
-    // SurveyResults
+    Data
   }
 };
 </script>
