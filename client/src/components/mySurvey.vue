@@ -17,19 +17,23 @@
         </v-card-text>
 
         <v-divider></v-divider>
-
         <v-card-actions class="justify-center">
           <v-btn block text to="/Home">Back to Dashboard</v-btn>
         </v-card-actions>
       </v-card>
+      <Questionnaire />
     </v-container>
   </div>
 </template>
 
 <script>
+import Questionnaire from "./Questionnaire";
 export default {
   props: {
     source: String
+  },
+  components: {
+    Questionnaire
   }
 };
 </script>

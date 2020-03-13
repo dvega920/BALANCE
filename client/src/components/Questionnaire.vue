@@ -26,6 +26,7 @@
 
 <script>
 export default {
+  name: "Questionnaire",
   data() {
     return {
       questions: [
