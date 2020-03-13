@@ -2,12 +2,9 @@
   <v-container>
     <v-layout>
       <v-flex justify-center>
-         <v-container fluid>
-       <providerData />
-    
-  
-  </v-container> 
-    
+        <v-container fluid>
+          <providerData />
+        </v-container>
       </v-flex>
     </v-layout>
   </v-container>
@@ -21,6 +18,6 @@ export default {
   name: "App",
   components: {
     providerData
-  },
-}
+  }
+};
 </script>

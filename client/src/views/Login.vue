@@ -1,8 +1,27 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <template>
   <v-container>
     <v-layout>
       <v-flex xs12>
-         <Login />
+        <Login />
       </v-flex>
     </v-layout>
   </v-container>

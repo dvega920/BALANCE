@@ -3,7 +3,6 @@
     <v-layout>
       <v-flex justify-center>
         <v-container fluid>
-          <!-- <SurveyResults /> -->
           <v-data-table
             :headers="headers"
             :items="questions"
@@ -22,7 +21,7 @@ export default {
     return {
       headers: [
         {
-          text: "Mood Data",
+          text: "Questions",
           align: "start",
           sortable: false,
           value: "name"
@@ -34,28 +33,29 @@ export default {
       ],
       questions: [
         {
-          name: "Interest in Life",
+          name:
+            "Do you experience little interest in pleasure in doing things?",
           norisk: 0,
           mildrisk: 80,
           modrisk: 10,
           sevrisk: 10
         },
         {
-          name: "Down or Depressed",
+          name: "Are you feeling down, depressed, or hopeless?",
           norisk: 5,
           mildrisk: 15,
           modrisk: 50,
           sevrisk: 30
         },
         {
-          name: "Trouble with Sleep",
+          name: "Trouble falling or staying asleep, or sleeping too much?",
           norisk: 40,
           mildrisk: 22,
           modrisk: 18,
           sevrisk: 20
         },
         {
-          name: "Tired or Little Energy",
+          name: "Feeling tired or having little energy?",
           norisk: 0,
           mildrisk: 85,
           modrisk: 10,
@@ -69,21 +69,24 @@ export default {
           sevrisk: 15
         },
         {
-          name: "Feeling Bad About Yourself",
+          name:
+            "Feeling bad about yourself — or that you are a failure or have let yourself or your family down?",
           norisk: 0,
           mildrisk: 25,
           modrisk: 57,
           sevrisk: 18
         },
         {
-          name: "Moving or Speaking slowly",
+          name:
+            "Moving or speaking so slowly that other people could have noticed? Or so fidgety or restless that you have been moving a lot more than usual?",
           norisk: 90,
           mildrisk: 0,
           modrisk: 10,
           sevrisk: 0
         },
         {
-          name: "Suicidal Thoughts",
+          name:
+            "Thoughts that you would be better off dead, or thoughts of hurting yourself in some way?",
           norisk: 0,
           mildrisk: 0,
           modrisk: 86,
