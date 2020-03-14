@@ -27,18 +27,20 @@
               <!-- <v-flex xs12 md4>
                 <v-text-field class="purple-input" label="Postal Code" type="number" />
               </v-flex>-->
-              <p class="card-description font-weight-light">Your Patients:</p>
-
-              <ul>
+              <div>
+                <p class="card-description font-weight-light">Your Patients:</p>
+              </div>
+              <div>
+                <br />
                 <div v-for="(patient, i) in patients" :key="i">
-                  <!-- <p>{{patient.patient_name}}</p> -->
-
-                  <ol>{{patient.patient_name}} | {{patient.age}} | {{patient.patient_email}}</ol>
+                  <ul>
+                    <p>{{patient.patient_name}} | {{patient.age}} | {{patient.patient_email}}</p>
+                  </ul>
                 </div>
-              </ul>
+              </div>
 
               <v-flex xs12 text-xs-right>
-                <v-btn class="mx-0" text medium color="#3f51b5">Edit Profile</v-btn>
+                <!-- <v-btn class="mx-0" text medium color="#3f51b5">Edit Profile</v-btn> -->
               </v-flex>
             </v-layout>
           </v-container>
@@ -46,8 +48,14 @@
         <v-spacer />
         <v-row>
           <v-col xs="12">
-            <v-btn class="mx-3 my-2 font-weight-light" to="/Survey" dark color="#3f51b5">My Survey</v-btn>
+            <!-- <v-btn class="mx-3 my-2 font-weight-light" to="/Survey" dark color="#3f51b5">My Survey</v-btn> -->
             <v-btn class="mx-3 my-2 font-weight-light" to="/Data" dark color="#3fb584">My Data</v-btn>
+            <v-btn
+              class="mx-3 my-2 font-weight-light"
+              to="/pDash"
+              dark
+              color="#3f51b5"
+            >Back To Dashboard</v-btn>
           </v-col>
         </v-row>
       </v-flex>
