@@ -13,8 +13,9 @@
               <img src="../assets/mcdreamy.jpg" />
             </v-avatar>
             <v-card-text class="text-xs-center">
-              <h6 class="category text-gray font-weight-thin mb-3">Sample Text</h6>
+              <!-- <h6 class="category text-gray font-weight-thin mb-3">Sample Text</h6> -->
               <h4 class="card-title font-weight-light">Dr. {{firstname}} {{lastname}}</h4>
+              <br />
               <p class="card-description font-weight-light">Contact Info:</p>
               <p class="card-description font-weight-light">Email: {{physician_email}}</p>
               <p class="card-description font-weight-light">Phone: {{phone}}</p>
