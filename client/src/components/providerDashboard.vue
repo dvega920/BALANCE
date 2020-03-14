@@ -3,7 +3,7 @@
     <v-container fluid>
       <v-row>
         <v-subheader>
-          <div class="headline">My Dashboard - Dr. {{firstname}} {{lastname}}</div>
+          <div class="headline">Provider Dashboard</div>
         </v-subheader>
       </v-row>
       <v-row dense>
@@ -14,7 +14,7 @@
               <v-list-item three-line>
                 <v-list-item-content>
                   <div class="overline font-weight-bold mb-4">???</div>
-                  <v-list-item-title class="headline mb-1">???</v-list-item-title>
+                  <v-list-item-title class="headline mb-1">Dr. {{firstname}} {{lastname}}</v-list-item-title>
                   <v-list-item-subtitle>???</v-list-item-subtitle>
                 </v-list-item-content>
                 <v-list-item-avatar tile size="80">
