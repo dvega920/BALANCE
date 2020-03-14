@@ -1,6 +1,8 @@
 <template>
   <div>
     <v-container fluid>
+      <v-img class="home-image" src="../assets/0313Asset5@2x.png" contain max-height="150px"></v-img>
+
       <v-row justify="center" class="mt-12">
         <v-col xs="12" sm="4" md="4">
           <v-card>
