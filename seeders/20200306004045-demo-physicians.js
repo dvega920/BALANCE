@@ -8,7 +8,7 @@ module.exports = {
         lastName: "McDreamy",
         physician_email: "mcdreamy@me.com",
         phone:
-          "6038675309",
+          "603-867-5309",
         createdAt: new Date(),
         updatedAt: new Date()
 
