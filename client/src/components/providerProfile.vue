@@ -9,6 +9,7 @@
           </v-toolbar>
           <v-container>
             <v-layout wrap>
+              <v-flex xs12 md4></v-flex>
               <v-flex xs12 md4>
                 <!-- <v-card class="pa-4" height="400px" outlined> -->
                 <material-card class="v-card-profile">
