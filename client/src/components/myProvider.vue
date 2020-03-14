@@ -7,19 +7,25 @@
             <v-toolbar-title>Provider Profile</v-toolbar-title>
             <v-spacer />
           </v-toolbar>
-          <material-card class="v-card-profile">
-            <v-avatar slot="offset" class="mx-auto d-block" size="130">
-              <!-- <img src="https://capenetworks.com/static/images/testimonials/user-icon.svg" /> -->
-              <img src="../assets/mcdreamy.jpg" />
-            </v-avatar>
-            <v-card-text class="text-xs-center">
-              <h6 class="category text-gray font-weight-thin mb-3">Sample Text</h6>
-              <h4 class="card-title font-weight-light">Dr. {{firstname}} {{lastname}}</h4>
-              <p class="card-description font-weight-light">Contact Info:</p>
-              <p class="card-description font-weight-light">Email: {{physician_email}}</p>
-              <p class="card-description font-weight-light">Phone: {{phone}}</p>
-            </v-card-text>
-          </material-card>
+
+          <v-layout wrap>
+            <v-flex xs12 md4></v-flex>
+            <v-flex xs12 md4>
+              <material-card class="v-card-profile">
+                <v-avatar slot="offset" class="mx-auto d-block" size="130">
+                  <!-- <img src="https://capenetworks.com/static/images/testimonials/user-icon.svg" /> -->
+                  <img src="../assets/mcdreamy.jpg" />
+                </v-avatar>
+                <v-card-text class="text-xs-center">
+                  <h6 class="category text-gray font-weight-thin mb-3">Sample Text</h6>
+                  <h4 class="card-title font-weight-light">Dr. {{firstname}} {{lastname}}</h4>
+                  <p class="card-description font-weight-light">Contact Info:</p>
+                  <p class="card-description font-weight-light">Email: {{physician_email}}</p>
+                  <p class="card-description font-weight-light">Phone: {{phone}}</p>
+                </v-card-text>
+              </material-card>
+            </v-flex>
+          </v-layout>
         </v-card>
         <v-spacer />
         <v-row>
