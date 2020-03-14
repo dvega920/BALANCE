@@ -9,30 +9,10 @@
           </v-toolbar>
           <v-container>
             <v-layout wrap>
-              <!-- <v-flex xs12 md6>
-                <v-text-field label="First Name" class="purple-input" />
-              </v-flex>-->
-              <!-- <v-flex xs12 md6>
-                <v-text-field label="Last Name" class="purple-input" />
-              </v-flex>-->
-              <!-- <v-flex xs12 md12>
-                <v-text-field label="Address" class="purple-input" readonly="yes" />
-              </v-flex>-->
-              <!-- <v-flex xs12 md4>
-                <v-text-field label="City" class="purple-input" />
-              </v-flex>-->
-              <!-- <v-flex xs12 md4>
-                <v-text-field label="State" class="purple-input" />
-              </v-flex>-->
-              <!-- <v-flex xs12 md4>
-                <v-text-field class="purple-input" label="Postal Code" type="number" />
-              </v-flex>-->
               <p class="card-description font-weight-light">Your Patients:</p>
 
               <ul>
                 <div v-for="(patient, i) in patients" :key="i">
-                  <!-- <p>{{patient.patient_name}}</p> -->
-
                   <ol>{{patient.patient_name}} | {{patient.age}} | {{patient.patient_email}}</ol>
                 </div>
               </ul>
@@ -51,22 +31,6 @@
           </v-col>
         </v-row>
       </v-flex>
-      <!-- <v-flex xs12 md4>
-        <v-card class="pa-4" height="400px" outlined>
-          <material-card class="v-card-profile">
-            <v-avatar slot="offset" class="mx-auto d-block" size="130">
-              <img src="https://capenetworks.com/static/images/testimonials/user-icon.svg" />
-            </v-avatar>
-            <v-card-text class="text-xs-center">
-              <h6 class="category text-gray font-weight-thin mb-3">Sample Text</h6>
-              <h4 class="card-title font-weight-light">John Doe</h4>
-              <p
-                class="card-description font-weight-light"
-              >SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT</p>
-            </v-card-text>
-          </material-card>
-        </v-card>
-      </v-flex>-->
     </v-layout>
   </v-container>
 </template>

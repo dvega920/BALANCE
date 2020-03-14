@@ -8,27 +8,27 @@ module.exports = {
         lastName: "McDreamy",
         physician_email: "mcdreamy@me.com",
         phone:
-          "8675309",
+          "603-867-5309",
         createdAt: new Date(),
         updatedAt: new Date()
 
       },
       {
-        firstName: "Dr. Samsa",
-        lastName: "Dr. Samsa",
-        physician_email: "email@email.com",
+        firstName: "Gregor",
+        lastName: "Samsa",
+        physician_email: "gregorsamsa@email.com",
         phone:
-          "8675555",
+          "978-867-5555",
         createdAt: new Date(),
         updatedAt: new Date()
 
       },
       {
-        firstName: "Dr. Sleep",
-        lastName: "Dr. Sleep",
-        physician_email: "email@email.com",
+        firstName: "Danny",
+        lastName: "Sleep",
+        physician_email: "dannysleep@myemail.com",
         phone:
-          "9995555",
+          "562-999-5555",
         createdAt: new Date(),
         updatedAt: new Date()
 
