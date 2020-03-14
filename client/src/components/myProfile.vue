@@ -64,6 +64,7 @@
               <p class="card-description font-weight-light">Age: {{age}}</p>
               <p class="card-description font-weight-light">Email: {{patient_email}}</p>
               <p class="card-description font-weight-light">Your Physician:</p>
+
               <!-- <div v-for="(physician, i) in physician" :key="i"> -->
               <!-- <p>{{patient.patient_name}}</p> -->
               <!-- <ul> -->
@@ -73,6 +74,7 @@
             </v-card-text>
           </material-card>
         </v-card>
+        <v-btn class="mt-3" dark color="#3f51b5" block to="/Home">Back to Dashboard</v-btn>
       </v-flex>
     </v-layout>
   </v-container>
