@@ -70,8 +70,8 @@
     <v-app-bar app color="indigo" dark>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
 
-      <v-toolbar-title class="font-italic font-weight-light">
-        B A L A N C E .
+      <v-toolbar-title class="font-weight-light">
+        B A L A N C E
         <span>
           <div class="overline font-weight-bold">User Dashboard</div>
         </span>
