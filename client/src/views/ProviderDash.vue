@@ -2,21 +2,15 @@
   <v-container>
     <v-layout>
       <v-flex justify-center>
-         <v-container fluid>
+        <v-container fluid>
+          <v-row>
+            <v-col cols="12">
+              <v-img src="../assets/0313Asset5@2x.png" contain max-height="200px"></v-img>
+            </v-col>
+          </v-row>
 
-  <v-row>
-      <v-col cols="12">
-        <v-img src="../assets/Balance-2.png" contain max-height="200px"> </v-img>
-      
-      </v-col>
-
-    </v-row>
-
-       <pDash />
-    
-  
-  </v-container> 
-    
+          <pDash />
+        </v-container>
       </v-flex>
     </v-layout>
   </v-container>
@@ -30,6 +24,6 @@ export default {
   name: "App",
   components: {
     pDash
-  },
-}
+  }
+};
 </script>
