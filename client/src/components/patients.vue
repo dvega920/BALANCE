@@ -9,25 +9,6 @@
           </v-toolbar>
           <v-container>
             <v-layout wrap>
-<<<<<<< HEAD
-              <!-- <v-flex xs12 md6>
-                <v-text-field label="First Name" class="purple-input" />
-              </v-flex>-->
-              <!-- <v-flex xs12 md6>
-                <v-text-field label="Last Name" class="purple-input" />
-              </v-flex>-->
-              <!-- <v-flex xs12 md12>
-                <v-text-field label="Address" class="purple-input" readonly="yes" />
-              </v-flex>-->
-              <!-- <v-flex xs12 md4>
-                <v-text-field label="City" class="purple-input" />
-              </v-flex>-->
-              <!-- <v-flex xs12 md4>
-                <v-text-field label="State" class="purple-input" />
-              </v-flex>-->
-              <!-- <v-flex xs12 md4>
-                <v-text-field class="purple-input" label="Postal Code" type="number" />
-              </v-flex>-->
               <div>
                 <p class="card-description font-weight-light">Your Patients:</p>
               </div>
@@ -37,13 +18,6 @@
                   <ul>
                     <p>{{patient.patient_name}} | {{patient.age}} | {{patient.patient_email}}</p>
                   </ul>
-=======
-              <p class="card-description font-weight-light">Your Patients:</p>
-
-              <ul>
-                <div v-for="(patient, i) in patients" :key="i">
-                  <ol>{{patient.patient_name}} | {{patient.age}} | {{patient.patient_email}}</ol>
->>>>>>> 5a9b6c39b56eb0a8119cc551bcb0a5477ffaf36b
                 </div>
               </div>
 

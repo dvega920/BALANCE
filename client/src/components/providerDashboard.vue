@@ -13,7 +13,6 @@
             <v-card-title class="pt-0">
               <v-list-item three-line>
                 <v-list-item-content>
-<<<<<<< HEAD
                   <!-- <div class="overline font-weight-bold mb-4">???</div> -->
                   <v-list-item-title class="headline mb-1">
                     Hello Dr.
@@ -21,11 +20,6 @@
                     {{firstname}} {{lastname}}!
                   </v-list-item-title>
                   <!-- <v-list-item-subtitle>???</v-list-item-subtitle> -->
-=======
-                  <div class="overline font-weight-bold mb-4">???</div>
-                  <v-list-item-title class="headline mb-1">Dr. {{firstname}} {{lastname}}</v-list-item-title>
-                  <v-list-item-subtitle>???</v-list-item-subtitle>
->>>>>>> 5a9b6c39b56eb0a8119cc551bcb0a5477ffaf36b
                 </v-list-item-content>
                 <v-list-item-avatar tile size="80">
                   <v-icon size="80px" light>mdi-medical-bag</v-icon>
