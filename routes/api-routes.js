@@ -236,71 +236,18 @@ router.put("/patients/:id", function (req, res) {
 // End copy paste 
 
 
-// Get :id
-
-// // Get route for retrieving a single patient
-// router.get("/api/patient/:id", function (req, res) {
-//     // Here we add an "include" property to our options in our findOne query
-//     // We set the value to an array of the models we want to include in a left outer join
-//     // In this case, just db.Author
-//     db.Patient.findOne({
-//         where: {
-//             id: req.params.id
-//         },
-//         include: [db.Patient]
-//     }).then(function (dbPatient) {
-//         res.json(dbPatient);
-//     });
-// });
-
-
-// Post
-// router.post("/api/patient", function (req, res) {
-//     db.Patient.create(req.body).then(function (dbPatient) {
-//         res.json(dbPatient);
-//     });
-// });
-
-
-// Delete
-// router.delete("/api/patient/:id", function (req, res) {
-//     db.Patient.destroy({
-//         where: {
-//             id: req.params.id
-//         }
-//     }).then(function (dbPatient) {
-//         res.json(dbPatient);
-//     });
-// });
-
-
-// Put
-// router.put("/api/patient", function (req, res) {
-//     db.Patient.update(
-//         req.body,
-//         {
-//             where: {
-//                 id: req.body.id
-//             }
-//         }).then(function (dbPatient) {
-//             res.json(dbPatient);
-//         });
-// });
-
-
-
 
 // Questions
 // GET route for getting all of the patient
 
-router.get("/questions", function (req, res) {
-    // findAll returns all entries for a table when used with no options
-    db.Questions.findAll({}).then(function (dbQuestions) {
-        console.log("Questionnaire!")
-        // We have access to the todos as an argument inside of the callback function
-        res.json(dbQuestions);
-    });
-});
+// router.get("/questions", function (req, res) {
+//     // findAll returns all entries for a table when used with no options
+//     db.Questions.findAll({}).then(function (dbQuestions) {
+//         console.log("Questionnaire!")
+//         // We have access to the todos as an argument inside of the callback function
+//         res.json(dbQuestions);
+//     });
+// });
 
 
 module.exports = router;

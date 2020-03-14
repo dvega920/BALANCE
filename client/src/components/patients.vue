@@ -9,6 +9,7 @@
           </v-toolbar>
           <v-container>
             <v-layout wrap>
+<<<<<<< HEAD
               <!-- <v-flex xs12 md6>
                 <v-text-field label="First Name" class="purple-input" />
               </v-flex>-->
@@ -36,6 +37,13 @@
                   <ul>
                     <p>{{patient.patient_name}} | {{patient.age}} | {{patient.patient_email}}</p>
                   </ul>
+=======
+              <p class="card-description font-weight-light">Your Patients:</p>
+
+              <ul>
+                <div v-for="(patient, i) in patients" :key="i">
+                  <ol>{{patient.patient_name}} | {{patient.age}} | {{patient.patient_email}}</ol>
+>>>>>>> 5a9b6c39b56eb0a8119cc551bcb0a5477ffaf36b
                 </div>
               </div>
 
@@ -59,22 +67,6 @@
           </v-col>
         </v-row>
       </v-flex>
-      <!-- <v-flex xs12 md4>
-        <v-card class="pa-4" height="400px" outlined>
-          <material-card class="v-card-profile">
-            <v-avatar slot="offset" class="mx-auto d-block" size="130">
-              <img src="https://capenetworks.com/static/images/testimonials/user-icon.svg" />
-            </v-avatar>
-            <v-card-text class="text-xs-center">
-              <h6 class="category text-gray font-weight-thin mb-3">Sample Text</h6>
-              <h4 class="card-title font-weight-light">John Doe</h4>
-              <p
-                class="card-description font-weight-light"
-              >SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT SAMPLE TEXT</p>
-            </v-card-text>
-          </material-card>
-        </v-card>
-      </v-flex>-->
     </v-layout>
   </v-container>
 </template>

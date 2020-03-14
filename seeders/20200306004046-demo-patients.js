@@ -7,7 +7,7 @@ module.exports = {
         patient_name: "Johnny Appleseed",
         age: "18",
         patient_email:
-          "email@email.com",
+          "johnnyappleseed@email.com",
         PhysicianId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -17,7 +17,7 @@ module.exports = {
         patient_name: "Jimney Cricket",
         age: "80",
         patient_email:
-          "email@email.com",
+          "jimneycricket@email.com",
         PhysicianId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
@@ -27,7 +27,7 @@ module.exports = {
         patient_name: "Mary Poppins",
         age: "40",
         patient_email:
-          "email@email.com",
+          "marypoppins@email.com",
         PhysicianId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
