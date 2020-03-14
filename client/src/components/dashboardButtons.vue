@@ -69,7 +69,7 @@
                 <v-list-item-content>
                   <div class="overline font-weight-bold mb-4">My Profile</div>
                   <v-list-item-title class="headline mb-1">User Account</v-list-item-title>
-                  <v-list-item-subtitle>View or edit your profile here.</v-list-item-subtitle>
+                  <v-list-item-subtitle>View your profile here.</v-list-item-subtitle>
                 </v-list-item-content>
                 <v-list-item-avatar tile size="80">
                   <v-icon size="80px" light>mdi-account</v-icon>
