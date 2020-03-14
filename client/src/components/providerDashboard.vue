@@ -3,22 +3,26 @@
     <v-container fluid>
       <v-row>
         <v-subheader>
-          <div class="headline">My Dashboard - Dr. {{firstname}} {{lastname}}</div>
+          <div class="headline">Provider Dashboard</div>
         </v-subheader>
       </v-row>
       <v-row dense>
         <v-col cols="6">
-          <v-card height="100%" width="750px" color="#3f51b5" dark hover ripple to>
+          <v-card height="100%" width="750px" color="#3f51b5" dark class="no-click">
             <v-card-media class="pa-0 pb-3"></v-card-media>
             <v-card-title class="pt-0">
               <v-list-item three-line>
                 <v-list-item-content>
-                  <div class="overline font-weight-bold mb-4">???</div>
-                  <v-list-item-title class="headline mb-1">???</v-list-item-title>
-                  <v-list-item-subtitle>???</v-list-item-subtitle>
+                  <!-- <div class="overline font-weight-bold mb-4">???</div> -->
+                  <v-list-item-title class="headline mb-1">
+                    Hello Dr.
+                    <br />
+                    {{firstname}} {{lastname}}!
+                  </v-list-item-title>
+                  <!-- <v-list-item-subtitle>???</v-list-item-subtitle> -->
                 </v-list-item-content>
                 <v-list-item-avatar tile size="80">
-                  <v-icon size="80px" light>mdi-clipboard-text-outline</v-icon>
+                  <v-icon size="80px" light>mdi-medical-bag</v-icon>
                 </v-list-item-avatar>
               </v-list-item>
             </v-card-title>
@@ -49,7 +53,7 @@
                 <v-list-item-content>
                   <div class="overline font-weight-bold mb-4">LIST OF PATIENTS</div>
                   <v-list-item-title class="headline mb-1">PATIENTS</v-list-item-title>
-                  <v-list-item-subtitle>???</v-list-item-subtitle>
+                  <!-- <v-list-item-subtitle>???</v-list-item-subtitle> -->
                 </v-list-item-content>
                 <v-list-item-avatar tile size="80">
                   <v-icon size="80px" light>mdi-account-group</v-icon>
