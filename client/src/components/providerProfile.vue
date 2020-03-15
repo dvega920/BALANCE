@@ -11,7 +11,6 @@
             <v-layout wrap>
               <v-flex xs12 md4></v-flex>
               <v-flex xs12 md4>
-                <!-- <v-card class="pa-4" height="400px" outlined> -->
                 <material-card class="v-card-profile">
                   <v-avatar slot="offset" class="mx-auto d-block" size="130">
                     <img src="../assets/mcdreamy.jpg" />
@@ -21,18 +20,13 @@
                     <h4 class="card-title font-weight-light">Welcome! Dr. {{firstname}} {{lastname}}</h4>
                     <p class="card-description font-weight-light">Email: {{physician_email}}</p>
                     <p class="card-description font-weight-light">Phone: {{phone}}</p>
-                    <!-- <p class="card-description font-weight-light">Your Patients:</p> -->
+
                     <div v-for="(patient, i) in patients" :key="i">
-                      <!-- <p>{{patient.patient_name}}</p> -->
-                      <ul>
-                        <!-- <li>{{patient.patient_name}}</li> -->
-                      </ul>
+                      <ul></ul>
                     </div>
                   </v-card-text>
                 </material-card>
-                <!-- </v-card> -->
               </v-flex>
-              <!-- End copy paste -->
             </v-layout>
           </v-container>
         </v-card>
