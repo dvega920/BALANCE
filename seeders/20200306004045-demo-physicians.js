@@ -8,11 +8,7 @@ module.exports = {
         lastName: "McDreamy",
         physician_email: "mcdreamy@me.com",
         phone:
-<<<<<<< HEAD
           "603-867-5309",
-=======
-          6038675309,
->>>>>>> ebb2eb080124f8787a315d3174fac8d88e194f16
         createdAt: new Date(),
         updatedAt: new Date()
 

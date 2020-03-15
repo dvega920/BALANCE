@@ -16,21 +16,20 @@
                 <br />
                 <div v-for="(patient, i) in patients" :key="i">
                   <ul>
-                    <p>{{patient.patient_name}} | {{patient.age}} | {{patient.patient_email}}</p>
+                    <li>
+                      <p>{{patient.patient_name}} | Age: {{patient.age}} | {{patient.patient_email}}</p>
+                    </li>
                   </ul>
                 </div>
               </div>
 
-              <v-flex xs12 text-xs-right>
-                <!-- <v-btn class="mx-0" text medium color="#3f51b5">Edit Profile</v-btn> -->
-              </v-flex>
+              <v-flex xs12 text-xs-right></v-flex>
             </v-layout>
           </v-container>
         </v-card>
         <v-spacer />
         <v-row>
           <v-col xs="12">
-            <!-- <v-btn class="mx-3 my-2 font-weight-light" to="/Survey" dark color="#3f51b5">My Survey</v-btn> -->
             <v-btn class="mx-3 my-2 font-weight-light" to="/Data" dark color="#3fb584">My Data</v-btn>
             <v-btn
               class="mx-3 my-2 font-weight-light"
